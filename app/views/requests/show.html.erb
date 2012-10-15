@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Status:</b>
+  <%= @request.status %>
+</p>
+
+<p>
+  <b>School:</b>
+  <%= @request.school_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @request.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @request.description %>
+</p>
+
+<p>
+  <b>Photo url:</b>
+  <%= @request.photo_url %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @request.category_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
