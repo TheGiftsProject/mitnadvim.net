@@ -2,8 +2,8 @@ class RequestsController < ApplicationController
   # GET /requests
   # GET /requests.json
   def index
-    @requests = Request.all
     @closed_requests = params[:requests] == "closed"
+    @requests = (@closed_requests ? Request.closed.all : Request.all)
     #@filter_data = {
       #categories: [[I18n.t("requests.filters.all_categories"), nil]].concat(Category.all.map{ |category| [category.name, category.id] }),
       #recurrences: [[I18n.t("requests.filters.all_recurrences"), nil]].concat(Recurrence.all.map{ |recurrence| [recurrence.name, recurrence.id] }),

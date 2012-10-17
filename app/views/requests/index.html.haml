@@ -19,7 +19,11 @@
         -#!= select_tag :recurrence_filter, @filter_data[:recurrences]
         -#!= select_tag :area_filter, @filter_data[:areas]
         -#%button.btn= t("requests.index.submit_filter")
-      .empty
-        %span= t("requests.index.list_empty_title")
-        %a.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")
+      - if (@requests.empty?)
+        .empty
+          %span= t("requests.index.list_empty_title")
+          %a.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")
+      - else
+        - @requests.each do |request|
+          != render partial: "layouts/components/request/request_row", locals: { req: request, type: "school" }
 
