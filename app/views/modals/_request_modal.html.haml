@@ -3,18 +3,26 @@
   %h3= t("modals.request.header")
 
 - content_for :content do
-  %h1
-    header
+  %h1= vrequest.name
   %hr
   %dl.dl-horizontal
-    %dt
-      desc
+    %dt= t("modals.request.fields.description")
+    %dd= @requst.description
+
+    %dt= t("modals.request.fields.requesting_school")
+    %dd= @request.school.name
+
+    %dt= t("modals.request.fields.required_time")
+    %dd= "3 שעות"
+
+    %dt= t("modals.request.fields.date")
+    %dd= "יום רביעי, 13.6.12 בשעה 14:00"
+
+    %dt= t("modals.request.fields.note_to_school")
     %dd
-      value
-    %dt
-      asdasd
-    %dd
-      value
+      %textarea{rows: 3, placeholder: "#{t("modals.request.fields.note_to_school_placeholder")}"}
+
+  %a.btn.btn-primary.btn-orange{href: "#"} open modal
 
 - content_for :footer do
   footer!
