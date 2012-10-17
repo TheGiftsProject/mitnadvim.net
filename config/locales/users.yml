@@ -16,7 +16,7 @@ he:
         gender: "מין"
         birth_date: "תאריך לידה"
         password: "הזן סיסמה"
-        password_repeat: "הזן סיסמה שנית"
+        password_confirmation: "הזן סיסמה שנית"
         area: "אזור בו אתה רוצה להתנדב"
         description: "ספר על עצמך בכמה מילים"
 

@@ -41,7 +41,6 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @identity = env['omniauth.identity']
     @user = User.new(params[:user])
 
     respond_to do |format|
