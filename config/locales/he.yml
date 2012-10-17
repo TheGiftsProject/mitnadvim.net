@@ -21,4 +21,4 @@ he:
           attributes:
             password:
               too_short: "קצרה מידי (6 תווים לפחות)"
-              blank: "אישור סיסמא חסר"
+              confirmation: "- יש למלא בשנית"
