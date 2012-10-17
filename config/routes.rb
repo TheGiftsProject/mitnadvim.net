@@ -1,12 +1,11 @@
 MitnadvimNet::Application.routes.draw do
   resources :requests
-
   resources :schools
-
   resources :users
-
   resources :volunteers
+
   root :to => 'application#temp_root'
+  match 'hp' => 'application#root'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

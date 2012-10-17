@@ -1,5 +1,19 @@
-.row
-  = request.name
-  = request.description
-  = request.school.name
-  = request.category.name
+.request_row
+  .name
+    = req.name
+  .description
+    = req.description
+  .additional_data
+    .icon.location
+    %span
+      = req.school.name
+    .icon.duration
+    .icon.schedule
+  .actions
+    - if type == 'school'
+      != render partial: "layouts/components/request/request_school_data", :locals => {:request => req}
+    - elsif type == 'user'
+      != render partial: "layouts/components/request/request_user_data", :locals => {:request => req}
+    - else
+      != render partial: "layouts/components/request/request_main_data", :locals => {:request => req}
+      

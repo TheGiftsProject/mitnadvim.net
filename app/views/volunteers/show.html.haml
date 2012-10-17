@@ -14,8 +14,7 @@
           .header
             = t("users.profile.my_open_requests")
           .content
-            -for request in @open_requests
-              != render partial: "layouts/components/request/request_row", :locals => {:request => request}
+            != render partial: "layouts/components/request/request_row", :collection => @open_requests, :as => :req, :locals => {:type => 'user'}
 
   -if @closed_requests.count > 0
     .row
@@ -24,6 +23,4 @@
           .header
             = t("users.profile.my_closed_requests")
           .content
-            -for request in @closed_requests
-              != render partial: "layouts/components/request/request_row", :locals => {:request => request}
-
+            != render partial: "layouts/components/request/request_row", :collection => @closed_requests, :as => :req, :locals => {:type => 'user'}

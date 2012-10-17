@@ -8,4 +8,7 @@ class ApplicationController < ActionController::Base
     #flash.now[:error] = "HEY"
   end
 
+  def root
+    @open_requests = Request.where(:status => 'open')
+  end
 end
