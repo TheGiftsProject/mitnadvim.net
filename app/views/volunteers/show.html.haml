@@ -7,14 +7,14 @@
         .content
           != render partial: "layouts/components/volunteer/simple_profile", :locals => {:user => @user}
 
-  -if @open_requests.count > 0
+  -if @active_requests.count > 0
     .row
       .span12
         .box
           .header
-            = t("users.profile.my_open_requests")
+            = t("users.profile.my_active_requests")
           .content
-            != render partial: "layouts/components/request/request_row", :collection => @open_requests, :as => :req, :locals => {:type => 'user'}
+            != render partial: "layouts/components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'user'}
 
   -if @closed_requests.count > 0
     .row

@@ -11,4 +11,6 @@ class Request < ActiveRecord::Base
 
   scope :not_closed, where(:closed => false)
   scope :closed, where(:closed => true)
+  scope :active, where(:closed => false)
+
 end
