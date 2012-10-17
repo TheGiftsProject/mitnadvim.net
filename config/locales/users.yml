@@ -12,7 +12,7 @@ he:
       fields:
         first_name: "שם פרטי"
         last_name: "שם משפחה"
-        email: "כתובת אי-מייל"
+        email: 'כתובת דוא"ל'
         phone_number: "מספר טלפון"
         gender: "מין"
         birth_year: "שנת לידה"
