@@ -2,12 +2,12 @@
 
 .box
   .header= t("users.new.title")
-  %form.form-horizontal{:action => sessions_path}
+  = form_for @user do |f|
     != volunteer_field("first_name")
     != volunteer_field("last_name")
     != volunteer_field("birth_date")
     != volunteer_field("password", "password")
-    != volunteer_field("password_confirmation", "password_confirmation")
+    != volunteer_field("password_confirmation", "password")
     != volunteer_field("description", "text")
     != volunteer_select_field("area", @areas)
     != volunteer_field("email")
