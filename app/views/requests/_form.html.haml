@@ -1,0 +1,46 @@
+= form_for(@request, html: { class: 'form-horizontal' }) do |f|
+  - if @request.errors.any?
+    #error_explanation
+      %ul
+        - @request.errors.full_messages.each do |msg|
+          %li= msg
+  .control-group
+    %label.control-label= t("requests.form.label.name")
+    .controls
+      != f.text_field :name
+  .control-group
+    %label.control-label= t("requests.form.label.description")
+    .controls
+      != f.text_area :description
+  .control-group
+    %label.control-label= t("requests.form.label.category")
+    .controls
+      != f.select :category_id, options_from_collection_for_select(Category.all, :id, :name)
+  .control-group
+    %label.control-label= t("requests.form.label.recurrence")
+    .controls
+      != f.select :recurrence_id, options_from_collection_for_select(Recurrence.all, :id, :name)
+  -#.control-group
+    -#%label.control-label= t("requests.form.label.control-labels.duration")
+    -#.controls
+      -#!= f.select :duration_count, []
+      -#!= f.select :duartion_type, []
+  -#.control-group
+    -#%label.control-label= t("requests.form.label.control-labels.start_time")
+    -#.controls
+      -#!= f.select :start_time_day, []
+      -#!= f.select :start_time_month, []
+      -#!= f.select :start_time_year, []
+  -#.control-group
+    -#%label.control-label= t("requests.form.label.control-labels.end_time")
+    -#.controls
+      -#!= f.select :end_time_day, []
+      -#!= f.select :end_time_month, []
+      -#!= f.select :end_time_year, []
+  -#.control-group
+    -#%label.control-label= t("requests.form.label.control-labels.comment")
+    -#.controls
+      -#!= f.text_area :comment
+  .control-group
+    .controls
+      = f.submit class: "btn btn-orange"

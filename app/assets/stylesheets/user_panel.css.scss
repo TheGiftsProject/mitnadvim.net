@@ -1,3 +1,30 @@
 .user-panel {
+  font-size: 14px;
+  color: white;
+  @include text-shadow(0 -1px 0 rgba(#000, 0.35));
 
+  .signed_out{
+   margin-top: 7px;
+
+   #email{
+     margin: 0 5px;
+   }
+
+  }
+
+  form{
+   @include inline-block;
+  }
+
+  a{
+   color: white;
+   text-decoration: underline;
+  }
+
+  input[type='text']{
+   width: 110px;
+   font-size: 16px;
+   margin-top: 0;
+  }
+  
 }

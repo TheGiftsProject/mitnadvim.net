@@ -5,10 +5,46 @@ he:
 
   header:
     title: "מתנדבים.נט"
+    school_entrance: "כניסת בית ספר"
+    already_signed_up: "רשום כמתנדב"
+    sign_in_now: "הכנס עכשיו"
+    enter: "הכנס"
+
+
+  requests:
+    new:
+      header: "בקשת התנדבות חדשה"
+      examples:
+        title: "דוגמאות"
+        sections:
+          title: "פגישה אחד על אחד במשך שעה אחרי הצהרים ללימוד חשבון"
+          description: "מפגש שבועי ללימוד תלמידים בכיתות ג' חשבון. הפגישה הינה בפורמט אחד על אחד."
+          type: "סוג התנדבות: לימוד חשבון"
+          time: "משך: שעה בשבוע"
+    index:
+      header: "ניהול בקשות התנדבות"
+      create_new: "צור בקשה חדשה"
+      open_requests: "בקשות פתוחות"
+      closed_requests: "בקשות שנענו"
+      submit_filter: "סנן התנדבות"
+      list_empty_title: "אין בקשות פתוחות"
+    form:
+      label:
+        name: "כותרת הבקשה"
+        description: "תיאור הבקשה"
+        category: "סוג ההתנדבות"
+        recurrence: "בחר פרק זמן"
+
+  helpers:
+    submit:
+      request:
+        create: "צור בקשת התנדבות חדשה"
+        update: "עדכן"
 
   errors:
     messages:
       not_saved: "לא ניתן לבצע הפעולה"
+
 
   activerecord:
     attributes:
@@ -23,3 +59,13 @@ he:
             password:
               too_short: "קצרה מידי (6 תווים לפחות)"
               confirmation: "- יש למלא בשנית"
+        request:
+          attributes:
+            name:
+              blank: ""
+            description:
+              blank: ""
+
+  modals:
+    request:
+      header: "בקשת התנדבות"
