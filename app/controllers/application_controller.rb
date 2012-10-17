@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
 
 
   def temp_root
-
+    #flash.now[:notice] = "HEY"
+    #flash.now[:error] = "HEY"
   end
 
 end
