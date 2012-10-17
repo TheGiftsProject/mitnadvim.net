@@ -5,6 +5,11 @@ he:
 
   header:
     title: "מתנדבים.נט"
+    school_entrance: "כניסת בית ספר"
+    already_signed_up: "רשום כמתנדב"
+    sign_in_now: "הכנס עכשיו"
+    enter: "הכנס"
+
 
   requests:
     new:
@@ -41,6 +46,7 @@ he:
   errors:
     messages:
       not_saved: "לא ניתן לבצע הפעולה"
+
 
   activerecord:
     attributes:
