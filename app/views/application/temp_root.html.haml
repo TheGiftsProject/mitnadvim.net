@@ -39,7 +39,7 @@
     %p סתם טקסט פשוט
 
 %br
-  
+
 .row
   .box.span12
     .header.light כותרת בהירה
@@ -47,3 +47,17 @@
 
 %a.btn.btn-orange{href: "#request_modal", data: {toggle: "modal"}} open modal
 != modal "request_modal", "request_modal"
+
+%br
+
+
+.row
+  .span12
+    %ul.nav.nav-tabs
+      %li.active
+        %a{:href => ""} בקשות פתוחות
+      %li
+        %a{:href => ""} בקשות שהתקבלו
+.row
+  .box.span12.tab-content
+    %p shit

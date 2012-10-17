@@ -1,7 +1,7 @@
 .modal.hide.fade{attributes}
   .modal-header
-    = yield :header
+    != content_for :header
   .modal-body
-    = yield
+    != content_for :content
   .modal-footer
-    = yield :footer
+    != content_for :footer

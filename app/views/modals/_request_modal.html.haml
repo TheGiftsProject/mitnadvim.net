@@ -1,20 +1,20 @@
-!= content_for :header do
+- content_for :header do
   %h3= t("modals.request.header")
   %button.close{ data: {dismiss:"modal"}, aria: { hidden: true}} &times;
 
+- content_for :content do
+  %h1
+    asdasdasd asd aasdasdasd asd
 
-%h1
-  asdasdasd asd aasdasdasd asd
+  %dl.dl-horizontal
+    %dt
+      asdasd
+    %dd
+      value
+    %dt
+      asdasd
+    %dd
+      value
 
-%dl.dl-horizontal
-  %dt
-    asdasd
-  %dd
-    value
-  %dt
-    asdasd
-  %dd
-    value
-
-!= content_for :footer do
+- content_for :footer do
   footer!
