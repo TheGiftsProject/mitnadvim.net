@@ -1,0 +1,25 @@
+.login-page {
+  .box {
+    margin: 0 auto;
+    width: 485px;
+    height: 275px;
+
+    .btn {
+      width: 125px;
+    }
+
+    .form-horizontal {
+      .control-label {
+        width: 100px;
+      }
+    }
+
+    .controls, .btn {
+      margin-right: 120px;
+    }
+
+    input[type='text'], input[type='password'] {
+      width: 92%;
+    }
+  }
+}

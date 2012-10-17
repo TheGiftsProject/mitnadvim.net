@@ -1,0 +1,10 @@
+.login-page
+  .box
+    %h1= 'hey'
+    %hr
+    != form_tag sessions_path, :class => "form-horizontal" do |f|
+      != volunteer_field(f, "email")
+      != volunteer_field(f, "password", "password")
+      != submit_tag t("header.enter"), :class => "btn btn-orange btn-big"
+    %hr
+    %h2= 'heya'

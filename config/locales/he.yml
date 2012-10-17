@@ -52,6 +52,8 @@ he:
   errors:
     messages:
       not_saved: "לא ניתן לבצע הפעולה"
+      login_fail: "הדוא\"ל או הסיסמא שהכנסת אינם קיימים במערכת"
+      logged_out: "התנתקת בהצלחה"
 
 
   activerecord:
