@@ -3,9 +3,13 @@ he:
     validation:
       name: "name is too short"
       name: "name is too short"
+    edit:
+      title: "edit school admin user"
+      successfully_updated: 'School was successfully updated.'
     signup:
       title: "create a new school admin user"
       create_button: "create an admin user"
+      successfully_created: 'School was successfully created.'
       school:
         name: "school name"
         area: "area"

@@ -21,7 +21,7 @@
       = text_field_tag "school[description]", @school.description
 
   .field.control-group
-    = label_tag :admin_name, t("schools.signup.admin.first_name"), class: "control-label"
+    = label_tag :admin_first_name, t("schools.signup.admin.first_name"), class: "control-label"
     .controls
       = text_field_tag "admin[first_name]", @admin_user.first_name
   
