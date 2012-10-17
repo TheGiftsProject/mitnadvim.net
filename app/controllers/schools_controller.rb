@@ -44,15 +44,18 @@ class SchoolsController < ApplicationController
   def create
     @school = School.new(params[:school])
 
-    user_data = {type: :school_admin, school: @school}.merge(params[:admin])
-
-    @admin_user = User.new(user_data)
+    @admin_user = User.new(params[:admin])
+    @admin_user.role = :school
+    @admin_user.school = @school
 
     school_is_valid = @school.save
     admin_is_valid = @admin_user.save
 
     respond_to do |format|
       if school_is_valid and admin_is_valid
+
+        sign_in(@admin_user)
+
         format.html { redirect_to requests_path(), notice: t("schools.signup.successfully_created") }
         format.json { render json: @school, status: :created, location: @school }
       else

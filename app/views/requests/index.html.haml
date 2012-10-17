@@ -9,17 +9,16 @@
     .span12
       %ul.nav.nav-tabs
         %li{ class: (@closed_requests ? "" : "active") }
-          %a{ :href => requests_path(:requests => "open") }= t("requests.index.open_requests")
+          %a{ :href => requests_path(:requests => "open") }= t("requests.index.active_requests")
         %li{ class: (@closed_requests ? "active" : "") }
           %a{ :href => requests_path(:requests => "closed") }= t("requests.index.closed_requests")
   .row
     .list.box.span12.tab-content
-      -#.filters
-        -#!= select_tag :category_filter, @filter_data[:categories]
-        -#!= select_tag :recurrence_filter, @filter_data[:recurrences]
-        -#!= select_tag :area_filter, @filter_data[:areas]
-        -#%button.btn= t("requests.index.submit_filter")
-      .empty
-        %span= t("requests.index.list_empty_title")
-        %a.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")
+      - if (@requests.empty?)
+        .empty
+          %span= t("requests.index.list_empty_title")
+          %a.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")
+      - else
+        - @requests.each do |request|
+          != render partial: "layouts/components/request/request_row", locals: { req: request, type: "school" }
 

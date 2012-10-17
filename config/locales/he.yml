@@ -1,7 +1,11 @@
 he:
   site:
     title: "מתנדבים.נט"
-    back_button: "Back"
+    back_button: "חזרה"
+    description: "מטרתה של מערכת מתנדבים הינה לתווך בין
+                 אנשים המעוניינים להתנדב לבין בתי ספר אשר
+                 זקוקים למתנדבים על מנת לעזור לתלמידים
+                 במגוון דרכים."
 
   header:
     title: "מתנדבים.נט"
@@ -13,6 +17,17 @@ he:
     hello: "שלום"
     edit_school: "ערוך פרטי בית ספר"
     manage_school: "ניהול בקשות התנדבות"
+
+  homepage:
+    title: "ברוכים הבאים!"
+    paragraph: "מטרתה של מערכת מתנדבים הינה לתווך בין
+                אנשים המעוניינים להתנדב לבין בתי ספר אשר
+                זקוקים למתנדבים על מנת לעזור לתלמידים
+                במגוון דרכים."
+    steps:
+      - "מצא התנדבות בבית הספר המתאים לך"
+      - "אם נמצאת מתאים ביה”ס ייצור איתך קשר"
+      - "התחל להתנדב!"
 
 
   requests:
@@ -30,7 +45,7 @@ he:
     index:
       header: "ניהול בקשות התנדבות"
       create_new: "צור בקשה חדשה"
-      open_requests: "בקשות פתוחות"
+      active_requests: "בקשות פתוחות"
       closed_requests: "בקשות שנענו"
       submit_filter: "סנן התנדבות"
       list_empty_title: "אין בקשות פתוחות"
@@ -42,6 +57,11 @@ he:
         recurrence: "בחר פרק זמן"
         duration: "משך ההתנדבות"
         duration_units: "שעות"
+    row:
+      duration: "משך ההתנדבות"
+      duration_units: "שעות"
+      volunteers: "מתנדבים"
+      more_details_action: "פרטים נוספים"
 
   helpers:
     submit:
@@ -52,19 +72,27 @@ he:
   errors:
     messages:
       not_saved: "לא ניתן לבצע הפעולה"
+      login_fail: "הדוא\"ל או הסיסמא שהכנסת אינם קיימים במערכת"
+      logged_out: "התנתקת בהצלחה"
+
+  login_page:
+    title: "על מנת לצפות בעמוד עליך להתחבר למערכת"
+    new: "מתנדב חדש?"
+    new_link: "הירשם למערכת והחל להתנדב!"
+
 
 
   activerecord:
     attributes:
       school:
-        name: "school name"
-        area: "area"
-        address: "address"
-        description: "description"
+        name: "שם בית הספר"
+        area: "איזור"
+        address: "כתובת"
+        description: "תיאור בית הספר"
       user:
-        first_name: "first_name"
-        last_name: "first_name"
-        phone_number: "phone_number"
+        first_name: "שם פרטי"
+        last_name: "שם משפחה"
+        phone_number: "מספר טלפון"
         email: "דוא\"ל"
         password: "סיסמא"
         password_confirmation: "אישור סיסמא"
@@ -73,18 +101,22 @@ he:
         school:
           attributes:
             name:
-              too_short: "too short"
+              too_short: "קצר מדי"
         user:
           attributes:
             password:
+              blank: "ריק"
               too_short: "קצרה מידי (6 תווים לפחות)"
               confirmation: "- יש למלא בשנית"
             first_name:
-              too_short: "too short"
+              too_short: "קצר מדי"
             phone_number:
-              too_short: "too short"
+              too_short: "קצר מדי"
             email:
-              too_short: "too short"
+              taken: "תפוס"
+              blank: "ריק"
+              too_short: "קצר מדי"
+              invalid: "לא תקין"
 
         request:
           attributes:

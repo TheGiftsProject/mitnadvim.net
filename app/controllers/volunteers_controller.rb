@@ -3,13 +3,9 @@ class VolunteersController < ApplicationController
   # GET /volunteers/1
   # GET /volunteers/1.json
   def show
-
     @user = User.find(params[:id])
-    @closed_requests = @user.requests.where(:status => 'closed')
-    @open_requests   = @user.requests.where(:status => 'open')
-
-
-    #TODO:SAKIN add validation for users that are volunteers
+    @closed_requests = @user.requests.closed
+    @active_requests   = @user.requests.active
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,10 +23,10 @@ class VolunteersController < ApplicationController
     @user = User.new params[:user]
     @user.role = "volunteer"
 
-
     respond_to do |format|
       if @user.save
-        format.html { redirect_to hp_path, :notice => t("users.new.success_notice") }
+        sign_in(user)
+        redirect_to root_path, :notice => t("users.new.success_notice")
       else
         @areas = Area.all
         @years = *(1940..2000)
@@ -40,7 +36,6 @@ class VolunteersController < ApplicationController
         format.html { render :action => "new" }
       end
     end
-
   end
 
 end

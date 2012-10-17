@@ -26,7 +26,6 @@ class User < ActiveRecord::Base
   validates :password, :presence => true,
             :confirmation => true,
             :length => {:within => 6..40}
-  validates_associated :school
 
   def encrypt_password
     if password.present?

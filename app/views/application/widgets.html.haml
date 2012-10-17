@@ -50,10 +50,12 @@
   .box.span12
     .header.light כותרת בהירה
     %p עוד טקסט
+%br
+%a.btn.btn-orange{href: "#user_request_modal", data: {toggle: "modal"}} open modal
+!= render partial: "modals/user/request_modal", locals: {vrequest: Request.first}
 
-%a.btn.btn-orange{href: "#request_modal", data: {toggle: "modal"}} open modal
--#!= modal "request_modal", "request_modal", object: {vrequest: Request.first}
-
+%a.btn.btn-orange{href: "#school_request_modal", data: {toggle: "modal"}} open school modal
+!= render partial: "modals/school/request_modal", locals: {vrequest: Request.first}
 %br
 
 

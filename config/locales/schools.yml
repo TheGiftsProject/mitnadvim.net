@@ -1,25 +1,24 @@
 he:
   schools:
     validation:
-      name: "name is too short"
-      name: "name is too short"
+      name: "שם קצר מדי"
     edit:
-      title: "edit school admin user"
-      successfully_updated: 'School was successfully updated.'
+      title: "עריכת בית ספר"
+      successfully_updated: 'בית הספר עודכן בהצלחה.'
     signup:
-      title: "create a new school admin user"
-      create_button: "create an admin user"
-      successfully_created: 'School was successfully created.'
+      title: "הרשמת בית ספר חדש"
+      create_button: "צור פרופיל בית ספר חדש"
+      successfully_created: 'פרופיל בית הספר נוצר בהצלחה.'
       school:
-        name: "school name"
-        area: "area"
-        address: "address"
-        description: "description"
+        name: "שם בית הספר"
+        area: "איזור"
+        address: "כתובת בית הספר"
+        description: "תיאור קצר של בית הספר"
       admin:
-        first_name: "school admin first name"
-        last_name: "school admin last name"
-        email: "email"
-        phone_number: "phone number"
-        password: "password"
-        confirm_password: "confirm password"
+        first_name: "שם פרטי אחראי המערכת"
+        last_name: "שם משפחה אחראי המערכת"
+        email: "כתובת דואר אלקטרוני"
+        phone_number: "מספר טלפון"
+        password: "סיסמה"
+        password_confirmation: "הזמן סיסמה שנית"
 

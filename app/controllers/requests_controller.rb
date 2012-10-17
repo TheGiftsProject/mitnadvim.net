@@ -1,14 +1,11 @@
 class RequestsController < ApplicationController
+  before_filter :must_be_school
+
   # GET /requests
   # GET /requests.json
   def index
-    @requests = Request.all
     @closed_requests = params[:requests] == "closed"
-    #@filter_data = {
-      #categories: [[I18n.t("requests.filters.all_categories"), nil]].concat(Category.all.map{ |category| [category.name, category.id] }),
-      #recurrences: [[I18n.t("requests.filters.all_recurrences"), nil]].concat(Recurrence.all.map{ |recurrence| [recurrence.name, recurrence.id] }),
-      #areas: [[I18n.t("requests.filters.all_areas"), nil]].concat(Area.all.map{ |area| [area.name, area.id] })
-    #}
+    @requests = (@closed_requests ? current_user.school.requests.closed.all : current_user.school.requests.not_closed.all)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -19,7 +16,7 @@ class RequestsController < ApplicationController
   # GET /requests/1
   # GET /requests/1.json
   def show
-    @request = Request.find(params[:id])
+    @request = current_user.school.requests.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -40,13 +37,13 @@ class RequestsController < ApplicationController
 
   # GET /requests/1/edit
   def edit
-    @request = Request.find(params[:id])
+    @request = current_user.school.requests.find(params[:id])
   end
 
   # POST /requests
   # POST /requests.json
   def create
-    @request = Request.new(params[:request])
+    @request = current_user.school.requests.build(params[:request])
 
     respond_to do |format|
       if @request.save
@@ -62,7 +59,7 @@ class RequestsController < ApplicationController
   # PUT /requests/1
   # PUT /requests/1.json
   def update
-    @request = Request.find(params[:id])
+    @request = current_user.school.requests.find(params[:id])
 
     respond_to do |format|
       if @request.update_attributes(params[:request])
@@ -78,7 +75,7 @@ class RequestsController < ApplicationController
   # DELETE /requests/1
   # DELETE /requests/1.json
   def destroy
-    @request = Request.find(params[:id])
+    @request = current_user.school.requests.find(params[:id])
     @request.destroy
 
     respond_to do |format|
