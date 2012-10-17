@@ -17,6 +17,8 @@ header.navbar{
 
   .container{
     width: 940px;
+
+    @import 'user_panel';
   }
 
   .brand{
