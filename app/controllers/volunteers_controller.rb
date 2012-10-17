@@ -28,6 +28,8 @@ class VolunteersController < ApplicationController
     user.role = "volunteer"
     user.save!
 
+    sign_in(user)
+
     redirect_to user_path(user)
   end
 
