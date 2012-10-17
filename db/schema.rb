@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(:version => 20121017132646) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "recurrences", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "requests", :force => true do |t|
     t.string   "status"
     t.integer  "school_id"
@@ -32,8 +38,9 @@ ActiveRecord::Schema.define(:version => 20121017132646) do
     t.text     "description"
     t.string   "photo_url"
     t.integer  "category_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "recurrence_id"
   end
 
   create_table "responses", :force => true do |t|

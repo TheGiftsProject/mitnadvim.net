@@ -1,0 +1,14 @@
+.btn{
+  font-family: $title-fonts;
+  color: $grey-text;
+  font-weight: $bold;
+}
+
+.btn-orange{
+  @include buttonBackground(#f3af26, #dc9f22);
+  color: white;
+  @include text-shadow( 0 -1px 0 rgba(#000,0.15));
+  &:hover{
+    color: #eee;
+  }
+}

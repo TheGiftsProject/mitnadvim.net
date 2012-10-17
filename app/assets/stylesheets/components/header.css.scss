@@ -1,13 +1,11 @@
-$nabar-height: 60px;
+$navbar-height: 60px;
 
-body{
-  background: #e8edf0;
-}
+@import "user_panel";
 
 header.navbar{
 
   .navbar-inner{
-    height: $nabar-height;
+    height: $navbar-height;
     @include background-image(
       linear-gradient(bottom,#565e62,#7a858a)
     );
@@ -29,7 +27,7 @@ header.navbar{
     @include text-stroke(2px,rgba(88,95,100,0.65));
     padding-bottom: 0;
     padding-top: 0;
-    line-height: $nabar-height;
+    line-height: $navbar-height;
   }
 
   .face{
@@ -43,4 +41,5 @@ header.navbar{
     top: -13px;
     @include inline-block;
   }
+
 }
