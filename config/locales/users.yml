@@ -1,0 +1,23 @@
+he:
+  users:
+    profile:
+      title: "הפרופיל שלי"
+      answered_requests: "בקשות התנדבות שנענו"
+      my_past_requests: "ההתנדבויות שלי"
+
+    new:
+      title: "הרשמת מתנדב חדש"
+      action: "צור פרופיל חדש"
+      fields:
+        first_name: "שם פרטי"
+        last_name: "שם משפחה"
+        email: "כתובת אי-מייל"
+        phone: "מספר טלפון"
+        gender: "מין"
+        birth_date: "תאריך לידה"
+        password: "הזן סיסמה"
+        password_repeat: "הזן סיסמה שנית"
+        area: "אזור בו אתה רוצה להתנדב"
+        description: "ספר על עצמך בכמה מילים"
+
+

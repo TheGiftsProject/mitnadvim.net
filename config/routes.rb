@@ -5,7 +5,7 @@ MitnadvimNet::Application.routes.draw do
 
   resources :users
 
-  resources :identities
+  resources :volunteers
 
   root :to => 'application#temp_root'
 
