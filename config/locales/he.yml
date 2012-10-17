@@ -56,17 +56,36 @@ he:
 
   activerecord:
     attributes:
+      school:
+        name: "school name"
+        area: "area"
+        address: "address"
+        description: "description"
       user:
+        first_name: "first_name"
+        last_name: "first_name"
+        phone_number: "phone_number"
         email: "דוא\"ל"
         password: "סיסמא"
         password_confirmation: "אישור סיסמא"
     errors:
       models:
+        school:
+          attributes:
+            name:
+              too_short: "too short"
         user:
           attributes:
             password:
               too_short: "קצרה מידי (6 תווים לפחות)"
               confirmation: "- יש למלא בשנית"
+            first_name:
+              too_short: "too short"
+            phone_number:
+              too_short: "too short"
+            email:
+              too_short: "too short"
+
         request:
           attributes:
             name:
@@ -74,6 +93,16 @@ he:
             description:
               blank: ""
 
+
   modals:
     request:
       header: "בקשת התנדבות"
+      fields:
+        description: "תיאור הבקשה"
+        requesting_school: "ביה\"ס המבקש"
+        required_time: "הזמן הדרוש"
+        date: "תאריך ושעה"
+        note_to_school: "מסר לביה\"ס"
+        note_to_school_placeholder: "אנא רשום פרטים נוספים או שאלות שיש לך בעבור הביה\"ס המבקש"
+      submit_button: "אני רוצה לעזור!"
+      submit_note: "פרטי יצירת הקשר שלך יישלחו לבית הספר המבקש"
