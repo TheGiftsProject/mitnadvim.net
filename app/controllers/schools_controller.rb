@@ -25,6 +25,7 @@ class SchoolsController < ApplicationController
   # GET /schools/new.json
   def new
     @school = School.new
+    @admin_user = User.new
 
     respond_to do |format|
       format.html # new.html.haml
@@ -35,6 +36,7 @@ class SchoolsController < ApplicationController
   # GET /schools/1/edit
   def edit
     @school = School.find(params[:id])
+    @admin_user = @school.admin
   end
 
   # POST /schools
@@ -42,17 +44,16 @@ class SchoolsController < ApplicationController
   def create
     @school = School.new(params[:school])
 
-    user_data = {role: :school_admin, school: @school}.merge(params[:admin])
+    user_data = {type: :school_admin, school: @school}.merge(params[:admin])
 
     @admin_user = User.new(user_data)
 
+    school_is_valid = @school.save
+    admin_is_valid = @admin_user.save
+
     respond_to do |format|
-
-      school_is_valid = @school.save
-      admin_is_valid = @admin_user.save
-
       if school_is_valid and admin_is_valid
-        format.html { redirect_to @school, notice: 'School was successfully created.' }
+        format.html { redirect_to requests_path(), notice: t("schools.signup.successfully_created") }
         format.json { render json: @school, status: :created, location: @school }
       else
         @errors = @school.errors.full_messages + @admin_user.errors.full_messages
@@ -68,13 +69,20 @@ class SchoolsController < ApplicationController
   def update
     @school = School.find(params[:id])
 
+    @admin_user = User.find(params[:user_id])
+
+    school_is_valid = @school.update_attributes(params[:school])
+    admin_is_valid = @admin_user.update_attributes(params[:admin])
+
     respond_to do |format|
-      if @school.update_attributes(params[:school])
-        format.html { redirect_to @school, notice: 'School was successfully updated.' }
+      if school_is_valid and admin_is_valid
+        format.html { redirect_to @school, notice: t("schools.signup.successfully_updated") }
         format.json { head :no_content }
       else
+        @errors = @school.errors.full_messages + @admin_user.errors.full_messages
+        flash[:error] = @errors
         format.html { render action: "edit" }
-        format.json { render json: @school.errors, status: :unprocessable_entity }
+        format.json { render json: @errors, status: :unprocessable_entity }
       end
     end
   end

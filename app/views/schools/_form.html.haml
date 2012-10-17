@@ -13,42 +13,42 @@
   .field.control-group
     = label_tag :school_address, t("schools.signup.school.address"), class: "control-label"
     .controls
-      = text_field_tag "school[address]"
+      = text_field_tag "school[address]", @school.address
   
   .field.control-group
     = label_tag :school_description, t("schools.signup.school.description"), class: "control-label"
     .controls
-      = text_field_tag "school[description]"
+      = text_field_tag "school[description]", @school.description
 
   .field.control-group
-    = label_tag :admin_name, t("schools.signup.admin.first_name"), class: "control-label"
+    = label_tag :admin_first_name, t("schools.signup.admin.first_name"), class: "control-label"
     .controls
-      = text_field_tag "admin[first_name]"
+      = text_field_tag "admin[first_name]", @admin_user.first_name
   
   .field.control-group
     = label_tag :admin_last_name, t("schools.signup.admin.last_name"), class: "control-label"
     .controls
-      = text_field_tag "admin[last_name]"
+      = text_field_tag "admin[last_name]", @admin_user.last_name
   
   .field.control-group
     = label_tag :admin_email, t("schools.signup.admin.email"), class: "control-label"
     .controls
-      = text_field_tag "admin[email]"
+      = text_field_tag "admin[email]", @admin_user.email
   
   .field.control-group
     = label_tag :admin_phone_number, t("schools.signup.admin.phone_number"), class: "control-label"
     .controls
-      = text_field_tag "admin[phone_number]"
+      = text_field_tag "admin[phone_number]", @admin_user.phone_number
   
   -#.field.control-group
   -#  = label_tag :admin_password, t("schools.signup.admin.password"), class: "control-label"
   -#  .controls
-  -#    = text_field_tag "admin[password]"
+  -#    = text_field_tag "admin[password]", @admin_user.password
   -#
   -#.field.control-group
   -#  = label_tag :admin_confirm_password, t("schools.signup.admin.confirm_password"), class: "control-label"
   -#  .controls
-  -#    = text_field_tag "admin[password_confirmation]"
+  -#    = text_field_tag "admin[password_confirmation]", @admin_user.password_confirmation
 
 
   .actions.control-group

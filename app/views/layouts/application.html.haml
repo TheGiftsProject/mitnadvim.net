@@ -5,7 +5,7 @@
     %meta{:name => "description", :content => t("site.description")}
     != csrf_meta_tag
     != yield :meta_tags
-    %link{:rel=>"shortcut icon", :href=>"/favicon.ico"}
+    %link{:rel=>"shortcut icon", :href=>"/favicon.png"}
     %title
       - if content_for? :title
         = yield :title
@@ -20,6 +20,7 @@
     .container
       = render :partial => "layouts/messages"
       != yield
+    = render :partial => "layouts/footer"
 
     != javascript_include_tag :application
     != yield :javascripts
