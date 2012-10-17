@@ -5,12 +5,7 @@ class RequestsController < ApplicationController
   # GET /requests.json
   def index
     @closed_requests = params[:requests] == "closed"
-    @requests = (@closed_requests ? current_user.school.requests.closed.all : current_user.school.requests.all)
-    #@filter_data = {
-      #categories: [[I18n.t("requests.filters.all_categories"), nil]].concat(Category.all.map{ |category| [category.name, category.id] }),
-      #recurrences: [[I18n.t("requests.filters.all_recurrences"), nil]].concat(Recurrence.all.map{ |recurrence| [recurrence.name, recurrence.id] }),
-      #areas: [[I18n.t("requests.filters.all_areas"), nil]].concat(Area.all.map{ |area| [area.name, area.id] })
-    #}
+    @requests = (@closed_requests ? current_user.school.requests.closed.all : current_user.school.requests.not_closed.all)
 
     respond_to do |format|
       format.html # index.html.erb
