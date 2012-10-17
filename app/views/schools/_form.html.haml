@@ -3,52 +3,52 @@
   .field.control-group
     = label_tag :school_name, t("schools.signup.school.name"), class: "control-label"
     .controls
-      = text_field_tag :name
+      = text_field_tag "school[name]"
 
   .field.control-group
     = label_tag :school_area_id, t("schools.signup.school.area"), class: "control-label"
     .controls
-      = select_tag :area_id, options_from_collection_for_select( @areas, :id, :name )
+      = select_tag "school[area_id]", options_from_collection_for_select( @areas, :id, :name )
   
   .field.control-group
     = label_tag :school_address, t("schools.signup.school.address"), class: "control-label"
     .controls
-      = text_field_tag :address
+      = text_field_tag "school[address]"
   
   .field.control-group
     = label_tag :school_description, t("schools.signup.school.description"), class: "control-label"
     .controls
-      = text_field_tag :description
+      = text_field_tag "school[description]"
 
   .field.control-group
     = label_tag :admin_name, t("schools.signup.admin.first_name"), class: "control-label"
     .controls
-      = text_field_tag :admin_first_name
+      = text_field_tag "admin[first_name]"
   
   .field.control-group
     = label_tag :admin_last_name, t("schools.signup.admin.last_name"), class: "control-label"
     .controls
-      = text_field_tag :admin_last_name
+      = text_field_tag "admin[last_name]"
   
   .field.control-group
     = label_tag :admin_email, t("schools.signup.admin.email"), class: "control-label"
     .controls
-      = text_field_tag :admin_email
+      = text_field_tag "admin[email]"
   
   .field.control-group
     = label_tag :admin_phone_number, t("schools.signup.admin.phone_number"), class: "control-label"
     .controls
-      = text_field_tag :admin_phone_number
+      = text_field_tag "admin[phone_number]"
   
   .field.control-group
     = label_tag :admin_password, t("schools.signup.admin.password"), class: "control-label"
     .controls
-      = text_field_tag :admin_password
+      = text_field_tag "admin[password]"
   
   .field.control-group
     = label_tag :admin_confirm_password, t("schools.signup.admin.confirm_password"), class: "control-label"
     .controls
-      = text_field_tag :admin_confirm_password
+      = text_field_tag "admin[confirm_password]"
 
 
   .actions.control-group

@@ -1,5 +1,5 @@
 class School < ActiveRecord::Base
-  attr_accessible :area_id, :description, :name, :photo_url
+  attr_accessible :area_id, :description, :name, :photo_url, :address
   attr_accessible :area
 
 

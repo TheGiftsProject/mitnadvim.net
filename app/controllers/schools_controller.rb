@@ -43,6 +43,14 @@ class SchoolsController < ApplicationController
   def create
     @school = School.new(params[:school])
 
+    user_data = {
+      type: :school_admin,
+      school: @school
+    }
+    user_data = params[:admin].merge(user_data)
+
+    @admin_user = User.new(user_data)
+
     respond_to do |format|
       if @school.save
         format.html { redirect_to @school, notice: 'School was successfully created.' }
