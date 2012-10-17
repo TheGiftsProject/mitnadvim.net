@@ -1,14 +1,14 @@
 - content_for :header do
-  %h3= t("modals.request.header")
   %button.close{ data: {dismiss:"modal"}, aria: { hidden: true}} &times;
+  %h3= t("modals.request.header")
 
 - content_for :content do
   %h1
-    asdasdasd asd aasdasdasd asd
-
+    header
+  %hr
   %dl.dl-horizontal
     %dt
-      asdasd
+      desc
     %dd
       value
     %dt

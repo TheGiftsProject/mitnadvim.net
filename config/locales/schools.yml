@@ -1,0 +1,18 @@
+he:
+  schools:
+    signup:
+      title: "create a new school admin user"
+      create_button: "create an admin user"
+      school:
+        name: "school name"
+        area: "area"
+        address: "address"
+        description: "description"
+      admin:
+        first_name: "school admin first name"
+        last_name: "school admin last name"
+        email: "email"
+        phone_number: "phone number"
+        password: "password"
+        confirm_password: "confirm password"
+
