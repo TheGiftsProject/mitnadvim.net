@@ -2,4 +2,4 @@
   %strong= req.responses.count
   %span= t("requests.row.volunteers")
 .action
-  %a.btn= t("requests.row.more_details_action")
+  %a.btn{ href: "#school_request_modal#{req.id}", data: { toggle: "modal" } }= t("requests.row.more_details_action")

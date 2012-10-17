@@ -1,12 +1,18 @@
 .login-page
   .box
-    %h2= t('login_page.title')
+    %h2= t("login_page.title.#{@type}")
     %hr
     != form_tag sessions_path, :class => "form-horizontal" do |f|
-      != volunteer_field(f, "email")
-      != volunteer_field(f, "password", "password")
+      .field.control-group
+        = label_tag :email, t("login_page.email"), class: "control-label"
+        .controls
+          = text_field_tag "user[email]"
+      .field.control-group
+        = label_tag :email, t("login_page.password"), class: "control-label"
+        .controls
+          = password_field_tag "user[password]"
       != submit_tag t("header.enter"), :class => "btn btn-orange btn-big"
     %hr
     %h3
-      %strong= t('login_page.new')
-      %a{:href => 'volunteers/new'}= t('login_page.new_link')
+      %strong= t("login_page.new.#{@type}")
+      %a{:href => "#{@type}/new"}= t("login_page.new_link.#{@type}")
