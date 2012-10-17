@@ -6,7 +6,7 @@
   .additional_data
     .icon.location
     %span
-      = req.school.name
+      = req.school.try(:name)
     .icon.duration
     .icon.schedule
   .actions
