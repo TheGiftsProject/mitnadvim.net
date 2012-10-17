@@ -20,11 +20,11 @@ header.navbar{
   }
 
   .brand{
-    font-family: $font-name;
+    font-family: $title-fonts;
     font-size: 52px;
     color: white;
     font-weight: $bold;
-    @include single-text-shadow(0 0 0 2px rgba(88,95,100,0.65));
+    @include text-stroke(2px,rgba(88,95,100,0.65));
     padding-bottom: 0;
     padding-top: 0;
     line-height: $nabar-height;
