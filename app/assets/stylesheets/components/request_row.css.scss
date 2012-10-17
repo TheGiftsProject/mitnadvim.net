@@ -1,0 +1,44 @@
+// Place all the styles related to the requests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.request_row {
+  padding: 0 20px 10px 0;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .name {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .description {
+    font-size: 17px;
+  }
+  .additional_data {
+    span{
+      font-size: 12px;
+      margin-left:10px;
+      @include inline-block;
+    }
+    .icon{
+      @include inline-block;
+      &.location {
+        width: 13px;
+        height: 18px;
+        background: url("/assets/ico-location.png") no-repeat;
+      }
+      &.duration {
+        width: 17px;
+        height: 17px;
+        background: url("/assets/ico-time.png") no-repeat;
+      }
+      &.schedule{
+        width: 19px;
+        height: 16px;
+        background: url("/assets/ico-schedule.png") no-repeat;
+      }
+    }
+  }
+}
