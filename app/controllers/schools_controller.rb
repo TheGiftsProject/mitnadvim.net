@@ -44,7 +44,7 @@ class SchoolsController < ApplicationController
     @school = School.new(params[:school])
 
     user_data = {
-      type: :school_admin,
+      role: :school_admin,
       school: @school
     }
     user_data = params[:admin].merge(user_data)
