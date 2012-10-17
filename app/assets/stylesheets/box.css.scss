@@ -8,6 +8,7 @@ $box-radius: 5px;
   @include photoshop-drop-shadow(90,2px,0,5px, rgba(#000, 0.25));
 
   padding: $box-padding;
+  @include box-sizing(border-box);
 
   color: $grey-text;
 
