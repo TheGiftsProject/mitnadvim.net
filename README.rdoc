@@ -12,6 +12,8 @@
        host    all             all             127.0.0.1/32            trust
        host    all             all             ::1/128                 trust
 
+       Restart postgreSQL afterwards.
+
    3. When creating the database, if you encounter a 'role not found' error, do the following:
 
       sudo sh
