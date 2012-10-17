@@ -1,0 +1,24 @@
+!!! 5
+%html
+  %head
+    %meta{:charset=>"utf-8"}
+    %meta{:name => "description", :content => t("site.description")}
+    != csrf_meta_tag
+    != yield :meta_tags
+    %link{:rel=>"shortcut icon", :href=>"/favicon.ico"}
+    %title
+      - if content_for? :title
+        = yield :title
+        = "|"
+      - else
+        = t("site.title")
+    != stylesheet_link_tag :application
+    != yield :stylesheets
+
+  %body
+    = render :partial => "layouts/header"
+    .container
+      != yield
+
+    != javascript_include_tag :application
+    != yield :javascripts
