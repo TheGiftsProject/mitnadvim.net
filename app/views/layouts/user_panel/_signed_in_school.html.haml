@@ -1,6 +1,6 @@
 .navbar-text.signed_in_school
   %span= t("header.hello")
-  %span יונתן
+  %span= current_user.first_name
   %span ·
   %a{:href => "/manage"}!= t("header.manage_school")
   %span ·
