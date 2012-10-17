@@ -22,3 +22,8 @@ he:
             password:
               too_short: "קצרה מידי (6 תווים לפחות)"
               confirmation: "- יש למלא בשנית"
+
+  modals:
+    request:
+      header: "בקשת התנדבות"
+
