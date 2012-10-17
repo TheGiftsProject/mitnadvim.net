@@ -16,9 +16,11 @@
     margin-right: -15px;
 
     .user_details {
+      @include inline-block;
       border-bottom: 1px solid #eee;
     }
     .avatar {
+      @include inline-block;
       height: 60px;
       width: 60px;
       background: url("avatar.png") no-repeat;

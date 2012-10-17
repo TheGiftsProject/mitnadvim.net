@@ -1,13 +1,10 @@
 .user_widget
   .header.light= t("homepage.logged_in.title")
   .user_data
-    .row
-      .span1
-        .avatar
-      .span3
-        .user_details
-          = "#{current_user.first_name} #{current_user.last_name}"
-          %br
-          %a{:href => volunteer_path(current_user.id)} =t("users.profile.watch")
+    .avatar
+    .user_details
+      = "#{current_user.first_name} #{current_user.last_name}"
+      %br
+      %a{:href => volunteer_path(current_user.id)} #{t("users.profile.watch")}
   -#%p= t("homepage.sign_up.description")
   -#%a.btn.btn-orange{:href => new_volunteer_path}=
