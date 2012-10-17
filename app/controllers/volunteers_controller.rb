@@ -24,7 +24,7 @@ class VolunteersController < ApplicationController
   end
 
   def create
-    user = User.new params
+    user = User.new params[:user]
     user.role = "volunteer"
 
     if user.save
