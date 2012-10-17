@@ -1,56 +1,18 @@
 = form_tag( schools_path, method: :post, class: "form-horizontal") do
 
-  .field.control-group
-    = label_tag :school_name, t("schools.signup.school.name"), class: "control-label"
-    .controls
-      = text_field_tag "school[name]", @school.name
+  = form_text_field t("schools.signup.school.name"), "school[name]", @school.name
 
-  .field.control-group
-    = label_tag :school_area_id, t("schools.signup.school.area"), class: "control-label"
-    .controls
-      = select_tag "school[area_id]", areas_options(@school.area_id)
-  
-  .field.control-group
-    = label_tag :school_address, t("schools.signup.school.address"), class: "control-label"
-    .controls
-      = text_field_tag "school[address]", @school.address
-  
-  .field.control-group
-    = label_tag :school_description, t("schools.signup.school.description"), class: "control-label"
-    .controls
-      = text_area_tag "school[description]", @school.description
+  = form_field_wrapper t("schools.signup.school.area"), "school[area_id]" do
+    = select_tag "school[area_id]", areas_options(@school.area_id)
 
-  .field.control-group
-    = label_tag :admin_first_name, t("schools.signup.admin.first_name"), class: "control-label"
-    .controls
-      = text_field_tag "admin[first_name]", @admin_user.first_name
-  
-  .field.control-group
-    = label_tag :admin_last_name, t("schools.signup.admin.last_name"), class: "control-label"
-    .controls
-      = text_field_tag "admin[last_name]", @admin_user.last_name
-  
-  .field.control-group
-    = label_tag :admin_email, t("schools.signup.admin.email"), class: "control-label"
-    .controls
-      = text_field_tag "admin[email]", @admin_user.email
-  
-  .field.control-group
-    = label_tag :admin_phone_number, t("schools.signup.admin.phone_number"), class: "control-label"
-    .controls
-      = text_field_tag "admin[phone_number]", @admin_user.phone_number
-  
-  .field.control-group
-    = label_tag :admin_password, t("schools.signup.admin.password"), class: "control-label"
-    .controls
-      = text_field_tag "admin[password]", @admin_user.password
+  = form_text_field t("schools.signup.school.address"), "school[address]", @school.address
+  = form_textarea_field t("schools.signup.school.description"), "school[description]", @school.description
 
-  .field.control-group
-    = label_tag :admin_confirm_password, t("schools.signup.admin.confirm_password"), class: "control-label"
-    .controls
-      = text_field_tag "admin[password_confirmation]", @admin_user.password_confirmation
+  = form_text_field t("schools.signup.admin.first_name"), "admin[first_name]", @admin_user.first_name
+  = form_text_field t("schools.signup.admin.first_name"), "admin[last_name]", @admin_user.last_name
+  = form_text_field t("schools.signup.admin.email"), "admin[email]", @admin_user.email
+  = form_text_field t("schools.signup.admin.phone_number"), "admin[phone_number]", @admin_user.phone_number
+  = form_text_field t("schools.signup.admin.password"), "admin[password]", @admin_user.password
+  = form_text_field t("schools.signup.admin.password_confirmation"), "admin[password_confirmation]", @admin_user.password_confirmation
 
-
-  .actions.control-group
-    .controls
-      = button_tag( t("schools.signup.create_button"), class: "btn-large btn-warning" )
+  = form_submit_button t("schools.signup.create_button"), class: "btn-large btn-warning"
