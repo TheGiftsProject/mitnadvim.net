@@ -1,12 +1,12 @@
 class ApplicationController < ActionController::Base
 
   protect_from_forgery
-  def temp_root
+  def widgets
     #flash.now[:notice] = "HEY"
     #flash.now[:error] = "HEY"
   end
 
-  def root
+  def homepage
     @open_requests = Request.where(:status => 'open')
   end
   helper_method :current_user, :user_signed_in?
