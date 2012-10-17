@@ -5,5 +5,5 @@
   %span!= t("header.sign_in_now")
   != form_tag sessions_path, :class => "navbar-form" do |f|
     != text_field_tag :email,"", :placeholder => t("activerecord.attributes.user.email")
-    != text_field_tag :password,"", :placeholder => t("activerecord.attributes.user.password")
+    != password_field_tag :password,"", :placeholder => t("activerecord.attributes.user.password")
     != submit_tag t("header.enter"), :class => "btn btn-orange btn-small"

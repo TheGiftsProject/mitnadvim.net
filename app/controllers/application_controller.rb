@@ -4,11 +4,14 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
+  def homepage
+    @open_requests = Request.where(:status => 'open')
+  end
+
   include UserSupport
 
-  def temp_root
+  def widgets
     #flash.now[:notice] = "HEY"
     #flash.now[:error] = "HEY"
   end
-
 end
