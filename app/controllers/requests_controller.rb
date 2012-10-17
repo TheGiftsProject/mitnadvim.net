@@ -50,7 +50,7 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.save
-        format.html { redirect_to @request, notice: 'Request was successfully created.' }
+        format.html { redirect_to requests_path, notice: 'Request was successfully created.' }
         format.json { render json: @request, status: :created, location: @request }
       else
         format.html { render action: "new" }
@@ -66,7 +66,7 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.update_attributes(params[:request])
-        format.html { redirect_to @request, notice: 'Request was successfully updated.' }
+        format.html { redirect_to requests_path, notice: 'Request was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
