@@ -8,11 +8,17 @@
   = form_text_field t("schools.signup.school.address"), "school[address]", @school.address
   = form_textarea_field t("schools.signup.school.description"), "school[description]", @school.description
 
+  %p= t("schools.signup.admin.title")
+  %hr
+
   = form_text_field t("schools.signup.admin.first_name"), "admin[first_name]", @admin_user.first_name
   = form_text_field t("schools.signup.admin.first_name"), "admin[last_name]", @admin_user.last_name
   = form_text_field t("schools.signup.admin.email"), "admin[email]", @admin_user.email
   = form_text_field t("schools.signup.admin.phone_number"), "admin[phone_number]", @admin_user.phone_number
-  = form_text_field t("schools.signup.admin.password"), "admin[password]", @admin_user.password
+
+  = form_text_field t("schools.signup.admin.password"), "admin[password]", @admin_user.password do
+    %span.help-inline= t("schools.signup.admin.password_limit")
+
   = form_text_field t("schools.signup.admin.password_confirmation"), "admin[password_confirmation]", @admin_user.password_confirmation
 
   = form_submit_button t("schools.signup.create_button"), class: "btn-large btn-warning"
