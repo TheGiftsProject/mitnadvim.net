@@ -1,4 +1,4 @@
 .control-group
-  %label.control-label{:for => field_name}= label
+  %label.control-label{:for => opts[:field_name]}= opts[:label]
   .controls
-    != field.select field_name, options_from_collection_for_select(options, :id, :name)
+    != field.select opts[:field_name], options_from_collection_for_select(options, :id, :name)
