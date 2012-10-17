@@ -8,9 +8,6 @@ Area.create!(:name => "ירושלים")
 Area.create!(:name => "לוד")
 Area.create!(:name => "תל אביב")
 
-matan_bar = User.create(:first_name => "מתן", :last_name => "בר", :phone_number => "054319875161", :email => "matan@example.com", :birth_year => 1984, :area => tel_aviv_area)
-teaching_request.responses.create(:user => matan_bar)
-
 ## CATEGORIES
 Category.create!(:name => "חנכות לימודית")
 Category.create!(:name => "חוגי העשרה")

@@ -20,9 +20,7 @@ class VolunteersController < ApplicationController
   end
 
   def create
-    user_params = params[:user]
-    user_params.except!(:password, :password_repeat)
-    user = User.new user_params
+    user = User.new params[:user]
     user.role = "volunteer"
     user.save!
 
