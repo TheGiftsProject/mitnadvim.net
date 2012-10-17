@@ -6,6 +6,10 @@ module FormsHelper
     block_to_partial("form/text_field", {:field_name => field_name, label: label, :type => type, value: value})
   end
 
+  def form_textarea_field(label, field_name, value)
+    block_to_partial("form/text_area_field", {:field_name => field_name, label: label, value: value})
+  end
+
   def form_select_field(label, field, field_name, options)
     block_to_partial("form/select_field", {field: field, field_name: field_name, label: label, options: options})
   end

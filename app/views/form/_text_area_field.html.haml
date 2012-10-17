@@ -1,0 +1,4 @@
+.control-group
+  %label.control-label{:for => field_name}= label
+  .controls
+    = text_area_tag "school[description]", @school.description, :id => field_name, :name => field_name
