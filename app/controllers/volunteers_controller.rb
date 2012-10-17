@@ -26,7 +26,7 @@ class VolunteersController < ApplicationController
     respond_to do |format|
       if @user.save
         sign_in(@user)
-        redirect_to root_path, :notice => t("users.new.success_notice")
+        format.html { redirect_to root_path, :notice => t("users.new.success_notice") }
       else
         @areas = Area.all
         @years = *(1940..2000)
