@@ -24,9 +24,11 @@ gem 'debugger'
 
 group :development, :test do
   gem 'debugger'
+  gem 'ruby-debug19', require: 'ruby-debug'
   gem 'rspec-rails'
   gem 'awesome_print'
   gem 'quiet_assets'
+  gem 'sextant' #rails/routes
 end
 
 gem 'heroku'
