@@ -43,21 +43,22 @@ class SchoolsController < ApplicationController
   def create
     @school = School.new(params[:school])
 
-    user_data = {
-      role: :school_admin,
-      school: @school
-    }
-    user_data = params[:admin].merge(user_data)
+    user_data = {role: :school_admin, school: @school}.merge(params[:admin])
 
     @admin_user = User.new(user_data)
 
     respond_to do |format|
-      if @school.save
+
+      school_is_valid = @school.save
+      admin_is_valid = @admin_user.save
+
+      if school_is_valid and admin_is_valid
         format.html { redirect_to @school, notice: 'School was successfully created.' }
         format.json { render json: @school, status: :created, location: @school }
       else
+        flash[:error] = @school.errors.merge(@admin_user.errors)
         format.html { render action: "new" }
-        format.json { render json: @school.errors, status: :unprocessable_entity }
+        format.json { render json: @errors, status: :unprocessable_entity }
       end
     end
   end
