@@ -1,4 +1,6 @@
 .info
   %strong= req.category.name
 .action
-  %a.btn= t("requests.row.i_want_to_help")
+  %a.btn{href: "#user_request_modal_#{req.id}", data: {toggle: "modal"}}= t("requests.row.i_want_to_help")
+
+!= render partial: "modals/user/request_modal", locals: {vrequest: Request.first, id: "user_request_modal_#{req.id}"}
