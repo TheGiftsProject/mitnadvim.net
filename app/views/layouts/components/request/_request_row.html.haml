@@ -10,8 +10,11 @@
     %span
       = req.school.try(:name)
     .icon.duration
-      = req.
+    %span
+      = "#{""} #{""} #{""}"
     .icon.schedule
+    %span
+      = "#{""} #{""} #{""}"
   .actions
     - if type == 'school'
       != render partial: "layouts/components/request/request_school_data", :locals => {:request => req}
