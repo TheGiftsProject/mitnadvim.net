@@ -1,4 +1,5 @@
 require 'controller_support/user_support'
+require 'controller_support/errors_support'
 
 class ApplicationController < ActionController::Base
 
@@ -9,6 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   include UserSupport
+  include ErrorsSupport
 
   def widgets
     #flash.now[:notice] = "HEY"
