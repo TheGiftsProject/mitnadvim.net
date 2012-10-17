@@ -14,11 +14,15 @@
     - else
       != render :partial => "homepage/sign_up"
 
--if @active_requests.count > 0
-  .row
-    .span12
-      .box
-        .header
-          = t("home.requests.title")
-        .content
+.row
+  .span12
+    .box
+      .header
+        = t("home.requests.title")
+      .content
+        -if @active_requests.count > 0
           != render partial: "layouts/components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}
+        -else
+          .empty_group{:style => "margin-top: 10px;"}
+            = t("requests.no_requests")
+
