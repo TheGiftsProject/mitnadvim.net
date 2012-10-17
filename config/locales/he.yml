@@ -77,7 +77,7 @@ he:
         user:
           attributes:
             password:
-              blank: "blank"
+              blank: "ריק"
               too_short: "קצרה מידי (6 תווים לפחות)"
               confirmation: "- יש למלא בשנית"
             first_name:

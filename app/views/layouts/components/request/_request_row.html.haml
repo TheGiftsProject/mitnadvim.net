@@ -8,7 +8,7 @@
       = "#{""} #{""} #{""}"
     .icon.location
     %span
-      = req.school.name
+      = req.school.try(:name)
     .icon.duration
       = req.
     .icon.schedule
