@@ -1,0 +1,47 @@
+$box-padding: 15px;
+$negative-box-padding: -1 * $box-padding;
+$box-radius: 5px;
+
+.box{
+  background: white;
+  @include border-radius($box-radius);
+  @include photoshop-drop-shadow(90,2px,0,5px, rgba(#000, 0.25));
+
+  padding: $box-padding;
+  @include box-sizing(border-box);
+
+  color: $grey-text;
+
+  h1,h2,h3,h4,h5{
+    color: $grey-title-text;
+  }
+
+  .header{
+    height: 34px;
+    @include background-image(
+      linear-gradient(bottom,#565e62,#7a858a)
+    );
+    @include photoshop-drop-shadow(90, 1px, 0, 4px, rgba(#000, 0.25));
+
+    margin: $negative-box-padding $negative-box-padding 0 $negative-box-padding;
+    @include border-top-radius($box-radius);
+    padding: 0 5px;
+
+    font-family: $title-fonts;
+    color: white;
+    font-weight: $bold;
+    font-size: 22px;
+    @include text-stroke(2px,rgba(88,95,100,0.65));
+    line-height: 34px;
+
+    &.light{
+      background: #eaecee;
+      color: #585f64;
+      @include text-shadow(0 1px 0 rgba(255,255,255,0.35));
+      @include photoshop-drop-shadow(90,1px,0,0,rgba(#7d8083, 0.25));
+
+    }
+  }
+
+
+}

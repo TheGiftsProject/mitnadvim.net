@@ -5,3 +5,21 @@ he:
 
   header:
     title: "מתנדבים.נט"
+
+  errors:
+    messages:
+      not_saved: "לא ניתן לבצע הפעולה"
+
+  activerecord:
+    attributes:
+      user:
+        email: "דוא\"ל"
+        password: "סיסמא"
+        password_confirmation: "אישור סיסמא"
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              too_short: "קצרה מידי (6 תווים לפחות)"
+              confirmation: "- יש למלא בשנית"

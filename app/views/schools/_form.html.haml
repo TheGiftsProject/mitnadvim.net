@@ -1,4 +1,4 @@
-= form_tag("/schools/create", class: "form-horizontal") do
+= form_tag( schools_path, method: :post, class: "form-horizontal") do
 
   .field.control-group
     = label_tag :school_name, t("schools.signup.school.name"), class: "control-label"
