@@ -19,8 +19,11 @@ class VolunteersController < ApplicationController
   end
 
   def create
-    user = User.new(params[:user])
+    user_params = params[:user]
+    user = User.new user_params
+    user.volunteer!
 
+    redirect_to user_path(user)
   end
 
 
