@@ -1,5 +1,7 @@
 $nabar-height: 60px;
 
+@import "user_panel";
+
 header.navbar{
 
   .navbar-inner{
@@ -39,4 +41,5 @@ header.navbar{
     top: -13px;
     @include inline-block;
   }
+
 }
