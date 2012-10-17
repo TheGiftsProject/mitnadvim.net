@@ -18,6 +18,7 @@
   %body
     = render :partial => "layouts/header"
     .container
+      = render :partial => "layouts/messages"
       != yield
 
     != javascript_include_tag :application
