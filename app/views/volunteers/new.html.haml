@@ -1,0 +1,11 @@
+.box
+  .header= t("users.new.title")
+  %form.form-horizontal{:action => "/devise/registrations/create"}
+    != volunteer_text_field("first_name")
+    != volunteer_text_field("last_name")
+    != volunteer_text_field("email")
+    != volunteer_text_field("phone")
+    != volunteer_text_field("gender")
+    != volunteer_text_field("birth_date")
+
+

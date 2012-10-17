@@ -12,4 +12,9 @@ class VolunteersController < ApplicationController
       format.json { render json: @user }
     end
   end
+
+  def new
+  end
+
+
 end
