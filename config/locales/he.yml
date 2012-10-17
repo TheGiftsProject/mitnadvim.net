@@ -82,6 +82,10 @@ he:
       not_saved: "לא ניתן לבצע הפעולה"
       login_fail: "הדוא\"ל או הסיסמא שהכנסת אינם קיימים במערכת"
       logged_out: "התנתקת בהצלחה"
+    pages:
+      forbidden: "אינך רשאי/ת לצפות בעמוד זה"
+      internal: "אוי לא! התרחשה שגיאה"
+      not_found: "העמוד אינו קיים"
 
   login_page:
     title:

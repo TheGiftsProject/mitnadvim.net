@@ -9,3 +9,22 @@
     height: 142px;
   }
 }
+
+.user_widget {
+  .user_data {
+    margin-top: 10px;
+    margin-right: -15px;
+
+    .user_details {
+      @include inline-block;
+      border-bottom: 1px solid #eee;
+    }
+    .avatar {
+      @include inline-block;
+      height: 60px;
+      width: 60px;
+      background: url("avatar.png") no-repeat;
+    }
+  }
+}
+

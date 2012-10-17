@@ -22,17 +22,21 @@ module UserSupport
   end
 
   def must_be_volunteer
-    user_signed_in? && current_user.volunteer?
+    unless user_signed_in? && current_user.volunteer?
+      forbidden_page
+    end
   end
 
   def must_be_school
-    if (!user_signed_in? || !current_user.school?)
-      flash.now[:notice] = "You are not a school"
+    unless user_signed_in? && current_user.school?
+      forbidden_page
     end
   end
 
   def must_be_admin
-    user_signed_in? && current_user.admin?
+    unless user_signed_in? && current_user.admin?
+      forbidden_page
+    end
   end
 end
 

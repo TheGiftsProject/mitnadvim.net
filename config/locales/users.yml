@@ -6,6 +6,7 @@ he:
       my_active_requests: "ההתנדבויות שלי"
       phone_no: "טלפון"
       email: 'דוא"ל'
+      watch: "צפה בפרופיל שלך"
     new:
       title: "הרשמת מתנדב חדש"
       action: "צור פרופיל חדש"
@@ -21,5 +22,8 @@ he:
         area_id: "אזור בו אתה רוצה להתנדב"
         description: "ספר על עצמך בכמה מילים"
       success_notice: "המשתמש נוצר בהצלחה!"
+      genders:
+        male: "זכר"
+        female: "נקבה"
 
 
