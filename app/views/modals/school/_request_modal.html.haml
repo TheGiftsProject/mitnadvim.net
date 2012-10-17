@@ -1,4 +1,4 @@
-#school_request_modal.modal.hide.fade
+.modal.hide.fade{ id: id }
   .modal-header
     %button.close{ data: {dismiss:"modal"}, aria: { hidden: true}} &times;
     %h3= t("modals.request.header")
@@ -11,10 +11,10 @@
       %dd= vrequest.description
 
       %dt= t("modals.request.fields.requesting_school")
-      %dd= "זכרון יוסף"
+      %dd= vrequest.school.name
 
       %dt= t("modals.request.fields.required_time")
-      %dd= "3 שעות"
+      %dd= vrequest.duration
 
       %dt= t("modals.request.fields.date")
       %dd= "יום רביעי, 13.6.12 בשעה 14:00"
@@ -25,6 +25,3 @@
 
     %a.btn.btn-primary.btn-orange{href: "#"}= t("modals.request.submit_button")
     %p= t("modals.request.submit_note")
-
-  .modal-footer
-    footer!
