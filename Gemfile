@@ -19,6 +19,8 @@ end
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'debugger'
+gem 'omniauth'
+gem 'omniauth-identity'
 
 group :development, :test do
   gem 'debugger'
