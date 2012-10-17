@@ -13,6 +13,7 @@ group :assets do
   gem 'compass-rails'
   gem 'compass-photoshop-drop-shadow'
   gem 'uglifier', '>= 1.0.3'
+  gem "bootstrap-sass-rails-rtl"
 end
 
 gem 'jquery-rails'

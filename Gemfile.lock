@@ -32,6 +32,9 @@ GEM
     arel (3.0.2)
     awesome_print (1.1.0)
     bcrypt-ruby (3.0.1)
+    bootstrap-sass-rails-rtl (2.0.4.12)
+      rails (~> 3.1)
+      sass-rails (~> 3.1)
     builder (3.0.3)
     chunky_png (1.2.6)
     coffee-rails (3.2.2)
@@ -166,6 +169,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bcrypt-ruby (~> 3.0.0)
+  bootstrap-sass-rails-rtl
   coffee-rails (~> 3.2.1)
   compass-photoshop-drop-shadow
   compass-rails
