@@ -11,6 +11,7 @@
               %span.step= step
   .box.span4
     - if user_signed_in?
+      != render :partial => "homepage/logged_in"
     - else
       != render :partial => "homepage/sign_up"
 

@@ -31,9 +31,10 @@ he:
 
     sign_up:
       title: "מעוניין להתנדב?"
-      description: ""
+      description: "על מנת להתנדב עליך להירשם כמשתמש במערכת"
       action: "הירשם כמתנדב חדש"
-
+    logged_in:
+      title: "הפרופיל שלי"
 
   requests:
     new:
@@ -68,6 +69,7 @@ he:
       volunteers: "מתנדבים"
       more_details_action: "פרטים נוספים"
       i_want_to_help: "אני רוצה לעזור"
+      im_helping: "התנדבתי"
 
   helpers:
     submit:

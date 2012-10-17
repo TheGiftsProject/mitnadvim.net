@@ -4,7 +4,8 @@
     %h3= t("modals.request.header")
 
   .modal-body
-    != form_tag new_response_path do |f|
+    != form_tag(responses_path) do
+      != hidden_field_tag "request_id", vrequest.id
       %h1= vrequest.name
       %hr
       %dl.dl-horizontal
@@ -12,17 +13,17 @@
         %dd= vrequest.description
 
         %dt= t("modals.request.fields.requesting_school")
-        %dd= "זכרון יוסף"
+        %dd= vrequest.school.name
 
         %dt= t("modals.request.fields.required_time")
-        %dd= "3 שעות"
+        %dd= "#{vrequest.duration} #{t("requests.row.duration_units")}"
 
         %dt= t("modals.request.fields.date")
-        %dd= "יום רביעי, 13.6.12 בשעה 14:00"
+        %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
 
         %dt= t("modals.request.fields.note_to_school")
         %dd
-          -#!= f.text_area_tag :note, rows: 3, placeholder: "#{t("modals.request.fields.note_to_school_placeholder")}"
+          != text_area_tag :note, placeholder: "#{t("modals.request.fields.note_to_school_placeholder")}"
 
         %dd
           %button.btn.btn-primary.btn-orange{type:"submit"}= t("modals.request.submit_button")
