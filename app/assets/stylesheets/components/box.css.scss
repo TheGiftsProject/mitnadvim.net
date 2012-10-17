@@ -16,6 +16,10 @@ $box-radius: 5px;
     color: $grey-title-text;
   }
 
+  hr{
+    margin: 15px $negative-box-padding;
+  }
+
   .header{
     height: 34px;
     @include background-image(
