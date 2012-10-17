@@ -1,5 +1,3 @@
-!= stylesheet_link_tag "volunteers"
-
 .box
   .header= t("users.new.title")
   != form_for @user, :url => {:action => "create"}, :html => {:class => "form-horizontal volunteer_creation_form"} do |f|
@@ -15,7 +13,8 @@
     != volunteer_field(@user, f, "email")
     != volunteer_field(@user, f, "phone_number")
     != volunteer_field(@user, f, "gender")
-    != f.submit(t("users.new.action"), :html => {:class => "btn"})
-
+    .actions.control-group
+      .controls
+        = f.submit(t("users.new.action"), :class => "btn btn-orange")
 
 
