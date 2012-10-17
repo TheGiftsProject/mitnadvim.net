@@ -55,7 +55,7 @@
 != render partial: "modals/user/request_modal", locals: {vrequest: Request.first}
 
 %a.btn.btn-orange{href: "#school_request_modal", data: {toggle: "modal"}} open school modal
-!= render partial: "modals/school/request_modal", locals: {vrequest: Request.first}
+!= render partial: "modals/school/request_modal", locals: {vrequest: Request.first, id: "school_request_modal"}
 %br
 
 

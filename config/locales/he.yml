@@ -62,6 +62,7 @@ he:
       duration_units: "שעות"
       volunteers: "מתנדבים"
       more_details_action: "פרטים נוספים"
+      i_want_to_help: "אני רוצה לעזור"
 
   helpers:
     submit:
@@ -76,9 +77,19 @@ he:
       logged_out: "התנתקת בהצלחה"
 
   login_page:
-    title: "על מנת לצפות בעמוד עליך להתחבר למערכת"
-    new: "מתנדב חדש?"
-    new_link: "הירשם למערכת והחל להתנדב!"
+    title:
+      volunteers: "על מנת לצפות בעמוד עליך להתחבר למערכת"
+      schools: "על מנת להיכנס לעמוד הניהול עליך להתחבר"
+    new:
+      volunteers: "מתנדב חדש?"
+      schools: "בית-ספר חדש?"
+    new_link:
+      volunteers: "הירשם למערכת והחל להתנדב!"
+      schools: "הירשם למערכת והחל לקבל מתנדבים!"
+
+
+    email: "דוא\"ל"
+    password: "סיסמא"
 
 
 
