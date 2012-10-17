@@ -1,0 +1,15 @@
+
+.box
+  - if @school.errors.any?
+    #error_explanation
+      %h2= t("schools.signup.error_title", pluralize(@school.errors.count, "error") )
+
+      %ul
+      - @school.errors.full_messages.each do |msg|
+        %li= msg
+
+  %h1= t("schools.signup.title")
+
+  != render 'form'
+
+  != link_to t("site.back_button"), schools_path
