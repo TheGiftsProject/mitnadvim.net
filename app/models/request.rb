@@ -9,6 +9,7 @@ class Request < ActiveRecord::Base
 
   validates_presence_of :name, :description, :category, :recurrence, :duration
 
+  scope :not_closed, where(:closed => false)
   scope :closed, where(:closed => true)
   scope :active, where(:closed => false)
 

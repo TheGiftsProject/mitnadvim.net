@@ -20,5 +20,5 @@ he:
         email: "כתובת דואר אלקטרוני"
         phone_number: "מספר טלפון"
         password: "סיסמה"
-        confirm_password: "הזמן סיסמה שנית"
+        password_confirmation: "הזמן סיסמה שנית"
 
