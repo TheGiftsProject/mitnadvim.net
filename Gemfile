@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'devise'
 gem 'debugger'
+gem 'enumify'
 
 group :development, :test do
   gem 'debugger'
