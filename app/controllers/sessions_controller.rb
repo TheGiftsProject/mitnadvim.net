@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    @type = params.key?(:school) ? 'school' : 'volunteer'
   end
 
   def create
