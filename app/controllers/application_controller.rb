@@ -17,19 +17,19 @@ class ApplicationController < ActionController::Base
   end
 
   def user_signed_in?
-    @current_user.present?
+    current_user.present?
   end
 
   def must_be_volunteer
-    user_signed_in? && @current_user.volunteer?
+    user_signed_in? && current_user.volunteer?
   end
 
   def must_be_school
-    user_signed_in? && @current_user.school?
+    user_signed_in? && current_user.school?
   end
 
   def must_be_admin
-    user_signed_in? && @current_user.admin?
+    user_signed_in? && current_user.admin?
   end
 
 end
