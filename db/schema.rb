@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121017141134) do
+ActiveRecord::Schema.define(:version => 20121017144040) do
 
   create_table "areas", :force => true do |t|
     t.string   "name"
@@ -38,10 +38,11 @@ ActiveRecord::Schema.define(:version => 20121017141134) do
     t.text     "description"
     t.string   "photo_url"
     t.integer  "category_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.integer  "recurrence_id"
     t.integer  "duration"
+    t.boolean  "closed",        :default => false
   end
 
   create_table "responses", :force => true do |t|

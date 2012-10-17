@@ -1,6 +1,6 @@
 class CreateRequests < ActiveRecord::Migration
   def change
-    create_table :requests do |t|
+    create_table :request do |t|
       t.string :status
       t.integer :school_id
       t.string :name
