@@ -1,4 +1,8 @@
 .user-panel.pull-right
-  != render :partial => "layouts/user_panel/signed_out"
-  -#!= render :partial => "layouts/user_panel/signed_in_volunteer"
-  -#!= render :partial => "layouts/user_panel/signed_in_school"
+  - if user_signed_in?
+    - if current_user.volunteer?
+      != render :partial => "layouts/user_panel/signed_in_volunteer"
+    - else
+      != render :partial => "layouts/user_panel/signed_in_school"
+  - else
+    != render :partial => "layouts/user_panel/signed_out"

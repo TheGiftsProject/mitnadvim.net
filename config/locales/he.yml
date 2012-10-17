@@ -101,3 +101,12 @@ he:
   modals:
     request:
       header: "בקשת התנדבות"
+      fields:
+        description: "תיאור הבקשה"
+        requesting_school: "ביה\"ס המבקש"
+        required_time: "הזמן הדרוש"
+        date: "תאריך ושעה"
+        note_to_school: "מסר לביה\"ס"
+        note_to_school_placeholder: "אנא רשום פרטים נוספים או שאלות שיש לך בעבור הביה\"ס המבקש"
+      submit_button: "אני רוצה לעזור!"
+      submit_note: "פרטי יצירת הקשר שלך יישלחו לבית הספר המבקש"

@@ -1,9 +1,9 @@
 .navbar-text.signed_out
-  %a{:href => "/school"}!= t("header.school_entrance")
+  %a{:href => "/log_in"}!= t("header.school_entrance")
   %span ·
   %strong!= t("header.already_signed_up")
   %span!= t("header.sign_in_now")
-  != form_tag :root, :class => "navbar-form" do |f|
+  != form_tag sessions_path, :class => "navbar-form" do |f|
     != text_field_tag :email,"", :placeholder => t("activerecord.attributes.user.email")
     != text_field_tag :password,"", :placeholder => t("activerecord.attributes.user.password")
     != submit_tag t("header.enter"), :class => "btn btn-orange btn-small"
