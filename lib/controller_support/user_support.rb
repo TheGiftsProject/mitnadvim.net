@@ -24,7 +24,7 @@ module UserSupport
   end
 
   def sign_in(user)
-    session[:user] = user.email
+    session[:user] = user.
   end
 
   def volunteer_signed_in?
