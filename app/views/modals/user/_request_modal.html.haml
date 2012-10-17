@@ -17,7 +17,7 @@
       %dd= "3 שעות"
 
       %dt= t("modals.request.fields.date")
-      %dd= "יום רביעי, 13.6.12 בשעה 14:00"
+      %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
 
       %dt= t("modals.request.fields.note_to_school")
       %dd
