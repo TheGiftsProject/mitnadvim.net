@@ -1,4 +1,16 @@
-$grey-text: #444444;
+//===========================================GRAYS==================================================
+$grey-dark: #444444;
+$grey: #656565;
+$grey-light: #b3b3b3;
+$grey-lighter: #f1f1f1;
+
+
+
+$grey-text: $grey-dark;
 $grey-title-text: #585f64;
 
 $background-color: #e8edf0;
+
+
+//=========================================MODALS===================================================
+$modal-header-background-color: $grey-lighter;
