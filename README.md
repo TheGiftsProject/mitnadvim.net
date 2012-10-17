@@ -1,3 +1,24 @@
+## Welcome to the mitnadvim.net opensource project
+
+The porpuse of the project is to give school administrators a tool to manage volunteering force in their school
+
+##
+
+
+##How do i contribute
+
+We need help, and we encourge you to contribute to the project in any way you can!
+
+Please take a look both at github issues, or at https://trello.com/board/mitnadvim-net/ to see what needs to be done
+
+
+If you're a programmer:
+1) Fork
+2) Browse the code
+3) Make your change
+4) Submit a pull request
+
+
 == PostgreSQL Installation
     1. If you don't have PostgreSQL installed, before running 'bundle install' run:
         sudo apt-get install postgresql
