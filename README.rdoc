@@ -4,16 +4,15 @@
         sudo apt-get install libpq-dev
 
     2. When creating the database, if you encounter an error with the password, edit
-       /etc/postgresql/9.1/main/pg_hba.conf
+        /etc/postgresql/9.1/main/pg_hba.conf
 
        and replace the existing table with the following:
 
-       local   all             all                                     trust
-       host    all             all             127.0.0.1/32            trust
-       host    all             all             ::1/128                 trust
+        local   all             all                                     trust
+        host    all             all             127.0.0.1/32            trust
+        host    all             all             ::1/128                 trust
 
-   3. When creating the database, if you encounter a 'role not found' error, do the following:
+    3. Restart PostgreSQL: sudo /etc/init.d/postgresql restart
 
-      sudo sh
-      sh - postgres
-      createuser %your user name%
+    4. When creating the database, if you encounter a 'role not found' error, do the following:
+        sudo -u postgres createuser
