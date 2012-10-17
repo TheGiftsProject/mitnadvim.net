@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def homepage
-    @open_requests = Request.where(:status => 'open')
+    @active_requests = Request.open
   end
 
   include UserSupport

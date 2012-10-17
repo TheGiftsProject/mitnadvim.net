@@ -3,13 +3,9 @@ class VolunteersController < ApplicationController
   # GET /volunteers/1
   # GET /volunteers/1.json
   def show
-
     @user = User.find(params[:id])
-    @closed_requests = @user.requests.where(:status => 'closed')
-    @open_requests   = @user.requests.where(:status => 'open')
-
-
-    #TODO:SAKIN add validation for users that are volunteers
+    @closed_requests = @user.requests.closed
+    @active_requests   = @user.requests.active
 
     respond_to do |format|
       format.html # show.html.erb

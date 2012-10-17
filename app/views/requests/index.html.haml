@@ -9,7 +9,7 @@
     .span12
       %ul.nav.nav-tabs
         %li{ class: (@closed_requests ? "" : "active") }
-          %a{ :href => requests_path(:requests => "open") }= t("requests.index.open_requests")
+          %a{ :href => requests_path(:requests => "open") }= t("requests.index.active_requests")
         %li{ class: (@closed_requests ? "active" : "") }
           %a{ :href => requests_path(:requests => "closed") }= t("requests.index.closed_requests")
   .row
