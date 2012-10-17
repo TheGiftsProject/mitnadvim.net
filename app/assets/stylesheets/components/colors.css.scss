@@ -1,4 +1,20 @@
-$grey-text: #444444;
+//===========================================GRAYS==================================================
+$grey-dark: #444444;
+$grey: #656565;
+$grey-light: #b3b3b3;
+$grey-lighter: #f1f1f1;
+
+
+
+$grey-text: $grey-dark;
 $grey-title-text: #585f64;
 
 $background-color: #e8edf0;
+
+//=========================================TYPE=====================================================
+$definition-term-color: lighten($grey-dark, 45%);
+$definition-data-color: $grey-dark;
+//=========================================MODALS===================================================
+$modal-header-background-color: $grey-lighter;
+$modal-sections-separator-color: $grey-lighter;
+$modal-separator-color: $grey-lighter;

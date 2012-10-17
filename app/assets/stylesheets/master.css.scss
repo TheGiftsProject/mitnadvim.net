@@ -11,5 +11,8 @@ $baseFontSize: 18px;
 @import "components/header";
 @import "components/button";
 @import "components/box";
+@import "components/modal";
+@import "components/type";
 
-
+@import "requests/examples";
+@import "requests/index";

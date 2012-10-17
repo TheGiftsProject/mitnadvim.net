@@ -3,6 +3,12 @@ class RequestsController < ApplicationController
   # GET /requests.json
   def index
     @requests = Request.all
+    @closed_requests = params[:requests] == "closed"
+    #@filter_data = {
+      #categories: [[I18n.t("requests.filters.all_categories"), nil]].concat(Category.all.map{ |category| [category.name, category.id] }),
+      #recurrences: [[I18n.t("requests.filters.all_recurrences"), nil]].concat(Recurrence.all.map{ |recurrence| [recurrence.name, recurrence.id] }),
+      #areas: [[I18n.t("requests.filters.all_areas"), nil]].concat(Area.all.map{ |area| [area.name, area.id] })
+    #}
 
     respond_to do |format|
       format.html # index.html.erb
@@ -27,7 +33,7 @@ class RequestsController < ApplicationController
     @request = Request.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @request }
     end
   end
