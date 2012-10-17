@@ -10,7 +10,7 @@ We need help, and we encourge you to contribute to the project in any way you ca
 
 Most of the stuff that needs to be done are at:
 
-* [Github issues](github.com/TheGiftsProject/mitnadvim.net/issues)
+* [Github issues](http://github.com/TheGiftsProject/mitnadvim.net/issues)
 * [Trello](https://trello.com/board/mitnadvim-net/)
 * [Google Groups](https://groups.google.com/forum/#!forum/mitnadvimnet)
 
