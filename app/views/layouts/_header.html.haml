@@ -4,5 +4,4 @@
       %a.brand{:href => root_path}
         = t("header.title")
         .face
-      .user-panel.pull-right
-        != render :partial => "layouts/user_panel/signed_out"
+      != render :partial => "layouts/user_panel/user_panel"
