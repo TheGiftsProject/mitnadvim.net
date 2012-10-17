@@ -1,5 +1,7 @@
 class VolunteersController < ApplicationController
 
+  before_filter :must_be_admin
+
   # GET /volunteers/1
   # GET /volunteers/1.json
   def show
