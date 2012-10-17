@@ -1,20 +1,17 @@
-$baseFontSize: 18px;
-
-@import "twitter/bootstrap_rtl";
-@import "compass";
-@import "photoshop-drop-shadow";
-
-@import "colors";
-@import "mixins";
-@import "font";
-@import "button";
-@import "layout";
-@import "box";
-
-@import "requests/examples";
-@import "requests/index";
+@import "master";
 
 body{
   direction: rtl;
   font-family: $body-fonts;
+  background: $background-color;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: $title-fonts;
+  color: $grey-text;
+  font-weight: $normal;
+}
+
+h1{
+  font-size: 38px;
 }

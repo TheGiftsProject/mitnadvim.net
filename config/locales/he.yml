@@ -58,3 +58,7 @@ he:
               blank: ""
             description:
               blank: ""
+
+  modals:
+    request:
+      header: "בקשת התנדבות"
