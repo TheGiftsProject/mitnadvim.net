@@ -4,10 +4,13 @@
   .description
     = req.description
   .additional_data
+    %span
+      = "#{""} #{""} #{""}"
     .icon.location
     %span
       = req.school.name
     .icon.duration
+      = req.
     .icon.schedule
   .actions
     - if type == 'school'
