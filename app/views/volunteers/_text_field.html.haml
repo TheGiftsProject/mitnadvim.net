@@ -1,4 +1,4 @@
 .control-group
-  %label.control-label{:for => @field_name}= t("users.new.fields.#{field_name}")
+  %label.control-label{:for => @field_name}= t("users.new.fields.#{opts[:field_name]}")
   .controls
-    %input{:id => @field_name, :name => "user[#{field_name}]", :value => user.send(field_name), :type => type}
+    %input{:id => @field_name, :name => "user[#{opts[:field_name]}]", :value => opts[:user].send(opts[:field_name]), :type => opts[:type]}

@@ -5,7 +5,7 @@ module ErrorsSupport
   extend ActiveSupport::Concern
 
   included do
-    rescue_from Exception, :with => :render_error
+    #rescue_from Exception, :with => :render_error
   end
 
   def forbidden_page
