@@ -16,6 +16,7 @@ group :assets do
   gem "bootstrap-sass-rails-rtl"
 end
 
+gem 'enumify'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
