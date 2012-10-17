@@ -1,3 +1,9 @@
 he:
   site:
     title: "מתנדבים.נט"
+
+  header:
+    title: "מתנדבים.נט"
+
+  requests:
+    new:

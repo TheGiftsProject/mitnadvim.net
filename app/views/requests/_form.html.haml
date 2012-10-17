@@ -16,13 +16,13 @@
     .controls
       != f.text_area :description
   .control-group
-    %label.control-label= t("requests.form.label.control-labels.type")
+    %label.control-label= t("requests.form.label.control-labels.category")
     .controls
-      != f.select :type, []
+      != f.select :category_id, options_from_collection_for_select(Category.all, :id, :name)
   .control-group
     %label.control-label= t("requests.form.label.control-labels.recurrence")
     .controls
-      != f.select :recurrence, []
+      != f.select :recurrence, ["test"]
   -#.control-group
     -#%label.control-label= t("requests.form.label.control-labels.duration")
     -#.controls
