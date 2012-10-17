@@ -4,17 +4,15 @@
   .description
     = req.description
   .additional_data
-    %span
-      = "#{""} #{""} #{""}"
     .icon.location
     %span
       = req.school.try(:name)
     .icon.duration
     %span
-      = "#{""} #{""} #{""}"
+      = "#{t("requests.duration")}: #{req.duration} #{t("requests.hours")}"
     .icon.schedule
     %span
-      = "#{""} #{""} #{""}"
+      = req.recurrence.name
   .actions
     - if type == 'school'
       != render partial: "layouts/components/request/request_school_data", :locals => {:request => req}

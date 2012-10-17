@@ -26,12 +26,15 @@ class VolunteersController < ApplicationController
   def create
     user = User.new params[:user]
     user.role = "volunteer"
-    user.save!
 
-    sign_in(user)
-
-    redirect_to user_path(user)
+    if user.save
+      sign_in(user)
+      redirect_to hp_path, :notice => t("users.new.success_notice")
+    else
+      @errors = user.errors.full_messages
+      flash[:error] = @errors
+      redirect_to new_volunteer_path
+    end
   end
-
 
 end
