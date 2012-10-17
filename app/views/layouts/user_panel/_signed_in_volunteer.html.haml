@@ -1,0 +1,7 @@
+.navbar-text.signed_in_volunteer
+  %span= t("header.hello")
+  %span יונתן
+  %span &nbsp;
+  %a{:href => "/signout"}= t("header.sign_out")
+  %span ·
+  %a{:href => "/school"}!= t("header.school_entrance")
