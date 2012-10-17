@@ -2,8 +2,8 @@ he:
   users:
     profile:
       title: "הפרופיל שלי"
-      answered_requests: "בקשות התנדבות שנענו"
-      my_past_requests: "ההתנדבויות שלי"
+      my_open_requests: "בקשות התנדבות שנענו"
+      my_closed_requests: "ההתנדבויות שלי"
       phone_no: "טלפון"
       email: 'דוא"ל'
 

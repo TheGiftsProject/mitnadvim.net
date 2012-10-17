@@ -1,10 +1,29 @@
-.container
+.volunteer_profile
   .row
     .span12
       .box
         .header.light
           = t("users.profile.title")
         .content
-          != render partial: "layouts/components/volunteers/simple_profile", :locals => {:user => @user}
+          != render partial: "layouts/components/volunteer/simple_profile", :locals => {:user => @user}
 
-  
+  -if @open_requests.count > 0
+    .row
+      .span12
+        .box
+          .header
+            = t("users.profile.my_open_requests")
+          .content
+            -for request in @open_requests
+              != render partial: "layouts/components/request/request_row", :locals => {:request => request}
+
+  -if @closed_requests.count > 0
+    .row
+      .span12
+        .box
+          .header
+            = t("users.profile.my_closed_requests")
+          .content
+            -for request in @closed_requests
+              != render partial: "layouts/components/request/request_row", :locals => {:request => request}
+

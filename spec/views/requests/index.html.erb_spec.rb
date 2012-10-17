@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "requests/index" do
   before(:each) do
-    assign(:requests, [
+    assign(:request, [
       stub_model(Request,
         :status => "Status",
         :school_id => 1,

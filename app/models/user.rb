@@ -14,4 +14,7 @@ class User < ActiveRecord::Base
   belongs_to :area
   belongs_to :school
 
+  has_many :responses
+  has_many :requests, :through => :responses
+
 end
