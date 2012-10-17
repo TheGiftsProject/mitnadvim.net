@@ -1,4 +1,4 @@
-<%= form_for(@school) do |f| %>
+<%= form_tag("/schools/create") do %>
   <% if @school.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@school.errors.count, "error") %> prohibited this school from being saved:</h2>
@@ -12,23 +12,48 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= label_tag :school_name, t("schools.signup.school.name") %><br />
+    <%= text_field_tag :name %>
   </div>
   <div class="field">
-    <%= f.label :area_id %><br />
+    <%= label_tag :school_area_id, t("schools.signup.school.area") %><br />
     <%= f.number_field :area_id %>
   </div>
   <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
+    <%= label_tag :school_address, t("schools.signup.school.address") %><br />
+    <%= text_field_tag :address %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= label_tag :school_description, t("schools.signup.school.description") %><br />
     <%= f.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= label_tag :admin_name, t("schools.signup.admin.first_name") %><br />
+    <%= f.text_area :admin_first_name %>
+  </div>
+  <div class="field">
+    <%= label_tag :admin_last_name, t("schools.signup.admin.last_name") %><br />
+    <%= f.text_area :admin_last_name %>
+  </div>
+  <div class="field">
+    <%= label_tag :admin_email, t("schools.signup.admin.email") %><br />
+    <%= f.text_area :admin_email %>
+  </div>
+  <div class="field">
+    <%= label_tag :admin_phone_number, t("schools.signup.admin.phone_number") %><br />
+    <%= f.text_area :admin_phone_number %>
+  </div>
+  <div class="field">
+    <%= label_tag :admin_password, t("schools.signup.admin.password") %><br />
+    <%= f.text_area :admin_password %>
+  </div>
+  <div class="field">
+    <%= label_tag :admin_confirm_password, t("schools.signup.admin.confirm_password") %><br />
+    <%= f.text_area :admin_confirm_password %>
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag t("schools.signup.create_button") %>
   </div>
 <% end %>
