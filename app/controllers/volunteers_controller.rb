@@ -5,6 +5,10 @@ class VolunteersController < ApplicationController
   def show
 
     @user = User.find(params[:id])
+    @closed_requests = @user.requests.where(:status => 'closed')
+    @open_requests   = @user.requests.where(:status => 'open')
+
+
     #TODO:SAKIN add validation for users that are volunteers
 
     respond_to do |format|
@@ -23,6 +27,8 @@ class VolunteersController < ApplicationController
     user = User.new params[:user]
     user.role = "volunteer"
     user.save!
+
+    sign_in(user)
 
     redirect_to user_path(user)
   end

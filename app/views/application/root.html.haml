@@ -1,0 +1,8 @@
+-if @open_requests.count > 0
+  .row
+    .span12
+      .box
+        .header
+          = t("home.requests.title")
+        .content
+          != render partial: "layouts/components/request/request_row", :collection => @open_requests, :as => :req, :locals => {:type => 'main'}
