@@ -1,10 +1,12 @@
 .login-page
   .box
-    %h1= 'hey'
+    %h2= t('login_page.title')
     %hr
     != form_tag sessions_path, :class => "form-horizontal" do |f|
       != volunteer_field(f, "email")
       != volunteer_field(f, "password", "password")
       != submit_tag t("header.enter"), :class => "btn btn-orange btn-big"
     %hr
-    %h2= 'heya'
+    %h3
+      %strong= t('login_page.new')
+      %a{:href => 'volunteers/new'}= t('login_page.new_link')

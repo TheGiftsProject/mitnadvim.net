@@ -25,7 +25,7 @@ class VolunteersController < ApplicationController
 
     if user.save
       sign_in(user)
-      redirect_to hp_path, :notice => t("users.new.success_notice")
+      redirect_to root_path, :notice => t("users.new.success_notice")
     else
       @errors = user.errors.full_messages
       flash[:error] = @errors
