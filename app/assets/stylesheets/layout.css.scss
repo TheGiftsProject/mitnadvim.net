@@ -1,0 +1,44 @@
+$nabar-height: 60px;
+
+body{
+  background: #e8edf0;
+}
+
+header.navbar{
+
+  .navbar-inner{
+    height: $nabar-height;
+    @include background-image(
+      linear-gradient(bottom,#565e62,#7a858a)
+    );
+    @include photoshop-drop-shadow(90,1px,0,4px,rgba(#000,0.25));
+    @include border-radius(0);
+  }
+
+  .container{
+    width: 940px;
+  }
+
+  .brand{
+    font-family: $font-name;
+    font-size: 52px;
+    color: white;
+    font-weight: $bold;
+    @include single-text-shadow(0 0 0 2px rgba(88,95,100,0.65));
+    padding-bottom: 0;
+    padding-top: 0;
+    line-height: $nabar-height;
+  }
+
+  .face{
+    @include background-image(
+      image-url("face.png")
+    );
+    width: 66px;
+    height: 61px;
+    position: relative;
+    vertical-align: top;
+    top: -13px;
+    @include inline-block;
+  }
+}
