@@ -25,7 +25,7 @@ class VolunteersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        sign_in(user)
+        sign_in(@user)
         redirect_to root_path, :notice => t("users.new.success_notice")
       else
         @areas = Area.all
