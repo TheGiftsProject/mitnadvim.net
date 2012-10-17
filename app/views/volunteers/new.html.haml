@@ -5,14 +5,14 @@
   != form_for @user, :url => {:action => "create"}, :html => {:class => "form-horizontal volunteer_creation_form"} do |f|
     != volunteer_field(f, "first_name")
     != volunteer_field(f, "last_name")
-    -#!= volunteer_field(f, "birth_year")
+    != volunteer_field(f, "birth_year")
     != volunteer_field(f, "password", "password")
     != volunteer_field(f, "password_confirmation", "password")
-    -#!= volunteer_field(f, "description", "text")
-    -#!= volunteer_select_field(f, "area", @areas)
+    != volunteer_field(f, "description", "text")
+    != volunteer_select_field(f, "area", @areas)
     != volunteer_field(f, "email")
-    -#!= volunteer_field(f, "phone_number")
-    -#!= volunteer_field(f, "gender")
+    != volunteer_field(f, "phone_number")
+    != volunteer_field(f, "gender")
     != f.submit(t("users.new.action"), :html => {:class => "btn"})
 
 

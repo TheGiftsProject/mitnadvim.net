@@ -175,7 +175,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-  bcrypt-ruby (~> 3.0.0)
+  bcrypt-ruby
   bootstrap-sass-rails-rtl
   coffee-rails (~> 3.2.1)
   compass-photoshop-drop-shadow

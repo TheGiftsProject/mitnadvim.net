@@ -16,7 +16,6 @@ class VolunteersController < ApplicationController
   def new
     @user = User.new
     @areas = Area.all
-    @user = User.new
   end
 
   def create
