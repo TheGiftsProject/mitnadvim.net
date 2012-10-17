@@ -1,4 +1,4 @@
 .control-group
   %label.control-label{:for => field_name}= t("users.new.fields.#{field_name}")
   .controls
-    != field.select field_name, options_from_collection_for_select(options, :id, :name)
+    != field.select field_name, options_from_collection_for_select(options, :id, :name, user.send(field_name))

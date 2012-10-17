@@ -24,15 +24,21 @@ class VolunteersController < ApplicationController
   end
 
   def create
-    user = User.new params[:user]
-    user.role = "volunteer"
+    @user = User.new params[:user]
+    @user.role = "volunteer"
 
-    if user.save
-      redirect_to hp_path, :notice => t("users.new.success_notice")
-    else
-      @errors = user.errors.full_messages
-      flash[:error] = @errors
-      redirect_to new_volunteer_path
+
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to hp_path, :notice => t("users.new.success_notice") }
+      else
+        @areas = Area.all
+        @years = *(1940..2000)
+
+        @errors = @user.errors.full_messages
+        flash[:error] = @errors
+        format.html { render :action => "new" }
+      end
     end
 
   end
