@@ -62,6 +62,7 @@ he:
       duration_units: "שעות"
       volunteers: "מתנדבים"
       more_details_action: "פרטים נוספים"
+      i_want_to_help: "אני רוצה לעזור"
 
   helpers:
     submit:
