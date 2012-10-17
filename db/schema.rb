@@ -67,7 +67,6 @@ ActiveRecord::Schema.define(:version => 20121017153105) do
     t.string   "last_name"
     t.string   "email"
     t.string   "phone_number"
-    t.string   "type"
     t.string   "facebook_id"
     t.integer  "school_id"
     t.string   "gender"
@@ -76,8 +75,8 @@ ActiveRecord::Schema.define(:version => 20121017153105) do
     t.datetime "updated_at",                             :null => false
     t.string   "password_hash"
     t.string   "password_salt"
-    t.string   "role",          :default => "volunteer"
     t.integer  "birth_year"
+    t.string   "role",          :default => "volunteer"
     t.string   "description"
   end
 

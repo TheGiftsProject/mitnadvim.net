@@ -22,5 +22,8 @@ he:
         area_id: "אזור בו אתה רוצה להתנדב"
         description: "ספר על עצמך בכמה מילים"
       success_notice: "המשתמש נוצר בהצלחה!"
+      genders:
+        male: "זכר"
+        female: "נקבה"
 
 
