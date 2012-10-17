@@ -1,0 +1,9 @@
+@mixin text-stroke($size, $color){
+  $rsize: -1 * $size;
+  @include text-shadow(
+      $rsize $rsize $color,
+      $size $rsize $color,
+      $rsize $size $color,
+      $size $size $color
+  );
+}
