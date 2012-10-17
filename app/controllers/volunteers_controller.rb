@@ -15,6 +15,12 @@ class VolunteersController < ApplicationController
 
   def new
     @areas = Area.all
+    @user = User.new
+  end
+
+  def create
+    user = User.new(params[:user])
+
   end
 
 
