@@ -56,23 +56,43 @@ he:
 
   activerecord:
     attributes:
+      school:
+        name: "school name"
+        area: "area"
+        address: "address"
+        description: "description"
       user:
+        first_name: "first_name"
+        last_name: "first_name"
+        phone_number: "phone_number"
         email: "דוא\"ל"
         password: "סיסמא"
         password_confirmation: "אישור סיסמא"
     errors:
       models:
+        school:
+          attributes:
+            name:
+              too_short: "too short"
         user:
           attributes:
             password:
               too_short: "קצרה מידי (6 תווים לפחות)"
               confirmation: "- יש למלא בשנית"
+            first_name:
+              too_short: "too short"
+            phone_number:
+              too_short: "too short"
+            email:
+              too_short: "too short"
+
         request:
           attributes:
             name:
               blank: ""
             description:
               blank: ""
+
 
   modals:
     request:

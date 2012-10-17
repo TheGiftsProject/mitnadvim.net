@@ -1,12 +1,11 @@
 - flash.each do |name, msg|
-  - if msg.is_a?(String)
-    %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
-      %a.close{"data-dismiss" => "alert"} ×
-      - if name == :error and msg.is_a?(Array)
-        #flash_error
-          %ul
-          - msg.each do |error_msg|
-            %li= error_msg
+  %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
+    %a.close{"data-dismiss" => "alert"} ×
+    - if name == :error and msg.is_a?(Array)
+      #flash_error
+        %ul
+        - msg.each do |error_msg|
+          %li= error_msg
 
-      - else
-        = content_tag :div, msg, :id => "flash_#{name}"
+    - elsif msg.is_a?(String)
+      = content_tag :div, msg, :id => "flash_#{name}"
