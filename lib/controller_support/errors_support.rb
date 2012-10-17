@@ -13,7 +13,7 @@ module ErrorsSupport
   end
 
   def internal_error_page
-    render :template => "static_pages/internal_error", :status => :internal_server_error
+    render :template => "static_pages/internal", :status => :internal_server_error
   end
 
   def not_found_page
