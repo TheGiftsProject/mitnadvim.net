@@ -5,21 +5,21 @@
     .span4
       %a.new_request.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")
 
-  .tabbable.requests
-    %ul.nav.nav-tabs
-      %li{ class: (@closed_requests ? "" : "active") }
-        %a{ :href => requests_path(:requests => "open") }= t("requests.index.open_requests")
-      %li{ class: (@closed_requests ? "active" : "") }
-        %a{ :href => requests_path(:requests => "closed") }= t("requests.index.closed_requests")
-
-    .box
+  .row
+    .span12
+      %ul.nav.nav-tabs
+        %li{ class: (@closed_requests ? "" : "active") }
+          %a{ :href => requests_path(:requests => "open") }= t("requests.index.open_requests")
+        %li{ class: (@closed_requests ? "active" : "") }
+          %a{ :href => requests_path(:requests => "closed") }= t("requests.index.closed_requests")
+  .row
+    .list.box.span12.tab-content
       -#.filters
-        -#!= select_tag :category_filter, @filter_data[:categories] #options_from_collection_for_select(Category.all, :id, :name)
-        -#!= select_tag :recurrence_filter, @filter_data[:recurrences] #options_from_collection_for_select(Recurrence.all, :id, :name)
-        -#!= select_tag :area_filter, @filter_data[:areas] #options_from_collection_for_select(Area.all, :id, :name)
+        -#!= select_tag :category_filter, @filter_data[:categories]
+        -#!= select_tag :recurrence_filter, @filter_data[:recurrences]
+        -#!= select_tag :area_filter, @filter_data[:areas]
         -#%button.btn= t("requests.index.submit_filter")
-      .tab-pane
-        .empty
-          %span= t("requests.index.list_empty_title")
-          %a.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")
+      .empty
+        %span= t("requests.index.list_empty_title")
+        %a.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")
 
