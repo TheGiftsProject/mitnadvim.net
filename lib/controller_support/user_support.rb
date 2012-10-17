@@ -26,7 +26,9 @@ module UserSupport
   end
 
   def must_be_school
-    user_signed_in? && current_user.school?
+    if (!user_signed_in? || !current_user.school?)
+      flash.now[:notice] = "You are not a school"
+    end
   end
 
   def must_be_admin
