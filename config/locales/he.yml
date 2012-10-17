@@ -40,6 +40,8 @@ he:
         description: "תיאור הבקשה"
         category: "סוג ההתנדבות"
         recurrence: "בחר פרק זמן"
+        duration: "משך ההתנדבות"
+        duration_units: "שעות"
 
   helpers:
     submit:

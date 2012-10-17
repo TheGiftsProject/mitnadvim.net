@@ -20,27 +20,11 @@
     %label.control-label= t("requests.form.label.recurrence")
     .controls
       != f.select :recurrence_id, options_from_collection_for_select(Recurrence.all, :id, :name)
-  -#.control-group
-    -#%label.control-label= t("requests.form.label.control-labels.duration")
-    -#.controls
-      -#!= f.select :duration_count, []
-      -#!= f.select :duartion_type, []
-  -#.control-group
-    -#%label.control-label= t("requests.form.label.control-labels.start_time")
-    -#.controls
-      -#!= f.select :start_time_day, []
-      -#!= f.select :start_time_month, []
-      -#!= f.select :start_time_year, []
-  -#.control-group
-    -#%label.control-label= t("requests.form.label.control-labels.end_time")
-    -#.controls
-      -#!= f.select :end_time_day, []
-      -#!= f.select :end_time_month, []
-      -#!= f.select :end_time_year, []
-  -#.control-group
-    -#%label.control-label= t("requests.form.label.control-labels.comment")
-    -#.controls
-      -#!= f.text_area :comment
+  .control-group
+    %label.control-label= t("requests.form.label.duration")
+    .controls
+      != f.text_field :duration, :type => "number", :value => @request.duration || 2
+      %span.help-inline= t("requests.form.label.duration_units")
   .control-group
     .controls
       = f.submit class: "btn btn-orange"
