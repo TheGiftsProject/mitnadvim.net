@@ -7,5 +7,5 @@ br_admin = User.create(:first_name => "אלי", :last_name => "נחמה", :phone
 teaching_category = Category.create(:name => "לימוד 1 על 1")
 teaching_request = Request.create(:name => "לימוד רובי", :description => "לימוד חד פעמי של רובי, כדי שמישהו יוכל לבנות מערכת מתנדבים", :category => teaching_category, :school => bialik_rogozin)
 
-matan_bar = User.create(:first_name => "מתן", :last_name => "בר", :phone_number => "054319875161", :email => "matan@example.com", :age => 28, :area => tel_aviv_area)
+matan_bar = User.create(:first_name => "מתן", :last_name => "בר", :phone_number => "054319875161", :email => "matan@example.com", :birth_year => 1984, :area => tel_aviv_area)
 teaching_request.responses.create(:user => matan_bar)
