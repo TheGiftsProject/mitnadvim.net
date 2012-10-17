@@ -6,7 +6,7 @@
     = select_tag "school[area_id]", areas_options(@school.area_id)
 
   = form_text_field t("schools.signup.school.address"), "school[address]", @school.address
-  = form_text_field t("schools.signup.school.description"), "school[description]", @school.description
+  = form_textarea_field t("schools.signup.school.description"), "school[description]", @school.description
 
   = form_text_field t("schools.signup.admin.first_name"), "admin[first_name]", @admin_user.first_name
   = form_text_field t("schools.signup.admin.first_name"), "admin[last_name]", @admin_user.last_name
