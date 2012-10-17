@@ -56,6 +56,7 @@ GEM
       compass (>= 0.12.2, < 0.14)
     daemons (1.1.9)
     diff-lcs (1.1.3)
+    enumify (0.0.3)
     erubis (2.7.0)
     eventmachine (1.0.0)
     excon (0.16.4)
@@ -177,11 +178,12 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-  bcrypt-ruby (~> 3.0.0)
+  bcrypt-ruby
   bootstrap-sass-rails-rtl
   coffee-rails (~> 3.2.1)
   compass-photoshop-drop-shadow
   compass-rails
+  enumify
   haml
   heroku
   jquery-rails
