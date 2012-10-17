@@ -11,6 +11,9 @@ $baseFontSize: 18px;
 @import "layout";
 @import "box";
 
+@import "requests/examples";
+@import "requests/index";
+
 body{
   direction: rtl;
   font-family: $body-fonts;

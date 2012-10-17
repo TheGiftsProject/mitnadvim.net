@@ -15,6 +15,13 @@ he:
           description: "מפגש שבועי ללימוד תלמידים בכיתות ג' חשבון. הפגישה הינה בפורמט אחד על אחד."
           type: "סוג התנדבות: לימוד חשבון"
           time: "משך: שעה בשבוע"
+    index:
+      header: "ניהול בקשות התנדבות"
+      create_new: "צור בקשה חדשה"
+      open_requests: "בקשות פתוחות"
+      closed_requests: "בקשות שנענו"
+      submit_filter: "סנן התנדבות"
+      list_empty_title: "אין בקשות פתוחות"
     form:
       label:
         name: "כותרת הבקשה"
