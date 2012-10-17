@@ -1,7 +1,7 @@
 he:
   site:
     title: "מתנדבים.נט"
-    back_button: "Back"
+    back_button: "חזרה"
 
   header:
     title: "מתנדבים.נט"
@@ -57,14 +57,14 @@ he:
   activerecord:
     attributes:
       school:
-        name: "school name"
-        area: "area"
-        address: "address"
-        description: "description"
+        name: "שם בית הספר"
+        area: "איזור"
+        address: "כתובת"
+        description: "תיאור בית הספר"
       user:
-        first_name: "first_name"
-        last_name: "first_name"
-        phone_number: "phone_number"
+        first_name: "שם פרטי"
+        last_name: "שם משפחה"
+        phone_number: "מספר טלפון"
         email: "דוא\"ל"
         password: "סיסמא"
         password_confirmation: "אישור סיסמא"
@@ -73,7 +73,7 @@ he:
         school:
           attributes:
             name:
-              too_short: "too short"
+              too_short: "קצר מדי"
         user:
           attributes:
             password:
@@ -81,14 +81,14 @@ he:
               too_short: "קצרה מידי (6 תווים לפחות)"
               confirmation: "- יש למלא בשנית"
             first_name:
-              too_short: "too short"
+              too_short: "קצר מדי"
             phone_number:
-              too_short: "too short"
+              too_short: "קצר מדי"
             email:
-              taken: "taken"
-              blank: "blank"
-              too_short: "too short"
-              invalid: "invalid"
+              taken: "תפוס"
+              blank: "ריק"
+              too_short: "קצר מדי"
+              invalid: "לא תקין"
 
         request:
           attributes:
