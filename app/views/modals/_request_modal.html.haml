@@ -22,7 +22,8 @@
     %dd
       %textarea{rows: 3, placeholder: "#{t("modals.request.fields.note_to_school_placeholder")}"}
 
-  %a.btn.btn-primary.btn-orange{href: "#"} open modal
+  %a.btn.btn-primary.btn-orange{href: "#"}= t("modals.request.submit_button")
+  %p= t("modals.request.submit_note")
 
 - content_for :footer do
   footer!
