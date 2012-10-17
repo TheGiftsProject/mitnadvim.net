@@ -4,8 +4,8 @@ MitnadvimNet::Application.routes.draw do
   resources :users
   resources :volunteers
 
-  root :to => 'application#temp_root'
-  match 'hp' => 'application#root'
+  root :to => 'application#homepage'
+  match 'widgets' => 'application#widgets'
 
   get "log_in"  => "sessions#new", :as => "log_in"
   get "log_out" => "sessions#destroy", :as => "log_out"

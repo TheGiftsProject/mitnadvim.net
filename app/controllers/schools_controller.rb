@@ -44,9 +44,9 @@ class SchoolsController < ApplicationController
   def create
     @school = School.new(params[:school])
 
-    user_data = {role: :school, school: @school}.merge(params[:admin])
-
-    @admin_user = User.new(user_data)
+    @admin_user = User.new(params[:admin])
+    @admin_user.role = :school
+    @admin_user.school = @school
 
     school_is_valid = @school.save
     admin_is_valid = @admin_user.save
