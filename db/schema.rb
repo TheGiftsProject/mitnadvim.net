@@ -11,8 +11,8 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
 ActiveRecord::Schema.define(:version => 20121017133418) do
+
   create_table "areas", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -79,4 +79,5 @@ ActiveRecord::Schema.define(:version => 20121017133418) do
     t.integer  "birth_year"
     t.string   "description"
   end
+
 end
