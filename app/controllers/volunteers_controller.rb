@@ -24,6 +24,7 @@ class VolunteersController < ApplicationController
     user.role = "volunteer"
     user.save!
 
+
     redirect_to user_path(user)
   end
 
