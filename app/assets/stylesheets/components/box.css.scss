@@ -27,7 +27,7 @@ $box-radius: 5px;
     );
     @include photoshop-drop-shadow(90, 1px, 0, 4px, rgba(#000, 0.25));
 
-    margin: $negative-box-padding $negative-box-padding 0 $negative-box-padding;
+    margin: $negative-box-padding $negative-box-padding $box-padding $negative-box-padding;
     @include border-top-radius($box-radius);
     padding: 0 5px;
 
@@ -44,6 +44,10 @@ $box-radius: 5px;
       @include text-shadow(0 1px 0 rgba(255,255,255,0.35));
       @include photoshop-drop-shadow(90,1px,0,0,rgba(#7d8083, 0.25));
 
+    }
+
+    &.no-margin{
+      margin-bottom: 0;
     }
   }
 
