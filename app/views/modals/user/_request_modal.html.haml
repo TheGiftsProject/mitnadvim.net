@@ -1,4 +1,4 @@
-#user_request_modal.modal.hide.fade
+.modal.hide.fade{ id: id }
   .modal-header
     %button.close{ data: {dismiss:"modal"}, aria: { hidden: true}} &times;
     %h3= t("modals.request.header")
@@ -11,10 +11,10 @@
       %dd= vrequest.description
 
       %dt= t("modals.request.fields.requesting_school")
-      %dd= "זכרון יוסף"
+      %dd= vrequest.school.name
 
       %dt= t("modals.request.fields.required_time")
-      %dd= "3 שעות"
+      %dd= "#{vrequest.duration} #{t("requests.row.duration_units")}"
 
       %dt= t("modals.request.fields.date")
       %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
