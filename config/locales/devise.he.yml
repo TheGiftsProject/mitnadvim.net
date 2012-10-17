@@ -4,30 +4,30 @@ en:
   errors:
     messages:
       expired: "has expired, please request a new one"
-      not_found: "not found"
-      already_confirmed: "was already confirmed, please try signing in"
-      not_locked: "was not locked"
+      not_found: "לא נמצא"
+      already_confirmed: "כבר אושר, נסה להיכנס למערכת מחדש"
+      not_locked: "לא ננעל"
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
 
   devise:
     failure:
-      already_authenticated: 'You are already signed in.'
-      unauthenticated: 'You need to sign in or sign up before continuing.'
-      unconfirmed: 'You have to confirm your account before continuing.'
-      locked: 'Your account is locked.'
-      invalid: 'Invalid email or password.'
+      already_authenticated: 'את/ה כבר מחובר.'
+      unauthenticated: 'את/ה צריך להירשם או להיכנס למערכת על-מנת להמשיך.'
+      unconfirmed: 'את/ה צריך לאשר את החשבון שלך על-מנת להמשיך.'
+      locked: 'החשבון שלך נעול.'
+      invalid: 'הדוא"ל או הסיסמא שלך אינם קיימים במערכת.'
       invalid_token: 'Invalid authentication token.'
       timeout: 'Your session expired, please sign in again to continue.'
-      inactive: 'Your account was not activated yet.'
+      inactive: 'החשבון שלך לא הופעל עוד.'
     sessions:
-      signed_in: 'Signed in successfully.'
-      signed_out: 'Signed out successfully.'
+      signed_in: 'התחברת בהצלחה.'
+      signed_out: 'התנתקת בהצלחה.'
     passwords:
       send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
       updated: 'Your password was changed successfully. You are now signed in.'
-      updated_not_active: 'Your password was changed successfully.'
+      updated_not_active: 'הסיסמא שלך שונתה בהצלחה.'
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
     confirmations:
