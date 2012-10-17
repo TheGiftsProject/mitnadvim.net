@@ -1,13 +1,15 @@
 class SessionsController < ApplicationController
   def new
-    @type = params.key?(:school) ? 'school' : 'volunteer'
+    @type = params.key?(:school) ? 'schools' : 'volunteers'
+
   end
 
   def create
     user = User.authenticate(params[:user][:email], params[:user][:password])
     if user
       session[:user_id] = user.id
-      redirect_to root_url, :notice => "Logged in!"
+      return_url = user.school? ? requests_path : root_path
+      redirect_to return_url, :notice => "Logged in!"
     else
       flash.now.alert = I18n.t('errors.messages.login_fail')
       render "new"
