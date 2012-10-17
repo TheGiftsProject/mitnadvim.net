@@ -38,7 +38,7 @@ describe RequestsController do
     it "assigns all requests as @requests" do
       request = Request.create! valid_attributes
       get :index, {}, valid_session
-      assigns(:requests).should eq([request])
+      assigns(:request).should eq([request])
     end
   end
 
