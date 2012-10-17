@@ -3,12 +3,12 @@
   .field.control-group
     = label_tag :school_name, t("schools.signup.school.name"), class: "control-label"
     .controls
-      = text_field_tag "school[name]"
+      = text_field_tag "school[name]", @school.name
 
   .field.control-group
     = label_tag :school_area_id, t("schools.signup.school.area"), class: "control-label"
     .controls
-      = select_tag "school[area_id]", options_from_collection_for_select( @areas, :id, :name )
+      = select_tag "school[area_id]", areas_options(@school.area_id)
   
   .field.control-group
     = label_tag :school_address, t("schools.signup.school.address"), class: "control-label"

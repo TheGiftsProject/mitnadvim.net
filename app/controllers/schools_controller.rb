@@ -25,7 +25,6 @@ class SchoolsController < ApplicationController
   # GET /schools/new.json
   def new
     @school = School.new
-    @areas = Area.all
 
     respond_to do |format|
       format.html # new.html.haml
@@ -56,7 +55,7 @@ class SchoolsController < ApplicationController
         format.html { redirect_to @school, notice: 'School was successfully created.' }
         format.json { render json: @school, status: :created, location: @school }
       else
-        @errors = @school.errors.merge(@admin_user.errors)
+        @errors = @school.errors.full_messages + @admin_user.errors.full_messages
         flash[:error] = @errors
         format.html { render action: "new" }
         format.json { render json: @errors, status: :unprocessable_entity }
