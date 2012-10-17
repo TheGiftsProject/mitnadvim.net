@@ -1,0 +1,12 @@
+.dl-horizontal {
+  font-size: 16px;
+  dt {
+    color: $definition-term-color;
+    font-weight: normal;
+  }
+
+  dd {
+    color: $definition-data-color;
+    padding-bottom: 19px;
+  }
+}
