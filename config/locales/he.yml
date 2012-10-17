@@ -76,6 +76,8 @@ he:
         create: "צור בקשת התנדבות חדשה"
         update: "עדכן"
 
+  flashes:
+    logged_in: "התחברת בהצלחה!"
   errors:
     messages:
       not_saved: "לא ניתן לבצע הפעולה"
