@@ -4,6 +4,7 @@ br_description = 'הקמפוס שלנו , הייחודי מסוגו בארץ –
 bialik_rogozin = School.create(:name => "ביאליק רוגוזין", :area => tel_aviv_area, :description => br_description)
 br_admin = User.create(:first_name => "אלי", :last_name => "נחמה", :phone_number => "05012345678", :email => "eli@example.com", :school => bialik_rogozin)
 
+weekly_recurrence = Recurrence.create(:name => "שבועי")
 teaching_category = Category.create(:name => "לימוד 1 על 1")
 teaching_request = Request.create(:name => "לימוד רובי", :description => "לימוד חד פעמי של רובי, כדי שמישהו יוכל לבנות מערכת מתנדבים", :category => teaching_category, :school => bialik_rogozin)
 

@@ -7,3 +7,33 @@ he:
 
   requests:
     new:
+      header: "בקשת התנדבות חדשה"
+      examples:
+        title: "דוגמאות"
+        sections:
+          title: "פגישה אחד על אחד במשך שעה אחרי הצהרים ללימוד חשבון"
+          description: "מפגש שבועי ללימוד תלמידים בכיתות ג' חשבון. הפגישה הינה בפורמט אחד על אחד."
+          type: "סוג התנדבות: לימוד חשבון"
+          time: "משך: שעה בשבוע"
+    form:
+      label:
+        name: "כותרת הבקשה"
+        description: "תיאור הבקשה"
+        category: "סוג ההתנדבות"
+        recurrence: "בחר פרק זמן"
+
+  helpers:
+    submit:
+      request:
+        create: "צור בקשת התנדבות חדשה"
+        update: "עדכן"
+
+  activerecord:
+    errors:
+      models:
+        request:
+          attributes:
+            name:
+              blank: ""
+            description:
+              blank: ""
