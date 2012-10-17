@@ -15,10 +15,12 @@ he:
         address: "כתובת בית הספר"
         description: "תיאור קצר של בית הספר"
       admin:
+        title: "admin user"
         first_name: "שם פרטי אחראי המערכת"
         last_name: "שם משפחה אחראי המערכת"
         email: "כתובת דואר אלקטרוני"
         phone_number: "מספר טלפון"
         password: "סיסמה"
         password_confirmation: "הזמן סיסמה שנית"
+        password_limit: "minimum 6 characters"
 

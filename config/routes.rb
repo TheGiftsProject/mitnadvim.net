@@ -2,7 +2,7 @@ MitnadvimNet::Application.routes.draw do
   resources :requests
   resources :schools
   resources :users
-  resources :volunteers
+  resources :volunteers, :only => [:new, :create, :show]
 
   root :to => 'application#homepage'
   match 'widgets' => 'application#widgets'

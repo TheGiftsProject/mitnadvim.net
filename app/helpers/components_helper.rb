@@ -4,7 +4,7 @@ module ComponentsHelper
     if block.present?
       options = {:body => capture(&block), :opts => opts}
     else
-      options = opts
+      options = {:opts => opts}
     end
 
     render(:partial => partial_name, :locals => options)
