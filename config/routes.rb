@@ -1,5 +1,5 @@
 MitnadvimNet::Application.routes.draw do
-  resources :requests
+  resources :requests, :responses
   resources :schools
   resources :users
   resources :volunteers
