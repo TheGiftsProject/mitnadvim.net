@@ -14,6 +14,7 @@ class VolunteersController < ApplicationController
   end
 
   def new
+    @areas = Area.all
   end
 
 

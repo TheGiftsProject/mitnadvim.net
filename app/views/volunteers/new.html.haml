@@ -1,11 +1,18 @@
+!= stylesheet_link_tag "volunteers"
+
 .box
   .header= t("users.new.title")
   %form.form-horizontal{:action => "/devise/registrations/create"}
-    != volunteer_text_field("first_name")
-    != volunteer_text_field("last_name")
-    != volunteer_text_field("email")
-    != volunteer_text_field("phone")
-    != volunteer_text_field("gender")
-    != volunteer_text_field("birth_date")
+    != volunteer_field("first_name")
+    != volunteer_field("last_name")
+    != volunteer_field("birth_date")
+    != volunteer_field("password", "password")
+    != volunteer_field("password_repeat", "password")
+    != volunteer_field("description", "text")
+    != volunteer_select_field("area", @areas)
+    != volunteer_field("email")
+    != volunteer_field("phone")
+    != volunteer_field("gender")
+
 
 
