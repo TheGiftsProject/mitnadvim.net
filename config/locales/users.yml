@@ -2,9 +2,10 @@ he:
   users:
     profile:
       title: "הפרופיל שלי"
-      answered_requests: "בקשות התנדבות שנענו"
-      my_past_requests: "ההתנדבויות שלי"
-
+      my_open_requests: "בקשות התנדבות שנענו"
+      my_closed_requests: "ההתנדבויות שלי"
+      phone_no: "טלפון"
+      email: 'דוא"ל'
     new:
       title: "הרשמת מתנדב חדש"
       action: "צור פרופיל חדש"
@@ -19,5 +20,4 @@ he:
         password_confirmation: "הזן סיסמה שנית"
         area_id: "אזור בו אתה רוצה להתנדב"
         description: "ספר על עצמך בכמה מילים"
-
 
