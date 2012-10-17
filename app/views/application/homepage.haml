@@ -10,7 +10,9 @@
             %li
               %span.step= step
   .box.span4
-    .header.light= t("homepage.profile")
+    - if user_signed_in?
+    - else
+      != render :partial => "homepage/sign_up"
 
 -if @active_requests.count > 0
   .row
