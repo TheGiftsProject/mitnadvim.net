@@ -5,3 +5,13 @@ body{
   font-family: $body-fonts;
   background: $background-color;
 }
+
+h1,h2,h3,h4,h5{
+  font-family: $title-fonts;
+  color: $grey-text;
+  font-weight: $normal;
+}
+
+h1{
+  font-size: 38px;
+}
