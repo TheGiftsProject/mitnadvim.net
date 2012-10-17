@@ -1,4 +1,4 @@
-#school_request_modal.modal.hide.fade
+#user_request_modal.modal.hide.fade
   .modal-header
     %button.close{ data: {dismiss:"modal"}, aria: { hidden: true}} &times;
     %h3= t("modals.request.header")
@@ -23,8 +23,9 @@
       %dd
         %textarea{rows: 3, placeholder: "#{t("modals.request.fields.note_to_school_placeholder")}"}
 
-    %a.btn.btn-primary.btn-orange{href: "#"}= t("modals.request.submit_button")
-    %p= t("modals.request.submit_note")
+      %dd
+        %a.btn.btn-primary.btn-orange{href: "#"}= t("modals.request.submit_button")
+        -#%p.text-info= t("modals.request.submit_note")
 
   .modal-footer
     footer!
