@@ -15,6 +15,7 @@ class VolunteersController < ApplicationController
 
   def new
     @areas = Area.all
+    @years = *(1940..2000)
     @user = User.new
   end
 
