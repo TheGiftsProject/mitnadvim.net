@@ -3,6 +3,7 @@ he:
     signup:
       title: "create a new school admin user"
       create_button: "create an admin user"
+      error_title: " prohibited this school from being saved:"
       school:
         name: "school name"
         area: "area"

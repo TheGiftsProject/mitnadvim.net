@@ -1,0 +1,54 @@
+- form_tag("/schools/create") do
+  - if @school.errors.any?
+    #error_explanation
+      %h2= t("schools.signup.error_title", pluralize(@school.errors.count, "error") )
+    
+      %ul
+      - @school.errors.full_messages.each do |msg|
+        %li= msg
+
+.field
+  = label_tag :school_name, t("schools.signup.school.name")
+  = text_field_tag :name
+
+.field
+  = label_tag :school_area_id, t("schools.signup.school.area")
+  = number_field_tag :area_id
+%br
+.field
+  = label_tag :school_address, t("schools.signup.school.address")
+  = text_field_tag :address
+%br
+.field
+  = label_tag :school_description, t("schools.signup.school.description")
+  = text_field_tag :description
+%br
+
+.field
+  = label_tag :admin_name, t("schools.signup.admin.first_name")
+  = text_field_tag :admin_first_name
+%br
+.field
+  = label_tag :admin_last_name, t("schools.signup.admin.last_name")
+  = text_field_tag :admin_last_name
+%br
+.field
+  = label_tag :admin_email, t("schools.signup.admin.email")
+  = text_field_tag :admin_email
+%br
+.field
+  = label_tag :admin_phone_number, t("schools.signup.admin.phone_number")
+  = text_field_tag :admin_phone_number
+%br
+.field
+  = label_tag :admin_password, t("schools.signup.admin.password")
+  = text_field_tag :admin_password
+%br
+.field
+  = label_tag :admin_confirm_password, t("schools.signup.admin.confirm_password")
+  = text_field_tag :admin_confirm_password
+%br
+
+.actions
+  = submit_tag( t("schools.signup.create_button") )
+%br
