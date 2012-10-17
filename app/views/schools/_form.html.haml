@@ -8,7 +8,7 @@
   .field.control-group
     = label_tag :school_area_id, t("schools.signup.school.area"), class: "control-label"
     .controls
-      = number_field_tag :area_id
+      = select_tag :area_id, options_from_collection_for_select( @areas, :id, :name )
   
   .field.control-group
     = label_tag :school_address, t("schools.signup.school.address"), class: "control-label"
@@ -49,7 +49,8 @@
     = label_tag :admin_confirm_password, t("schools.signup.admin.confirm_password"), class: "control-label"
     .controls
       = text_field_tag :admin_confirm_password
-  
 
-  .actions
-    = submit_tag( t("schools.signup.create_button") )
+
+  .actions.control-group
+    .controls
+      = button_tag( t("schools.signup.create_button"), class: "btn-large btn-warning" )

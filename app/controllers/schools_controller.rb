@@ -25,6 +25,7 @@ class SchoolsController < ApplicationController
   # GET /schools/new.json
   def new
     @school = School.new
+    @areas = Area.all
 
     respond_to do |format|
       format.html # new.html.haml
