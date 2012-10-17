@@ -4,28 +4,26 @@
     %h3= t("modals.request.header")
 
   .modal-body
-    %h1= vrequest.name
-    %hr
-    %dl.dl-horizontal
-      %dt= t("modals.request.fields.description")
-      %dd= vrequest.description
+    != form_tag(responses_path) do
+      != hidden_field_tag "request_id", vrequest.id
+      %h1= vrequest.name
+      %hr
+      %dl.dl-horizontal
+        %dt= t("modals.request.fields.description")
+        %dd= vrequest.description
 
-      %dt= t("modals.request.fields.requesting_school")
-      %dd= vrequest.school.name
+        %dt= t("modals.request.fields.requesting_school")
+        %dd= vrequest.school.name
 
-      %dt= t("modals.request.fields.required_time")
-      %dd= "#{vrequest.duration} #{t("requests.row.duration_units")}"
+        %dt= t("modals.request.fields.required_time")
+        %dd= "#{vrequest.duration} #{t("requests.row.duration_units")}"
 
-      %dt= t("modals.request.fields.date")
-      %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
+        %dt= t("modals.request.fields.date")
+        %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
 
-      %dt= t("modals.request.fields.note_to_school")
+        %dt= t("modals.request.fields.note_to_school")
+        %dd
+          != text_area_tag :note,"", placeholder: "#{t("modals.request.fields.note_to_school_placeholder")}"
+
       %dd
-        %textarea{rows: 3, placeholder: "#{t("modals.request.fields.note_to_school_placeholder")}"}
-
-      %dd
-        %a.btn.btn-primary.btn-orange{href: "#"}= t("modals.request.submit_button")
-        -#%p.text-info= t("modals.request.submit_note")
-
-  -#.modal-footer
-  -#  footer!
+        %button.btn.btn-primary.btn-orange{type:"submit"}= t("modals.request.submit_button")

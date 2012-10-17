@@ -7,6 +7,8 @@ class Request < ActiveRecord::Base
   belongs_to :school
   has_many :responses
 
+  has_many :responded_users, class_name: "User", source: :user, :through => :responses
+
   validates_presence_of :name, :description, :category, :recurrence, :duration
 
   scope :not_closed, where(:closed => false)

@@ -1,6 +1,9 @@
 .info
   %strong= req.category.name
 .action
-  %a.btn{href: "#user_request_modal_#{req.id}", data: {toggle: "modal"}}= t("requests.row.i_want_to_help")
+  - unless req.responded_users.include?(current_user)
+    %a.btn{href: "#user_request_modal_#{req.id}", data: {toggle: "modal"}}= t("requests.row.i_want_to_help")
+  - else
+    %a.btn.disabled= t("requests.row.im_helping")
 
-!= render partial: "modals/user/request_modal", locals: {vrequest: Request.first, id: "user_request_modal_#{req.id}"}
+!= render partial: "modals/user/request_modal", locals: {vrequest: req, id: "user_request_modal_#{req.id}"}
