@@ -1,22 +1,24 @@
-.request_row
-  .name
-    = req.name
-  .description
-    = req.description
-  .additional_data
-    .icon.location
-    %span
-      = req.school.try(:name)
-    .icon.duration
-    %span
-      = "#{t("requests.duration")}: #{req.duration} #{t("requests.hours")}"
-    .icon.schedule
-    %span
-      = req.recurrence.name
-  .actions
-    - if type == 'school'
-      != render partial: "layouts/components/request/request_school_data", :locals => {:request => req}
-    - elsif type == 'user'
-      != render partial: "layouts/components/request/request_user_data", :locals => {:request => req}
-    - else
-      != render partial: "layouts/components/request/request_main_data", :locals => {:request => req}
+.request_row.row
+  .span7
+    .name
+      = req.name
+    .description
+      = req.description
+    .additional_data
+      .icon.location
+      %span
+        = req.school.try(:name)
+      .icon.duration
+      %span
+        = "#{t("requests.row.duration")}: #{req.duration} #{t("requests.row.duration_units")}"
+      .icon.schedule
+      %span
+        = req.recurrence.name
+  .span4
+    .actions
+      - if type == 'school'
+        != render partial: "layouts/components/request/request_school_data", :locals => {:req => req}
+      - elsif type == 'user'
+        != render partial: "layouts/components/request/request_user_data", :locals => {:req => req}
+      - else
+        != render partial: "layouts/components/request/request_main_data", :locals => {:req => req}
