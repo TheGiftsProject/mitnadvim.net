@@ -2,7 +2,7 @@
 
 .box
   .header= t("users.new.title")
-  %form.form-horizontal{:action => "/devise/registrations/create"}
+  %form.form-horizontal{:action => sessions_path}
     != volunteer_field("first_name")
     != volunteer_field("last_name")
     != volunteer_field("birth_date")

@@ -7,6 +7,8 @@ MitnadvimNet::Application.routes.draw do
 
   resources :volunteers
 
+  resources :sessions
+
   root :to => 'application#temp_root'
 
   # The priority is based upon order of creation:
