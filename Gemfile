@@ -16,8 +16,9 @@ group :assets do
   gem "bootstrap-sass-rails-rtl"
 end
 
+gem 'enumify'
 gem 'jquery-rails'
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem "bcrypt-ruby", :require => "bcrypt"
 
 group :development, :test do
   gem 'ruby-debug19', require: 'ruby-debug'
