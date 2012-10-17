@@ -53,6 +53,9 @@ class SchoolsController < ApplicationController
 
     respond_to do |format|
       if school_is_valid and admin_is_valid
+
+        sign_in(@admin_user)
+
         format.html { redirect_to requests_path(), notice: t("schools.signup.successfully_created") }
         format.json { render json: @school, status: :created, location: @school }
       else

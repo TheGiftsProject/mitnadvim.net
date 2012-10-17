@@ -42,10 +42,7 @@ ActiveRecord::Schema.define(:version => 20121017144040) do
     t.datetime "updated_at",                       :null => false
     t.integer  "recurrence_id"
     t.integer  "duration"
-<<<<<<< HEAD
-=======
     t.boolean  "closed",        :default => false
->>>>>>> 7683691c2996ab13fcdfb7462c3ba9e7b5f876da
   end
 
   create_table "responses", :force => true do |t|
