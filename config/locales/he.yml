@@ -31,7 +31,7 @@ he:
 
     sign_up:
       title: "מעוניין להתנדב?"
-      description: ""
+      description: "על מנת להתנדב עליך להירשם כמשתמש במערכת"
       action: "הירשם כמתנדב חדש"
     logged_in:
       title: "הפרופיל שלי"
