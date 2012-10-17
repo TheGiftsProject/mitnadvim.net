@@ -1,6 +1,7 @@
 %header.navbar.navbar-static-top
   .navbar-inner
     .container
-      %a.brand
+      %a.brand{:href => root_path}
         = t("header.title")
         .face
+      .user-panel

@@ -1,10 +1,14 @@
-@import "twitter/bootstrap";
 @import "twitter/bootstrap_rtl";
 @import "compass";
 @import "photoshop-drop-shadow";
+
+@import "colors";
+@import "mixins";
 @import "font";
 @import "layout";
+@import "box";
 
 body{
   direction: rtl;
+  font-family: $body-fonts;
 }
