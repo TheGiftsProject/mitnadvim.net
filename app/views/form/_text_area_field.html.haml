@@ -1,4 +1,4 @@
 .control-group
-  %label.control-label{:for => field_name}= label
+  %label.control-label{:for => opts[:field_name]}= opts[:label]
   .controls
-    = text_area_tag "school[description]", @school.description, :id => field_name, :name => field_name
+    = text_area_tag opts[:field_name], opts[:value], {:id => opts[:field_name], :name => opts[:field_name]}

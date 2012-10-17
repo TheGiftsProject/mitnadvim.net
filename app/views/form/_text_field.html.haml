@@ -1,4 +1,6 @@
 .control-group
-  %label.control-label{:for => field_name}= label
+  %label.control-label{:for => opts[:field_name]}= opts[:label]
   .controls
-    %input{:id => field_name, :name => field_name, :type => type, value: value}
+    %input{:id => opts[:field_name], :name => opts[:field_name], :type => opts[:type], value: opts[:value]}
+    - if defined? body
+      != body

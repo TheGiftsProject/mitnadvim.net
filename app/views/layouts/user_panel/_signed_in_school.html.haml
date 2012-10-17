@@ -2,8 +2,8 @@
   %span= t("header.hello")
   %span= current_user.first_name
   %span ·
-  %a{:href => "/manage"}!= t("header.manage_school")
-  %span ·
-  %a{:href => "/edit"}!= t("header.edit_school")
+  %a{:href => requests_path}!= t("header.manage_school")
+  -#%span ·
+  -#%a{:href => "/edit"}!= t("header.edit_school")
   %span ·
   %a{:href => "/log_out"}= t("header.sign_out")

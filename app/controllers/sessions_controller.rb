@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       return_url = user.school? ? requests_path : root_path
-      redirect_to return_url, :notice => "Logged in!"
+      redirect_to return_url, :notice => "התחברת בהצלחה!"
     else
       flash.now.alert = I18n.t('errors.messages.login_fail')
       render "new"

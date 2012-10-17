@@ -2,8 +2,12 @@ module FormsHelper
 
   extend ComponentsHelper
 
-  def form_text_field(label, field_name, value, type = "text")
-    block_to_partial("form/text_field", {:field_name => field_name, label: label, :type => type, value: value})
+  def form_text_field(label, field_name, value, &block)
+    block_to_partial("form/text_field", {:field_name => field_name, label: label, :type => "text", value: value}, &block)
+  end
+
+  def form_password_field(label, field_name, value, &block)
+    block_to_partial("form/text_field", {:field_name => field_name, label: label, :type => "password", value: value}, &block)
   end
 
   def form_textarea_field(label, field_name, value)
