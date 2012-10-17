@@ -56,7 +56,8 @@ class SchoolsController < ApplicationController
         format.html { redirect_to @school, notice: 'School was successfully created.' }
         format.json { render json: @school, status: :created, location: @school }
       else
-        flash[:error] = @school.errors.merge(@admin_user.errors)
+        @errors = @school.errors.merge(@admin_user.errors)
+        flash[:error] = @errors
         format.html { render action: "new" }
         format.json { render json: @errors, status: :unprocessable_entity }
       end

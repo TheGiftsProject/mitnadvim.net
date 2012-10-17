@@ -2,4 +2,11 @@
   - if msg.is_a?(String)
     %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
       %a.close{"data-dismiss" => "alert"} ×
-      = content_tag :div, msg, :id => "flash_#{name}"
+      - if name == :error and !msg.is_a?(String)
+        #flash_error
+          %ul
+          - msg.full_messages.each do |error_msg|
+            %li= error_msg
+
+      - else
+        = content_tag :div, msg, :id => "flash_#{name}"

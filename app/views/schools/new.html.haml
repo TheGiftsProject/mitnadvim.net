@@ -1,14 +1,5 @@
 
 .box
-  - if @errors.any?
-    #error_explanation
-      %h2= t("schools.signup.error_title", pluralize(@errors.count, "error") )
-
-      %ul
-      - @errors.full_messages.each do |msg|
-        %li= msg
-
-
   %h1= t("schools.signup.title")
 
   != render 'form'
