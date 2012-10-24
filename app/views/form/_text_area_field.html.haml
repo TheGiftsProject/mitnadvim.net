@@ -2,3 +2,5 @@
   %label.control-label{:for => opts[:field_name]}= opts[:label]
   .controls
     = text_area_tag opts[:field_name], opts[:value], {:id => opts[:field_name], :name => opts[:field_name]}
+    - if defined? body
+      != body

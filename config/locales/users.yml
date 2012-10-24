@@ -18,7 +18,11 @@ he:
         phone_number: "מספר טלפון"
         gender: "מין"
         birth_year: "שנת לידה"
-        password: "הזן סיסמה"
+        password: "סיסמה"
+        password_confirmation: "הזן סיסמה שנית"
+        password_limit: "לפחות 6 תווים"
+        description: "תיאור"
+        area: "אזור התנדבות"
     errors:
       models:
         user:

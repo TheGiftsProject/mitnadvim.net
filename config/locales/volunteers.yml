@@ -3,10 +3,6 @@ he:
     new:
       title: "הרשמת מתנדב חדש"
       action: "צור פרופיל חדש"
-      fields:
-        password: "הזן סיסמה"
-        password_confirmation: "הזן סיסמה שנית"
-        area: "אזור בו אתה רוצה להתנדב"
-        description: "ספר על עצמך בכמה מילים"
-      password_limit: "לפחות 6 תווים"
+      description_help: "ספר על עצמך בכמה מילים"
+      area_help: "האזור בו תרצה להתנדב"
       success_notice: "המשתמש נוצר בהצלחה!"
