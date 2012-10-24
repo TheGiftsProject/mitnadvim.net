@@ -61,10 +61,14 @@ he:
       user:
         first_name: "שם פרטי"
         last_name: "שם משפחה"
+        email: "כתובת דוא\"ל"
         phone_number: "מספר טלפון"
-        email: "דוא\"ל"
-        password: "סיסמא"
-        password_confirmation: "אישור סיסמא"
+        gender: "מין"
+        birth_year: "שנת לידה"
+        password: "הזן סיסמה"
+        password_confirmation: "הזן סיסמה שנית"
+        area_id: "אזור בו אתה רוצה להתנדב"
+        description: "ספר על עצמך בכמה מילים"
     errors:
       models:
         school:

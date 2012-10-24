@@ -4,23 +4,10 @@ he:
       title: "הפרופיל שלי"
       my_closed_requests: "בקשות התנדבות שנענו"
       my_active_requests: "ההתנדבויות שלי"
-      phone_no: "טלפון"
-      email: 'דוא"ל'
       watch: "צפה בפרופיל שלך"
     new:
       title: "הרשמת מתנדב חדש"
       action: "צור פרופיל חדש"
-      fields:
-        first_name: "שם פרטי"
-        last_name: "שם משפחה"
-        email: "כתובת דוא\"ל"
-        phone_number: "מספר טלפון"
-        gender: "מין"
-        birth_year: "שנת לידה"
-        password: "הזן סיסמה"
-        password_confirmation: "הזן סיסמה שנית"
-        area_id: "אזור בו אתה רוצה להתנדב"
-        description: "ספר על עצמך בכמה מילים"
       success_notice: "המשתמש נוצר בהצלחה!"
       genders:
         male: "זכר"
