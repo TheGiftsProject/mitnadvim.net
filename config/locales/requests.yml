@@ -1,4 +1,6 @@
 he:
+  notices:
+    request_created: "בקשתך נוצרה בהצלחה!"
   requests:
     published: "פורסם לפני"
     days: "ימים"
