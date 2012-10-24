@@ -18,59 +18,6 @@ he:
     edit_school: "ערוך פרטי בית ספר"
     manage_school: "ניהול בקשות התנדבות"
 
-  homepage:
-    title: "ברוכים הבאים!"
-    paragraph: "מטרתה של מערכת מתנדבים הינה לתווך בין
-                אנשים המעוניינים להתנדב לבין בתי ספר אשר
-                זקוקים למתנדבים על מנת לעזור לתלמידים
-                במגוון דרכים."
-    steps:
-      - "מצא התנדבות בבית הספר המתאים לך"
-      - "אם נמצאת מתאים ביה”ס ייצור איתך קשר"
-      - "התחל להתנדב!"
-
-    sign_up:
-      title: "מעוניין להתנדב?"
-      description: "על מנת להתנדב עליך להירשם כמשתמש במערכת"
-      action: "הירשם כמתנדב חדש"
-    logged_in:
-      title: "הפרופיל שלי"
-
-  requests:
-    new:
-      header: "בקשת התנדבות חדשה"
-    edit:
-      header: "ערוך בקשת התנדבות"
-    examples:
-      title: "דוגמאות"
-      sections:
-        title: "פגישה אחד על אחד במשך שעה אחרי הצהרים ללימוד חשבון"
-        description: "מפגש שבועי ללימוד תלמידים בכיתות ג' חשבון. הפגישה הינה בפורמט אחד על אחד."
-        type: "סוג התנדבות: לימוד חשבון"
-        time: "משך: שעה בשבוע"
-    index:
-      header: "ניהול בקשות התנדבות"
-      create_new: "צור בקשה חדשה"
-      active_requests: "בקשות פתוחות"
-      closed_requests: "בקשות שנענו"
-      submit_filter: "סנן התנדבות"
-      list_empty_title: "אין בקשות פתוחות"
-    form:
-      label:
-        name: "כותרת הבקשה"
-        description: "תיאור הבקשה"
-        category: "סוג ההתנדבות"
-        recurrence: "בחר פרק זמן"
-        duration: "משך ההתנדבות"
-        duration_units: "שעות"
-    row:
-      duration: "משך ההתנדבות"
-      duration_units: "שעות"
-      volunteers: "מתנדבים"
-      more_details_action: "פרטים נוספים"
-      i_want_to_help: "אני רוצה לעזור"
-      im_helping: "התנדבתי"
-
   helpers:
     submit:
       request:
@@ -103,8 +50,6 @@ he:
 
     email: "דוא\"ל"
     password: "סיסמא"
-
-
 
   activerecord:
     attributes:

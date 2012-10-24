@@ -1,10 +1,40 @@
 he:
-  notices:
-    request_created: "בקשתך נוצרה בהצלחה!"
-    request_updated: "בקשתך עודכנה בהצלחה!"
   requests:
-    published: "פורסם לפני"
-    days: "ימים"
-    duration:  "משך"
-    hours: "שעות"
     no_requests: "לא נמצאו בקשות"
+
+    new:
+      header: "בקשת התנדבות חדשה"
+    edit:
+      header: "ערוך בקשת התנדבות"
+    examples:
+      title: "דוגמאות"
+      sections:
+        title: "פגישה אחד על אחד במשך שעה אחרי הצהרים ללימוד חשבון"
+        description: "מפגש שבועי ללימוד תלמידים בכיתות ג' חשבון. הפגישה הינה בפורמט אחד על אחד."
+        type: "סוג התנדבות: לימוד חשבון"
+        time: "משך: שעה בשבוע"
+    index:
+      header: "ניהול בקשות התנדבות"
+      create_new: "צור בקשה חדשה"
+      active_requests: "בקשות פתוחות"
+      closed_requests: "בקשות שנענו"
+      submit_filter: "סנן התנדבות"
+      list_empty_title: "אין בקשות פתוחות"
+    form:
+      label:
+        name: "כותרת הבקשה"
+        description: "תיאור הבקשה"
+        category: "סוג ההתנדבות"
+        recurrence: "בחר פרק זמן"
+        duration: "משך ההתנדבות"
+        duration_units: "שעות"
+    row:
+      duration: "משך ההתנדבות"
+      duration_units: "שעות"
+      volunteers: "מתנדבים"
+      more_details_action: "פרטים נוספים"
+      i_want_to_help: "אני רוצה לעזור"
+      im_helping: "התנדבתי"
+    notices:
+      request_created: "בקשתך נוצרה בהצלחה!"
+      request_updated: "בקשתך עודכנה בהצלחה!"

@@ -19,7 +19,7 @@
   .span12
     .box
       .header.no-margin
-        = t("home.requests.title")
+        = t("homepage.requests.title")
       .content
         -if @active_requests.count > 0
           != render partial: "layouts/components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}
