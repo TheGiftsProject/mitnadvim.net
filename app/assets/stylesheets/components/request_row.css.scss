@@ -9,6 +9,13 @@
     border-bottom: none;
   }
 
+  div {
+    padding-bottom: 10px;
+    &:last-child{
+      padding-bottom: 0px;
+    }
+  }
+
   .name {
     font-size: 20px;
     line-height: 30px;
