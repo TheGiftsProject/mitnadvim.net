@@ -14,7 +14,7 @@ he:
       user:
         first_name: "שם פרטי"
         last_name: "שם משפחה"
-        email: "כתובת דוא\"ל"
+        email: 'דוא"ל'
         phone_number: "מספר טלפון"
         gender: "מין"
         birth_year: "שנת לידה"

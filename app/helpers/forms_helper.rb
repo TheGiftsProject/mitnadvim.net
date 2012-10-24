@@ -2,7 +2,7 @@ module FormsHelper
 
   extend ComponentsHelper
 
-  def form_text_field(label, field_name, value, &block)
+  def form_text_field(label, field_name, value = nil, &block)
     block_to_partial("form/text_field", {:field_name => field_name, label: label, :type => "text", value: value}, &block)
   end
 
