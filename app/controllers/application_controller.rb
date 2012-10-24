@@ -5,15 +5,10 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  def homepage
-    @active_requests = Request.active
-  end
-
   include UserSupport
   include ErrorsSupport
 
-  def widgets
-    #flash.now[:notice] = "HEY"
-    #flash.now[:error] = "HEY"
+  def homepage
+    @active_requests = Request.active
   end
 end
