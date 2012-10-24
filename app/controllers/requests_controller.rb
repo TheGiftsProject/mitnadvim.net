@@ -63,7 +63,7 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.update_attributes(params[:request])
-        format.html { redirect_to requests_path, notice: 'Request was successfully updated.' }
+        format.html { redirect_to requests_path, notice: I18n.t("notices.request_updated") }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
