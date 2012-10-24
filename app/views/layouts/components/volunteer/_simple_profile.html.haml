@@ -5,7 +5,7 @@
     .span1
       = "#{@user.first_name} #{@user.last_name}"
     .span2
-      = "#{t("users.profile.phone_no")}: #{@user.phone_number}"
+      = "#{User.human_attribute_name("phone_number")}: #{@user.phone_number}"
     .span2
-      = "#{t("users.profile.email")}: #{@user.email}"
+      = "#{User.human_attribute_name("email")}: #{@user.email}"
     .offset6
