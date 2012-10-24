@@ -22,7 +22,7 @@ class VolunteersController < ApplicationController
     respond_to do |format|
       if @user.save
         sign_in(@user)
-        format.html { redirect_to root_path, :notice => t("users.new.success_notice") }
+        format.html { redirect_to root_path, :notice => t("volunteers.new.success_notice") }
       else
         @errors = @user.errors.full_messages
         flash[:error] = @errors

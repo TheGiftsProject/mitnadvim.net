@@ -1,0 +1,18 @@
+he:
+  volunteers:
+    new:
+      title: "הרשמת מתנדב חדש"
+      action: "צור פרופיל חדש"
+      fields:
+        first_name: "שם פרטי"
+        last_name: "שם משפחה"
+        email: "כתובת דוא\"ל"
+        phone_number: "מספר טלפון"
+        gender: "מין"
+        birth_year: "שנת לידה"
+        password: "הזן סיסמה"
+        password_confirmation: "הזן סיסמה שנית"
+        area: "אזור בו אתה רוצה להתנדב"
+        description: "ספר על עצמך בכמה מילים"
+      password_limit: "לפחות 6 תווים"
+      success_notice: "המשתמש נוצר בהצלחה!"
