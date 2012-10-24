@@ -1,7 +1,5 @@
 he:
   schools:
-    validation:
-      name: "שם קצר מדי"
     edit:
       title: "עריכת בית ספר"
       successfully_updated: 'בית הספר עודכן בהצלחה.'
