@@ -1,18 +1,4 @@
 .box
-  .header= t("users.new.title")
-  = form_tag(volunteers_path, :method => :post, :class => "form-horizontal volunteer_creation_form") do
-    = form_text_field(t("users.new.fields.first_name"), "user[first_name]", @user.first_name)
-    = form_text_field(t("users.new.fields.last_name"), "user[last_name]", @user.last_name)
-    = form_field_wrapper(t("users.new.fields.birth_year"), "user[birth_year]") do
-      = select_tag("user[birth_year]", year_options(@user.birth_year))
-    = form_password_field(t("users.new.fields.password"), "user[password]")
-    = form_password_field(t("users.new.fields.password_confirmation"), "user[password_confirmation]")
-    = form_textarea_field(t("users.new.fields.description"), "user[description]", @user.description)
-    = form_field_wrapper(t("users.new.fields.area"), "user[area_id]") do
-      = select_tag("user[area_id]", area_options(@user.area_id))
-    = form_text_field(t("users.new.fields.email"), "user[email]", @user.email)
-    = form_text_field(t("users.new.fields.phone_number"), "user[phone_number]", @user.phone_number)
-    = form_field_wrapper(t("users.new.fields.gender"), "user[gender]") do
-      = select_tag("user[gender]", gender_options(@user.gender))
-
-    = form_submit_button(t("users.new.action"), :class => "btn btn-orange")
+  %h1= t("users.new.title")
+  %hr
+  != render 'form'

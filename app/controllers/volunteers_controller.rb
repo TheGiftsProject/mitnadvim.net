@@ -1,14 +1,12 @@
 class VolunteersController < ApplicationController
 
-  # GET /volunteers/1
-  # GET /volunteers/1.json
   def show
     @user = User.find(params[:id])
     @closed_requests = @user.requests.closed
     @active_requests   = @user.requests.active
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.json { render json: @user }
     end
   end

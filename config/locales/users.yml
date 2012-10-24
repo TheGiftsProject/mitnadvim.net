@@ -21,6 +21,7 @@ he:
         password_confirmation: "הזן סיסמה שנית"
         area: "אזור בו אתה רוצה להתנדב"
         description: "ספר על עצמך בכמה מילים"
+      password_limit: "לפחות 6 תווים"
       success_notice: "המשתמש נוצר בהצלחה!"
       genders:
         male: "זכר"
