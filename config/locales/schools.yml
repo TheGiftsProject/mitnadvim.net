@@ -9,20 +9,8 @@ he:
       title: "הרשמת בית ספר חדש"
       create_button: "צור פרופיל בית ספר חדש"
       successfully_created: 'פרופיל בית הספר נוצר בהצלחה.'
-      school:
-        name: "שם בית הספר"
-        area: "איזור"
-        address: "כתובת בית הספר"
-        description: "תיאור קצר"
       admin:
         title: "אחראי מערכת"
-        first_name: "שם פרטי"
-        last_name: "שם משפחה"
-        email: "כתובת דוא\"ל"
-        phone_number: "מספר טלפון"
-        password: "סיסמה"
-        password_confirmation: "הזמן סיסמה שנית"
-        password_limit: "לפחות 6 תווים"
 
   activerecord:
     attributes:
