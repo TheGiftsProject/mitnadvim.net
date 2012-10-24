@@ -66,9 +66,6 @@ he:
         gender: "מין"
         birth_year: "שנת לידה"
         password: "הזן סיסמה"
-        password_confirmation: "הזן סיסמה שנית"
-        area_id: "אזור בו אתה רוצה להתנדב"
-        description: "ספר על עצמך בכמה מילים"
     errors:
       models:
         school:

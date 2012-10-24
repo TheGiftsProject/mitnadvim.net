@@ -4,12 +4,6 @@ he:
       title: "הרשמת מתנדב חדש"
       action: "צור פרופיל חדש"
       fields:
-        first_name: "שם פרטי"
-        last_name: "שם משפחה"
-        email: "כתובת דוא\"ל"
-        phone_number: "מספר טלפון"
-        gender: "מין"
-        birth_year: "שנת לידה"
         password: "הזן סיסמה"
         password_confirmation: "הזן סיסמה שנית"
         area: "אזור בו אתה רוצה להתנדב"
