@@ -5,12 +5,40 @@ he:
       my_closed_requests: "בקשות התנדבות שנענו"
       my_active_requests: "ההתנדבויות שלי"
       watch: "צפה בפרופיל שלך"
-    new:
-      title: "הרשמת מתנדב חדש"
-      action: "צור פרופיל חדש"
-      success_notice: "המשתמש נוצר בהצלחה!"
-      genders:
-        male: "זכר"
-        female: "נקבה"
+    genders:
+      male: "זכר"
+      female: "נקבה"
+
+  activerecord:
+    attributes:
+      user:
+        first_name: "שם פרטי"
+        last_name: "שם משפחה"
+        email: 'דוא"ל'
+        phone_number: "מספר טלפון"
+        gender: "מין"
+        birth_year: "שנת לידה"
+        password: "סיסמה"
+        password_confirmation: "הזן סיסמה שנית"
+        password_limit: "לפחות 6 תווים"
+        description: "תיאור"
+        area: "אזור התנדבות"
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "ריק"
+              too_short: "קצרה מידי (6 תווים לפחות)"
+              confirmation: "- יש למלא בשנית"
+            first_name:
+              too_short: "קצר מדי"
+            phone_number:
+              too_short: "קצר מדי"
+            email:
+              taken: "תפוס"
+              blank: "ריק"
+              too_short: "קצר מדי"
+              invalid: "לא תקין"
 
 
