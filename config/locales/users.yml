@@ -9,4 +9,32 @@ he:
       male: "זכר"
       female: "נקבה"
 
+  activerecord:
+    attributes:
+      user:
+        first_name: "שם פרטי"
+        last_name: "שם משפחה"
+        email: "כתובת דוא\"ל"
+        phone_number: "מספר טלפון"
+        gender: "מין"
+        birth_year: "שנת לידה"
+        password: "הזן סיסמה"
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "ריק"
+              too_short: "קצרה מידי (6 תווים לפחות)"
+              confirmation: "- יש למלא בשנית"
+            first_name:
+              too_short: "קצר מדי"
+            phone_number:
+              too_short: "קצר מדי"
+            email:
+              taken: "תפוס"
+              blank: "ריק"
+              too_short: "קצר מדי"
+              invalid: "לא תקין"
+
 

@@ -24,3 +24,17 @@ he:
         password_confirmation: "הזמן סיסמה שנית"
         password_limit: "לפחות 6 תווים"
 
+  activerecord:
+    attributes:
+      school:
+        name: "שם בית הספר"
+        area: "איזור"
+        address: "כתובת"
+        description: "תיאור בית הספר"
+    errors:
+      models:
+        school:
+          attributes:
+            name:
+              too_short: "קצר מדי"
+
