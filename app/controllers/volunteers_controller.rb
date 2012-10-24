@@ -14,8 +14,6 @@ class VolunteersController < ApplicationController
   end
 
   def new
-    @areas = Area.all
-    @years = *(1940..2000)
     @user = User.new
   end
 
@@ -28,9 +26,6 @@ class VolunteersController < ApplicationController
         sign_in(@user)
         format.html { redirect_to root_path, :notice => t("users.new.success_notice") }
       else
-        @areas = Area.all
-        @years = *(1940..2000)
-
         @errors = @user.errors.full_messages
         flash[:error] = @errors
         format.html { render :action => "new" }

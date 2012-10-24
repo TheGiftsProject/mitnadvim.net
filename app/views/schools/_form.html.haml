@@ -1,4 +1,4 @@
-= form_tag( schools_path, method: :post, class: "form-horizontal") do
+= form_tag(schools_path, method: :post, class: "form-horizontal") do
 
   = form_text_field t("schools.signup.school.name"), "school[name]", @school.name
 
@@ -16,9 +16,9 @@
   = form_text_field t("schools.signup.admin.email"), "admin[email]", @admin_user.email
   = form_text_field t("schools.signup.admin.phone_number"), "admin[phone_number]", @admin_user.phone_number
 
-  = form_password_field t("schools.signup.admin.password"), "admin[password]", @admin_user.password do
+  = form_password_field t("schools.signup.admin.password"), "admin[password]" do
     %span.help-inline= t("schools.signup.admin.password_limit")
 
-  = form_password_field t("schools.signup.admin.password_confirmation"), "admin[password_confirmation]", @admin_user.password_confirmation
+  = form_password_field t("schools.signup.admin.password_confirmation"), "admin[password_confirmation]"
 
   = form_submit_button t("schools.signup.create_button"), class: "btn-large btn-warning"

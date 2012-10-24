@@ -19,7 +19,7 @@ he:
         birth_year: "שנת לידה"
         password: "הזן סיסמה"
         password_confirmation: "הזן סיסמה שנית"
-        area_id: "אזור בו אתה רוצה להתנדב"
+        area: "אזור בו אתה רוצה להתנדב"
         description: "ספר על עצמך בכמה מילים"
       success_notice: "המשתמש נוצר בהצלחה!"
       genders:
