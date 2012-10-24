@@ -11,9 +11,4 @@ class ApplicationController < ActionController::Base
   def homepage
     @active_requests = Request.active
   end
-
-  def widgets
-    #flash.now[:notice] = "HEY"
-    #flash.now[:error] = "HEY"
-  end
 end
