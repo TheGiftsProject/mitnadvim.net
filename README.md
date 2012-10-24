@@ -2,7 +2,7 @@
 
 ![Mitnadvim screenshot](https://img.skitch.com/20121017-qmbp94b4fk1r2hkn64ea2xw851.jpg "Current state screenshot")
 
-The porpuse of the project is to give school administrators a tool to manage volunteering force in their school
+The purpose of the project is to give school administrators a tool to manage volunteering force in their school
 
 ##How do i contribute
 
