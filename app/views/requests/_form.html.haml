@@ -1,30 +1,16 @@
-= form_for(@request, html: { class: 'form-horizontal' }) do |f|
+= form_tag(requests_path, :class => "form-horizontal") do
   - if @request.errors.any?
     #error_explanation
       %ul
         - @request.errors.full_messages.each do |msg|
           %li= msg
-  .control-group
-    %label.control-label= t("requests.form.label.name")
-    .controls
-      != f.text_field :name
-  .control-group
-    %label.control-label= t("requests.form.label.description")
-    .controls
-      != f.text_area :description
-  .control-group
-    %label.control-label= t("requests.form.label.category")
-    .controls
-      != f.select :category_id, options_from_collection_for_select(Category.all, :id, :name)
-  .control-group
-    %label.control-label= t("requests.form.label.recurrence")
-    .controls
-      != f.select :recurrence_id, options_from_collection_for_select(Recurrence.all, :id, :name)
-  .control-group
-    %label.control-label= t("requests.form.label.duration")
-    .controls
-      != f.text_field :duration, :type => "number", :value => @request.duration || 2
-      %span.help-inline= t("requests.form.label.duration_units")
-  .control-group
-    .controls
-      = f.submit class: "btn btn-orange"
+  = form_text_field(Request.human_attribute_name("name"), "request[name]", @request.name)
+  = form_textarea_field(Request.human_attribute_name("description"), "request[description]", @request.description)
+  = form_field_wrapper(Request.human_attribute_name("category"), "request[category_id]") do
+    = select_tag("request[category_id]", category_options(@request.category_id))
+  = form_field_wrapper(Request.human_attribute_name("recurrence"), "request[recurrence_id]") do
+    = select_tag("request[recurrence_id]", recurrence_options(@request.recurrence_id))
+  = form_text_field(Request.human_attribute_name("duration"), "request[duration]", @request.duration || 2) do
+    %span.help-inline= Request.human_attribute_name("duration_units")
+
+  = form_submit_button(t("requests.new.action"), :class => "btn btn-orange")

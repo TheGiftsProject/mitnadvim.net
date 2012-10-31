@@ -4,6 +4,7 @@ he:
 
     new:
       header: "בקשת התנדבות חדשה"
+      action: "צור בקשה חדשה"
     edit:
       header: "ערוך בקשת התנדבות"
     examples:
@@ -20,14 +21,6 @@ he:
       closed_requests: "בקשות שנענו"
       submit_filter: "סנן התנדבות"
       list_empty_title: "אין בקשות פתוחות"
-    form:
-      label:
-        name: "כותרת הבקשה"
-        description: "תיאור הבקשה"
-        category: "סוג ההתנדבות"
-        recurrence: "בחר פרק זמן"
-        duration: "משך ההתנדבות"
-        duration_units: "שעות"
     row:
       duration: "משך ההתנדבות"
       duration_units: "שעות"
@@ -38,3 +31,14 @@ he:
     notices:
       request_created: "בקשתך נוצרה בהצלחה!"
       request_updated: "בקשתך עודכנה בהצלחה!"
+
+  activerecord:
+    attributes:
+      request:
+        name: "כותרת הבקשה"
+        description: "תיאור הבקשה"
+        category: "סוג ההתנדבות"
+        recurrence: "פרק זמן"
+        duration: "משך ההתנדבות"
+        duration_units: "שעות"
+
