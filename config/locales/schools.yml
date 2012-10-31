@@ -1,7 +1,5 @@
 he:
   schools:
-    validation:
-      name: "שם קצר מדי"
     edit:
       title: "עריכת בית ספר"
       successfully_updated: 'בית הספר עודכן בהצלחה.'
@@ -9,18 +7,20 @@ he:
       title: "הרשמת בית ספר חדש"
       create_button: "צור פרופיל בית ספר חדש"
       successfully_created: 'פרופיל בית הספר נוצר בהצלחה.'
+      admin:
+        title: "אחראי מערכת"
+
+  activerecord:
+    attributes:
       school:
         name: "שם בית הספר"
         area: "איזור"
-        address: "כתובת בית הספר"
-        description: "תיאור קצר"
-      admin:
-        title: "אחראי מערכת"
-        first_name: "שם פרטי"
-        last_name: "שם משפחה"
-        email: "כתובת דוא\"ל"
-        phone_number: "מספר טלפון"
-        password: "סיסמה"
-        password_confirmation: "הזמן סיסמה שנית"
-        password_limit: "לפחות 6 תווים"
+        address: "כתובת"
+        description: "תיאור בית הספר"
+    errors:
+      models:
+        school:
+          attributes:
+            name:
+              too_short: "קצר מדי"
 

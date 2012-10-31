@@ -1,20 +1,4 @@
 .box
-  .header= t("users.new.title")
-  != form_for @user, :url => {:action => "create"}, :html => {:class => "form-horizontal volunteer_creation_form"} do |f|
-    != volunteer_field(@user, f, "first_name")
-    != volunteer_field(@user, f, "last_name")
-    != field_wrapper("birth_year") do
-      != f.select "birth_year", @years
-    != volunteer_field(@user, f, "password", "password")
-    != volunteer_field(@user, f, "password_confirmation", "password")
-    != field_wrapper("description") do
-      != f.text_area "description", :size => "60x3"
-    != volunteer_select_field(@user, f, "area_id", @areas)
-    != volunteer_field(@user, f, "email")
-    != volunteer_field(@user, f, "phone_number")
-    != volunteer_field(@user, f, "gender")
-    .actions.control-group
-      .controls
-        = f.submit(t("users.new.action"), :class => "btn btn-orange")
-
-
+  %h1= t("volunteers.new.title")
+  %hr
+  != render 'form'

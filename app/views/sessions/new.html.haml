@@ -2,15 +2,9 @@
   .box
     %h2= t("login_page.title.#{@type}")
     %hr
-    != form_tag sessions_path, :class => "form-horizontal" do |f|
-      .field.control-group
-        = label_tag :email, t("login_page.email"), class: "control-label"
-        .controls
-          = text_field_tag "user[email]"
-      .field.control-group
-        = label_tag :email, t("login_page.password"), class: "control-label"
-        .controls
-          = password_field_tag "user[password]"
+    = form_tag sessions_path, :class => "form-horizontal" do
+      = form_text_field(User.human_attribute_name("email"), "user[email]")
+      = form_password_field(User.human_attribute_name("password"), "user[password]")
       != submit_tag t("header.enter"), :class => "btn btn-orange btn-big"
     %hr
     %h3
