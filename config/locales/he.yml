@@ -26,6 +26,7 @@ he:
 
   flashes:
     logged_in: "התחברת בהצלחה!"
+    under_construction: "זוהי גרסת הדגמה - האתר עדיין בפיתוח"
   errors:
     messages:
       not_saved: "לא ניתן לבצע הפעולה"

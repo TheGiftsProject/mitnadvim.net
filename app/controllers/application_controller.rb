@@ -3,6 +3,8 @@ require 'controller_support/errors_support'
 
 class ApplicationController < ActionController::Base
 
+  before_filter :under_construction
+
   protect_from_forgery
 
   include UserSupport
@@ -11,4 +13,9 @@ class ApplicationController < ActionController::Base
   def homepage
     @active_requests = Request.active
   end
+
+  def under_construction
+    flash.now.alert = I18n.t("flashes.under_construction")
+  end
+
 end
