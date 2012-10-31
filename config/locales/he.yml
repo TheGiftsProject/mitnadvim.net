@@ -18,6 +18,10 @@ he:
     edit_school: "ערוך פרטי בית ספר"
     manage_school: "ניהול בקשות התנדבות"
 
+  footer:
+    text: "פונט עברי מאת "
+    font_contributor: "עודד עזר"
+
   helpers:
     submit:
       request:
