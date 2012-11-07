@@ -1,0 +1,27 @@
+.volunteers {
+
+  background-color: #f5f5f5;
+
+  .separator {
+    height: 1px;
+    border-bottom: 2px solid #e5e5e5;
+  }
+
+  .responded {
+    display: block;
+    padding: 15px 0;
+  }
+
+  .volunteer {
+    height: 70px;
+
+    .volunteer_details {
+      margin-top: 10px;
+    }
+
+    .actions {
+      margin-top: 23px;
+    }
+  }
+
+}

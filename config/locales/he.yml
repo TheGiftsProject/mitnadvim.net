@@ -77,5 +77,13 @@ he:
         date: "תאריך ושעה"
         note_to_school: "מסר לביה\"ס"
         note_to_school_placeholder: "אנא רשום פרטים נוספים או שאלות שיש לך בעבור הביה\"ס המבקש"
+      responded_volunteers:
+        zero: "אף מתנדב לא ענה לבקשה זאת"
+        one: "מתנדב אחד התעניין בהתנדבות זו עד כה"
+        other: "%{count} מתנדבים התעניינו בהתנדבות זו עד כה"
+      volunteers_details:
+        grade: "(ציון 5)"
+      actions:
+        watch_details: "צפה בפרטים"
       submit_button: "אני רוצה לעזור!"
       submit_note: "פרטי יצירת הקשר שלך יישלחו לבית הספר המבקש"
