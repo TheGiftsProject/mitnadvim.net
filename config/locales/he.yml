@@ -82,7 +82,10 @@ he:
         one: "מתנדב אחד התעניין בהתנדבות זו עד כה"
         other: "%{count} מתנדבים התעניינו בהתנדבות זו עד כה"
       volunteers_details:
-        grade: "(ציון 5)"
+        grade:
+          zero: "(לא ניתן עדיין ציון)"
+          one: "(ציון 1)"
+          other: "(ציון)"
       actions:
         watch_details: "צפה בפרטים"
       submit_button: "אני רוצה לעזור!"
