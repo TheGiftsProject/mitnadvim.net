@@ -13,17 +13,44 @@
     }
 
     .volunteer {
-      height: 70px;
-      padding: 0 15px;
+      padding: 10px 15px;
+      overflow: hidden;
+      margin-bottom: 5px;
       border-bottom: 1px solid #d8d8d8;
-      margin-bottom: 15px;
 
-      .volunteer_details {
-        margin-top: 10px;
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+
+      img {
+        float: right;
+        margin-left: 15px;
+      }
+
+      .details {
+        float: right;
+        font-family: $body-fonts;
+        font-size: 14px;
+        color: black;
+        font-weight: bold;
+        width: 350px;
+        margin-top: 6px;
+
+        .name {
+          color: #227fde;
+          text-decoration: underline;
+        }
+
+        .note {
+          display: block;
+        }
       }
 
       .actions {
-        margin-top: 23px;
+        float: right;
+        margin-top: 15px;
+        margin-right: 5px;
       }
     }
 
