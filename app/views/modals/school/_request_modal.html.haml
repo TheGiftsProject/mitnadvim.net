@@ -18,6 +18,11 @@
 
       %dt= t("modals.request.fields.date")
       %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
+
+    .actions
+      %button.btn.edit_request= t("modals.request.actions.edit_request")
+      %button.btn.delete_request= t("modals.request.actions.delete_request")
+      %button.btn.complete_request= t("modals.request.actions.complete_request")
   .modal-footer
     .volunteers
       %span.responded= t("modals.request.responded_volunteers", count: vrequest.responses.length)

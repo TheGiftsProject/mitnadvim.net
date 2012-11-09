@@ -88,6 +88,9 @@ he:
           other: "(ציון)"
         note: "אני יכולה רק שעתיים ביום רביעי, מקווה שזה מספיק"
       actions:
+        edit_request: "ערוך בקשה"
+        delete_request: "מחק בקשה"
+        complete_request: "סמן בקשה כהושלמה"
         watch_details: "צפה בפרטים"
       submit_button: "אני רוצה לעזור!"
       submit_note: "פרטי יצירת הקשר שלך יישלחו לבית הספר המבקש"

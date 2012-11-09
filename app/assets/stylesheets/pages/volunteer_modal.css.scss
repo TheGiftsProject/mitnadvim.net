@@ -2,6 +2,21 @@
 
   width: 700px;
 
+  .modal-body {
+
+    dl {
+      margin-bottom: 0;
+    }
+
+    .actions {
+      button {
+        float: right;
+        margin-left: 10px;
+      }
+    }
+
+  }
+
   .modal-footer {
 
     padding: 0;
