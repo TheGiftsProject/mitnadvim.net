@@ -29,8 +29,7 @@ Please join our [google-group](https://groups.google.com/forum/#!forum/mitnadvim
 ### PostgreSQL Installation
 
   1. If you don't have PostgreSQL installed, before running 'bundle install' run:
-      sudo apt-get install postgresql
-      sudo apt-get install libpq-dev
+      sudo apt-get install postgresql libq-dev
 
   2. When creating the database, if you encounter an error with the password, edit
       /etc/postgresql/9.1/main/pg_hba.conf
