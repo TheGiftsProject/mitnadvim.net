@@ -1,46 +1,20 @@
 class SchoolsController < ApplicationController
-  # GET /schools
-  # GET /schools.json
-  def index
-    @schools = School.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @schools }
-    end
-  end
-
-  # GET /schools/1
-  # GET /schools/1.json
-  def show
-    @school = School.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @school }
-    end
-  end
-
-  # GET /schools/new
-  # GET /schools/new.json
   def new
     @school = School.new
     @admin_user = User.new
 
     respond_to do |format|
-      format.html # new.html.haml
+      format.html
       format.json { render json: @school }
     end
   end
 
-  # GET /schools/1/edit
   def edit
     @school = School.find(params[:id])
     @admin_user = @school.admin
   end
 
-  # POST /schools
-  # POST /schools.json
   def create
     @school = School.new(params[:school])
 
@@ -56,7 +30,7 @@ class SchoolsController < ApplicationController
 
         sign_in(@admin_user)
 
-        format.html { redirect_to requests_path(), notice: t("schools.signup.successfully_created") }
+        format.html { redirect_to requests_path, notice: t("schools.signup.successfully_created") }
         format.json { render json: @school, status: :created, location: @school }
       else
         @errors = @school.errors.full_messages + @admin_user.errors.full_messages
@@ -67,8 +41,6 @@ class SchoolsController < ApplicationController
     end
   end
 
-  # PUT /schools/1
-  # PUT /schools/1.json
   def update
     @school = School.find(params[:id])
 
@@ -90,8 +62,6 @@ class SchoolsController < ApplicationController
     end
   end
 
-  # DELETE /schools/1
-  # DELETE /schools/1.json
   def destroy
     @school = School.find(params[:id])
     @school.destroy
