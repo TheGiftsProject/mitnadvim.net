@@ -4,8 +4,7 @@
     %h3= t("modals.request.header")
 
   .modal-body
-    != form_tag(responses_path) do
-      != hidden_field_tag "request_id", vrequest.id
+    != form_tag(request_responses_path(vrequest)) do
       %h1= vrequest.name
       %hr
       %dl.dl-horizontal

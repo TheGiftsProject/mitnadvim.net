@@ -1,6 +1,9 @@
 MitnadvimNet::Application.routes.draw do
 
-  resources :requests, :responses
+  resources :requests do
+    resources :responses
+  end
+
   resources :schools
   resources :users
   resources :volunteers, :only => [:new, :create, :show]
