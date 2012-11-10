@@ -12,6 +12,7 @@ he:
   activerecord:
     attributes:
       user:
+        name: "שם"
         first_name: "שם פרטי"
         last_name: "שם משפחה"
         email: 'דוא"ל'

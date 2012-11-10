@@ -24,15 +24,5 @@
       %button.btn.delete_request= t("modals.request.actions.delete_request")
       %button.btn.complete_request= t("modals.request.actions.complete_request")
   .modal-footer
-    .volunteers
-      %span.responded= t("modals.request.responded_volunteers", count: vrequest.responses.length)
-      - vrequest.responses.each do |response|
-        .volunteer
-          != image_tag("avatar.png")
-          .details
-            %span.name= "#{response.user.first_name} #{response.user.last_name}"
-            %span.grade= t("modals.request.volunteers_details.grade", count: 0)
-            %span.note= response.note
-          .actions
-            %button.btn.btn-primary.btn-orange{:type => "button"}= I18n.t("modals.request.actions.watch_details")
+    != render(partial: "responses/responded_volunteers", locals: {vrequest: vrequest})
 
