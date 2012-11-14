@@ -7,7 +7,6 @@ $(document).ready(() ->
   )
 
   $(".delete_request").click(() ->
-    debugger
     requestId = $(this).attr("reqId")
     $.ajax(
       url: "/requests/#{requestId}"
