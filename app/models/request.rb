@@ -5,7 +5,7 @@ class Request < ActiveRecord::Base
   belongs_to :category
   belongs_to :recurrence
   belongs_to :school
-  has_many :responses
+  has_many :responses, :dependent => :destroy
 
   has_many :responded_users, class_name: "User", source: :user, :through => :responses
 

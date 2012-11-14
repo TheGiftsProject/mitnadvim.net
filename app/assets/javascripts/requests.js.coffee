@@ -8,4 +8,16 @@ $(document).ready(() ->
   $(".school_request_modal").on("hide", (ev) ->
     $(this).find(".volunteer .actions .btn-primary").popover("hide")
   )
+
+  $(".delete_request").click(() ->
+    debugger
+    requestId = $(this).attr("reqId")
+    $.ajax(
+      url: "/requests/#{requestId}"
+      type: "DELETE"
+      dataType: "json"
+      success: (result) =>
+        $(this).parents(".school_request_modal").modal("hide")
+    )
+  )
 )

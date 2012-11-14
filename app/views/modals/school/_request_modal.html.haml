@@ -20,9 +20,9 @@
       %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
 
     .actions
-      %button.btn.edit_request= t("modals.request.actions.edit_request")
-      %button.btn.delete_request= t("modals.request.actions.delete_request")
-      %button.btn.complete_request= t("modals.request.actions.complete_request")
+      %button.btn.edit_request{reqId: vrequest.id}= t("modals.request.actions.edit_request")
+      %button.btn.delete_request{reqId: vrequest.id}= t("modals.request.actions.delete_request")
+      %button.btn.complete_request{reqId: vrequest.id}= t("modals.request.actions.complete_request")
   .modal-footer
     != render(partial: "responses/responded_volunteers", locals: {vrequest: vrequest})
 
