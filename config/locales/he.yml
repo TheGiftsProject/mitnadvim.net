@@ -96,3 +96,5 @@ he:
         title: "פרטי מתנדב"
       submit_button: "אני רוצה לעזור!"
       submit_note: "פרטי יצירת הקשר שלך יישלחו לבית הספר המבקש"
+      flashes:
+        delete_success: "הבקשה נמחקה בהצלחה"
