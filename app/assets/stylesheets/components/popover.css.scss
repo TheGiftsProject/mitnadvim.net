@@ -1,3 +1,17 @@
 .popover {
   right: auto;
+
+  &.right {
+
+    .arrow {
+      right: auto;
+      left: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 5px solid black;
+      border-left: none;
+    }
+
+
+  }
 }

@@ -27,6 +27,10 @@ class User < ActiveRecord::Base
             :confirmation => true,
             :length => {:within => 6..40}
 
+  def fullname
+    "#{first_name} #{last_name}"
+  end
+
   def encrypt_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt
