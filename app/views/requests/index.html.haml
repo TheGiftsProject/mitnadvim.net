@@ -14,7 +14,7 @@
           %a{ :href => requests_path(:requests => "closed") }= t("requests.index.closed_requests")
   .row
     .list.box.span12.tab-content
-      - if (@requests.empty?)
+      - if @requests.empty?
         .empty
           %span= t("requests.index.list_empty_title")
           %a.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")

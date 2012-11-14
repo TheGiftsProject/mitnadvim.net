@@ -8,4 +8,4 @@
         %span.grade= t("modals.request.volunteers_details.grade", count: 0)
         %span.note= response.note
       .actions
-        %button.btn.btn-primary.btn-orange= I18n.t("modals.request.actions.watch_details")
+        %button.btn.btn-primary.btn-orange{"data-title" => t("modals.request.details_popover.title"), "data-content" => response.user.first_name}= t("modals.request.actions.watch_details")
