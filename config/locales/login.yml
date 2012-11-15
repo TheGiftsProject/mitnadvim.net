@@ -1,0 +1,13 @@
+he:
+  login_page:
+    title:
+      volunteers: "על מנת לצפות בעמוד עליך להתחבר למערכת"
+      schools: "על מנת להיכנס לעמוד הניהול עליך להתחבר"
+    new:
+      volunteers: "מתנדב חדש?"
+      schools: "בית-ספר חדש?"
+    new_link:
+      volunteers: "הירשם למערכת והחל להתנדב!"
+      schools: "הירשם למערכת והחל לקבל מתנדבים!"
+    email: "דוא\"ל"
+    password: "סיסמא"

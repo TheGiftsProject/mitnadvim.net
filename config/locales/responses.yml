@@ -1,0 +1,6 @@
+he:
+  activerecord:
+    attributes:
+      response:
+        note: 'מסר לביה"ס'
+

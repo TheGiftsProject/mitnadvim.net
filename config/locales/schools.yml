@@ -10,6 +10,7 @@ he:
     edit:
       title: "עריכת בית ספר"
       successfully_updated: 'בית הספר עודכן בהצלחה.'
+      back_button: "חזרה"
     signup:
       title: "הרשמת בית ספר חדש"
       create_button: "צור פרופיל בית ספר חדש"

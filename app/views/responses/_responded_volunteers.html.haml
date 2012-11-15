@@ -1,5 +1,5 @@
 .volunteers
-  %span.responded= t("modals.request.responded_volunteers", count: vrequest.responses.length)
+  %span.responded= t("modals.school.request.responded_volunteers", count: vrequest.responses.length)
   - vrequest.responses.each do |response|
     .volunteer
       != image_tag("avatar.png")
@@ -7,4 +7,4 @@
         %span.name= "#{response.user.first_name} #{response.user.last_name}"
         %span.note= response.note
       .actions
-        %button.btn.btn-primary.btn-orange{"data-html" => true, "data-title" => t("modals.request.details_popover.title"), "data-content" => block_to_partial("responses/volunteer_details", volunteer: response.user)}= t("modals.request.actions.watch_details")
+        %button.btn.btn-primary.btn-orange{"data-html" => true, "data-title" => t("modals.school.request.details_popover.title"), "data-content" => block_to_partial("responses/volunteer_details", volunteer: response.user)}= t("modals.school.request.actions.watch_details")

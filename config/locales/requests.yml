@@ -50,7 +50,11 @@ he:
         name: "כותרת הבקשה"
         description: "תיאור הבקשה"
         category: "סוג ההתנדבות"
+        start_date: "תאריך ושעה"
         recurrence: "פרק זמן"
         duration: "משך ההתנדבות"
         duration_units: "שעות"
+        requesting_school: "ביה\"ס המבקש"
+
+
 

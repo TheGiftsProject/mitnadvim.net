@@ -1,0 +1,26 @@
+he:
+  modals:
+    volunteer:
+      request:
+        header: "בקשת התנדבות"
+        fields:
+          placeholders:
+            note: "אנא רשום פרטים נוספים או שאלות שיש לך בעבור הביה\"ס המבקש"
+        actions:
+          submit: "אני רוצה לעזור!"
+
+    school:
+      request:
+        header: "בקשת התנדבות"
+        responded_volunteers:
+          zero: "אף מתנדב לא ענה לבקשה זאת"
+          one: "מתנדב אחד התעניין בהתנדבות זו עד כה"
+          other: "%{count} מתנדבים התעניינו בהתנדבות זו עד כה"
+        actions:
+          edit_request: "ערוך בקשה"
+          delete_request: "מחק בקשה"
+          complete_request: "סמן בקשה כהושלמה"
+          watch_details: "צפה בפרטים"
+        details_popover:
+          title: "פרטי מתנדב"
+

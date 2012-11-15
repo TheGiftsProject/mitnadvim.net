@@ -1,9 +1,9 @@
 .navbar-text.signed_in_school
-  %span= t("header.hello")
+  %span= t("layout.header.hello")
   %span= current_user.first_name
   %span ·
-  %a{:href => requests_path}!= t("header.manage_school")
+  %a{:href => requests_path}!= t("layout.header.manage_school")
   -#%span ·
-  -#%a{:href => "/edit"}!= t("header.edit_school")
+  -#%a{:href => "/edit"}!= t("layout.header.edit_school")
   %span ·
-  %a{:href => "/log_out"}= t("header.sign_out")
+  %a{:href => "/log_out"}= t("layout.header.sign_out")

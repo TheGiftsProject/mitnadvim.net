@@ -1,31 +1,31 @@
 .school_request_modal.modal.hide.fade{ id: id }
   .modal-header
     %button.close{ data: {dismiss:"modal"}, aria: { hidden: true}} &times;
-    %h3= t("modals.request.header")
+    %h3= t("modals.school.request.header")
 
   .modal-body
     %h1= vrequest.name
     %hr
     %dl.dl-horizontal
-      %dt= t("modals.request.fields.description")
+      %dt= Request.human_attribute_name("description")
       %dd= vrequest.description
 
-      %dt= t("modals.request.fields.requesting_school")
+      %dt= Request.human_attribute_name("requesting_school")
       %dd= vrequest.school.name
 
-      %dt= t("modals.request.fields.required_time")
+      %dt= Request.human_attribute_name("duration")
       %dd= "#{vrequest.duration} #{t("requests.row.duration_units")}"
 
-      %dt= t("modals.request.fields.date")
+      %dt= Request.human_attribute_name("start_date")
       %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
 
     .actions
-      %button.btn.edit_request{reqId: vrequest.id}= t("modals.request.actions.edit_request")
-      %button.btn.delete_request{reqId: vrequest.id}= t("modals.request.actions.delete_request")
-      %button.btn.complete_request{reqId: vrequest.id}= t("modals.request.actions.complete_request")
+      %button.btn.edit_request{reqId: vrequest.id}= t("modals.school.request.actions.edit_request")
+      %button.btn.delete_request{reqId: vrequest.id}= t("modals.school.request.actions.delete_request")
+      %button.btn.complete_request{reqId: vrequest.id}= t("modals.school.request.actions.complete_request")
   .modal-footer
     != render(partial: "responses/responded_volunteers", locals: {vrequest: vrequest})
 
   .flash_content
-    .delete_success= t("modals.request.flashes.delete_success")
+    .delete_success= t("flashes.delete_success")
 

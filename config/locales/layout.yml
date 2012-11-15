@@ -1,0 +1,15 @@
+he:
+  layout:
+    header:
+      title: "מתנדבים.נט"
+      school_entrance: "כניסת בית ספר"
+      already_signed_up: "רשום כמתנדב"
+      sign_in_now: "הכנס עכשיו"
+      enter: "הכנס"
+      sign_out: "התנתק"
+      hello: "שלום"
+      edit_school: "ערוך פרטי בית ספר"
+      manage_school: "ניהול בקשות התנדבות"
+    footer:
+      text: "פונט עברי מאת "
+      font_contributor: "עודד עזר"

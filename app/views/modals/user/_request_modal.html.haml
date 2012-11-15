@@ -1,28 +1,28 @@
 .modal.hide.fade{ id: id }
   .modal-header
     %button.close{ data: {dismiss:"modal"}, aria: { hidden: true}} &times;
-    %h3= t("modals.request.header")
+    %h3= t("modals.volunteer.request.header")
 
   .modal-body
     != form_tag(request_responses_path(vrequest)) do
       %h1= vrequest.name
       %hr
       %dl.dl-horizontal
-        %dt= t("modals.request.fields.description")
+        %dt= Request.human_attribute_name("description")
         %dd= vrequest.description
 
-        %dt= t("modals.request.fields.requesting_school")
+        %dt= Request.human_attribute_name("requesting_school")
         %dd= vrequest.school.name
 
-        %dt= t("modals.request.fields.required_time")
+        %dt= Request.human_attribute_name("duration")
         %dd= "#{vrequest.duration} #{t("requests.row.duration_units")}"
 
-        %dt= t("modals.request.fields.date")
+        %dt= Request.human_attribute_name("start_date")
         %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
 
-        %dt= t("modals.request.fields.note_to_school")
+        %dt= Response.human_attribute_name("note")
         %dd
-          != text_area_tag :note,"", placeholder: "#{t("modals.request.fields.note_to_school_placeholder")}"
+          != text_area_tag :note,"", placeholder: "#{t("modals.volunteer.request.fields.placeholders.note")}"
 
       %dd
-        %button.btn.btn-primary.btn-orange{type:"submit"}= t("modals.request.submit_button")
+        %button.btn.btn-primary.btn-orange{type:"submit"}= t("modals.volunteer.request.actions.submit")
