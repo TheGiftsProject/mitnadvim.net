@@ -1,23 +1,23 @@
 .requests_index
   .row.header
     .span8
-      %h1= t("requests.index.header")
+      %h1= t("schools.show.header")
     .span4
-      %a.new_request.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")
+      %a.new_request.btn.btn-orange{ :href => new_request_path }= t("schools.show.create_new")
 
   .row
     .span12
       %ul.nav.nav-tabs
         %li{ class: (@closed_requests ? "" : "active") }
-          %a{ :href => school_path(current_school, :requests => "open") }= t("requests.index.active_requests")
+          %a{ :href => school_path(current_school, :requests => "open") }= t("schools.show.active_requests")
         %li{ class: (@closed_requests ? "active" : "") }
-          %a{ :href => school_path(current_school, :requests => "closed") }= t("requests.index.closed_requests")
+          %a{ :href => school_path(current_school, :requests => "closed") }= t("schools.show.closed_requests")
   .row
     .list.box.span12.tab-content
       - if @requests.empty?
         .empty
-          %span= t("requests.index.list_empty_title")
-          %a.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")
+          %span= t("schools.show.list_empty_title")
+          %a.btn.btn-orange{ :href => new_request_path }= t("schools.show.create_new")
       - else
         - @requests.each do |req|
           != render partial: "layouts/components/request/request_row", locals: { req: req, type: "school" }

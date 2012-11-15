@@ -2,11 +2,11 @@
   .box.span8
     .row
       .span4.welcome
-        %h1= t("homepage.title")
-        %p= t("homepage.paragraph")
+        %h1= t("requests.index.title")
+        %p= t("requests.index.paragraph")
       .span4.steps
         %ol
-          - t("homepage.steps").each do |step|
+          - t("requests.index.steps").each do |step|
             %li
               %span.step= step
   .box.span4
@@ -19,7 +19,7 @@
   .span12
     .box
       .header.no-margin
-        = t("homepage.requests.title")
+        = t("requests.index.requests.title")
       .content
         -if @active_requests.count > 0
           != render partial: "layouts/components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}

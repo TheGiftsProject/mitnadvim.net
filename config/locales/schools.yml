@@ -1,5 +1,12 @@
 he:
   schools:
+    show:
+      header: "ניהול בקשות התנדבות"
+      create_new: "צור בקשה חדשה"
+      active_requests: "בקשות פתוחות"
+      closed_requests: "בקשות שנענו"
+      submit_filter: "סנן התנדבות"
+      list_empty_title: "אין בקשות פתוחות"
     edit:
       title: "עריכת בית ספר"
       successfully_updated: 'בית הספר עודכן בהצלחה.'
