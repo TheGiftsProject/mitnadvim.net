@@ -6,7 +6,7 @@ module UserSupport
 
   included do
     helper_method :current_user, :user_signed_in?, :sign_in
-    helper_method :must_be_volunteer, :must_be_school, :must_be_admin
+    helper_method :must_be_volunteer, :must_be_admin
   end
 
   def current_user
@@ -23,12 +23,6 @@ module UserSupport
 
   def must_be_volunteer
     unless user_signed_in? && current_user.volunteer?
-      forbidden_page
-    end
-  end
-
-  def must_be_school
-    unless user_signed_in? && current_user.school?
       forbidden_page
     end
   end

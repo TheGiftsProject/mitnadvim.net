@@ -8,7 +8,7 @@ MitnadvimNet::Application.routes.draw do
   resources :users
   resources :volunteers, :only => [:new, :create, :show]
 
-  root :to => 'application#homepage'
+  root :to => "requests#index"
   match 'widgets' => 'application#widgets'
 
   get "log_in"  => "sessions#new", :as => "log_in"

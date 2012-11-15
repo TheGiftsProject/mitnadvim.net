@@ -1,24 +1,29 @@
-.requests_index
-  .row.header
-    .span8
-      %h1= t("requests.index.header")
-    .span4
-      %a.new_request.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")
+.row.homepage-top
+  .box.span8
+    .row
+      .span4.welcome
+        %h1= t("homepage.title")
+        %p= t("homepage.paragraph")
+      .span4.steps
+        %ol
+          - t("homepage.steps").each do |step|
+            %li
+              %span.step= step
+  .box.span4
+    - if user_signed_in?
+      != render :partial => "requests/logged_in"
+    - else
+      != render :partial => "requests/sign_up"
 
-  .row
-    .span12
-      %ul.nav.nav-tabs
-        %li{ class: (@closed_requests ? "" : "active") }
-          %a{ :href => requests_path(:requests => "open") }= t("requests.index.active_requests")
-        %li{ class: (@closed_requests ? "active" : "") }
-          %a{ :href => requests_path(:requests => "closed") }= t("requests.index.closed_requests")
-  .row
-    .list.box.span12.tab-content
-      - if @requests.empty?
-        .empty
-          %span= t("requests.index.list_empty_title")
-          %a.btn.btn-orange{ :href => new_request_path }= t("requests.index.create_new")
-      - else
-        - @requests.each do |req|
-          != render partial: "layouts/components/request/request_row", locals: { req: req, type: "school" }
-          != render partial: "modals/school/request_modal", locals: {vrequest: req, id: "school_request_modal#{req.id}"}
+.row
+  .span12
+    .box
+      .header.no-margin
+        = t("homepage.requests.title")
+      .content
+        -if @active_requests.count > 0
+          != render partial: "layouts/components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}
+        -else
+          .empty_group{:style => "margin-top: 10px;"}
+            = t("requests.no_requests")
+

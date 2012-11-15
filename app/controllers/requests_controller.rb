@@ -1,14 +1,9 @@
 class RequestsController < ApplicationController
-  before_filter :must_be_school
+
+  before_filter :must_be_school, :only => [:new, :edit, :create, :update, :destroy]
 
   def index
-    @closed_requests = params[:requests] == "closed"
-    @requests = (@closed_requests ? current_user.school.requests.closed.all : current_user.school.requests.not_closed.all)
-
-    respond_to do |format|
-      format.html
-      format.json { render json: @requests }
-    end
+    @active_requests = Request.active
   end
 
   def new

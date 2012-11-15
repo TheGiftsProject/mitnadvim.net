@@ -1,5 +1,7 @@
 class SchoolsController < ApplicationController
 
+  include SchoolSupport
+
   def new
     @school = School.new
     @admin_user = User.new
@@ -7,6 +9,16 @@ class SchoolsController < ApplicationController
     respond_to do |format|
       format.html
       format.json { render json: @school }
+    end
+  end
+
+  def show
+    @closed_requests = params[:requests] == "closed"
+    @requests = (@closed_requests ? current_school.requests.closed.all : current_school.requests.not_closed.all)
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @requests }
     end
   end
 
@@ -71,4 +83,5 @@ class SchoolsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end

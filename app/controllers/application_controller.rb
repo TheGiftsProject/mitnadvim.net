@@ -10,10 +10,6 @@ class ApplicationController < ActionController::Base
   include UserSupport
   include ErrorsSupport
 
-  def homepage
-    @active_requests = Request.active
-  end
-
   def under_construction
     flash.now.alert = I18n.t("flashes.under_construction")
   end
