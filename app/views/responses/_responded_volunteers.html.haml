@@ -5,7 +5,6 @@
       != image_tag("avatar.png")
       .details
         %span.name= "#{response.user.first_name} #{response.user.last_name}"
-        %span.grade= t("modals.request.volunteers_details.grade", count: 0)
         %span.note= response.note
       .actions
         %button.btn.btn-primary.btn-orange{"data-html" => true, "data-title" => t("modals.request.details_popover.title"), "data-content" => block_to_partial("responses/volunteer_details", volunteer: response.user)}= t("modals.request.actions.watch_details")
