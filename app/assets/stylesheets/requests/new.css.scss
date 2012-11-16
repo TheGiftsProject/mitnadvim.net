@@ -1,0 +1,7 @@
+@import "./examples";
+
+.new_request {
+  .examples {
+    @include examples;
+  }
+}

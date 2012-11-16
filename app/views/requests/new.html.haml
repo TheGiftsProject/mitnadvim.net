@@ -1,7 +1,10 @@
+- content_for :stylesheets do
+  != stylesheet_link_tag "requests/new"
+
 .row.new_request
   .span8.box
     %h1= t("requests.pages.new.header")
     %hr
     != render "form"
   .span4.box.examples
-    != render "examples"
+    != render partial: "examples"
