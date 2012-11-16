@@ -13,4 +13,4 @@
   = form_text_field(Request.human_attribute_name("duration"), "request[duration]", @request.duration || 2) do
     %span.help-inline= Request.human_attribute_name("duration_units")
 
-  = form_submit_button(t("requests.new.action"), :class => "btn btn-orange")
+  = form_submit_button(t("requests.pages.new.action"), :class => "btn btn-orange")

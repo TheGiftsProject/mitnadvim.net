@@ -10,7 +10,7 @@
         = req.school.try(:name)
       .icon.duration
       %span
-        = "#{t("requests.row.duration")}: #{req.duration} #{t("requests.row.duration_units")}"
+        = "#{Request.human_attribute_name("duration")}: #{req.duration} #{Request.human_attribute_name("duration_units")}"
       .icon.schedule
       %span
         = req.recurrence.name

@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   include UserSupport
+  include SchoolSupport
   include ErrorsSupport
 
   def under_construction

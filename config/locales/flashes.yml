@@ -1,5 +1,8 @@
 he:
   flashes:
-    logged_in: "התחברת בהצלחה!"
     under_construction: "זוהי גרסת הדגמה - האתר עדיין בפיתוח"
-    delete_success: "הבקשה נמחקה בהצלחה"
+    logged_in: "התחברת בהצלחה!"
+    requests:
+      deleted: "הבקשה נמחקה בהצלחה"
+      created: "בקשתך נוצרה בהצלחה!"
+      updated: "בקשתך עודכנה בהצלחה!"

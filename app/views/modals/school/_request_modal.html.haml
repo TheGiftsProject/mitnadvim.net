@@ -14,7 +14,7 @@
       %dd= vrequest.school.name
 
       %dt= Request.human_attribute_name("duration")
-      %dd= "#{vrequest.duration} #{t("requests.row.duration_units")}"
+      %dd= "#{vrequest.duration} #{Request.human_attribute_name("duration_units")}"
 
       %dt= Request.human_attribute_name("start_date")
       %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
@@ -27,5 +27,5 @@
     != render(partial: "responses/responded_volunteers", locals: {vrequest: vrequest})
 
   .flash_content
-    .delete_success= t("flashes.delete_success")
+    .delete_success= t("flashes.requests.deleted")
 

@@ -1,8 +1,8 @@
 .user_widget
-  .header.light= t("requests.index.logged_in.title")
+  .header.light= t("requests.pages.index.profile.logged_in.title")
   .user_data
     .avatar
     .user_details
       = "#{current_user.first_name} #{current_user.last_name}"
       %br
-      %a{:href => volunteer_path(current_user.id)} #{t("users.profile.watch")}
+      %a{:href => volunteer_path(current_user.id)} #{t("requests.pages.index.profile.logged_in.action")}

@@ -1,7 +1,5 @@
 class SchoolsController < ApplicationController
 
-  include SchoolSupport
-
   def new
     @school = School.new
     @admin_user = User.new
