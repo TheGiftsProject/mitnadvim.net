@@ -17,8 +17,8 @@
   .span4
     .actions
       - if type == 'school'
-        != render partial: "layouts/components/request/request_school_data", :locals => {:req => req}
+        != render partial: "components/request/request_school_data", :locals => {:req => req}
       - elsif type == 'user'
-        != render partial: "layouts/components/request/request_user_data", :locals => {:req => req}
+        != render partial: "components/request/request_user_data", :locals => {:req => req}
       - else
-        != render partial: "layouts/components/request/request_main_data", :locals => {:req => req}
+        != render partial: "components/request/request_main_data", :locals => {:req => req}

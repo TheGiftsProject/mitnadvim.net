@@ -24,7 +24,7 @@
       %button.btn.delete_request{reqId: vrequest.id}= t("modals.school.request.actions.delete_request")
       %button.btn.complete_request{reqId: vrequest.id}= t("modals.school.request.actions.complete_request")
   .modal-footer
-    != render(partial: "responses/responded_volunteers", locals: {vrequest: vrequest})
+    != render(partial: "modals/school/responded_volunteers", locals: {vrequest: vrequest})
 
   .flash_content
     .delete_success= t("flashes.requests.deleted")

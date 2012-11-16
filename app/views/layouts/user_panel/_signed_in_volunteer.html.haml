@@ -2,4 +2,4 @@
   %span= t("layout.header.user_panel.logged_in.hello")
   %span= current_user.first_name
   %span &nbsp;
-  %a{:href => "/log_out"}= t("layout.header.user_panel.logged_in.sign_out")
+  %a{:href => sign_out_path}= t("layout.header.user_panel.logged_in.sign_out")

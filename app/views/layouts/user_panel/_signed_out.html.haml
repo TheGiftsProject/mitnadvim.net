@@ -1,5 +1,5 @@
 .navbar-text.signed_out
-  %a{:href => "/log_in?school"}!= t("layout.header.user_panel.logged_out.school.entrance")
+  %a{:href => sign_in_path(:school => "")}!= t("layout.header.user_panel.logged_out.school.entrance")
   %span ·
   %strong!= t("layout.header.user_panel.logged_out.volunteer.already_signed_up")
   %span!= t("layout.header.user_panel.logged_out.volunteer.sign_in_now")

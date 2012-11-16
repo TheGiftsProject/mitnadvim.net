@@ -22,7 +22,7 @@
         = t("requests.pages.index.list.caption")
       .content
         -if @active_requests.count > 0
-          != render partial: "layouts/components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}
+          != render partial: "components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}
         -else
           .empty_group{:style => "margin-top: 10px;"}
             = t("requests.pages.index.list.no_requests")

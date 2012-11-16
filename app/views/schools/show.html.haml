@@ -20,5 +20,5 @@
           %a.btn.btn-orange{ :href => new_request_path }= t("schools.pages.show.actions.create_request")
       - else
         - @requests.each do |req|
-          != render partial: "layouts/components/request/request_row", locals: { req: req, type: "school" }
+          != render partial: "components/request/request_row", locals: { req: req, type: "school" }
           != render partial: "modals/school/request_modal", locals: {vrequest: req, id: "school_request_modal#{req.id}"}
