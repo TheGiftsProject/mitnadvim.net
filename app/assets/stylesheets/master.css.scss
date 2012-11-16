@@ -1,15 +1,20 @@
 $baseFontSize: 18px;
 
+// vendor stylesheets
 @import "twitter/bootstrap_rtl";
 @import "compass";
 @import "photoshop-drop-shadow";
 
-@import "components/colors";
-@import "components/mixins";
-@import "components/fonts";
+// base
+@import "base/fonts";
+@import "base/colors";
+@import "base/effects";
 
-@import "layouts/_header.css.scss";
-@import "layouts/_footer.css.scss";
+// layout
+@import "layouts/header";
+@import "layouts/footer";
+
+// components
 @import "components/buttons";
 @import "components/box";
 @import "components/nav_tabs";
