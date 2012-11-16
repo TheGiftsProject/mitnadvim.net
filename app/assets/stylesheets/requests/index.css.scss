@@ -1,32 +1,22 @@
+@import "master";
+@import "./welcome_box";
+@import "./profile_box";
+
 .requests_index {
-  .header {
-    margin-bottom: 20px;
 
-    .new_request {
-      width: 150px;
-      float: left;
+  .top_panel {
+    margin-bottom: 30px;
+
+    .box {
+      height: 142px;
     }
-  }
 
-  .nav-tabs {
-    border-bottom: none;
-    margin-bottom: 0;
-  }
+    .welcome {
+      @include welcome-box;
+    }
 
-  .list {
-    .empty {
-      margin: 200px auto;
-      width: 160px;
-
-      span {
-        display: block;
-        text-align: center;
-        margin-bottom: 10px;
-      }
-
-      a {
-        display: block;
-      }
+    .profile {
+      @include profile-box;
     }
   }
 }

@@ -10,11 +10,11 @@ $body-fonts: Arial, san-serif;
 	font-family:'MeodedPashut';
 	font-weight: $light; /*(light)*/
 	font-style: normal;
-	src: url('meodedpashut_oelight.eot');
-	src: url('meodedpashut_oelight.eot?#iefix') format('embedded-opentype'),
-		url('meodedpashut_oelight.ttf') format('truetype'),
-		url('meodedpashut_oelight.woff') format('woff'),
-		url('meodedpashut_oelight.svg#MeodedPashutLight') format('svg');
+	src: asset-url('meodedpashut_oelight.eot', font);
+	src: asset-url('meodedpashut_oelight.eot?#iefix', font) format('embedded-opentype'),
+         asset-url('meodedpashut_oelight.ttf', font) format('truetype'),
+         asset-url('meodedpashut_oelight.woff', font) format('woff'),
+         asset-url('meodedpashut_oelight.svg#MeodedPashutLight', font) format('svg');
 }
 
 
@@ -22,31 +22,31 @@ $body-fonts: Arial, san-serif;
 	font-family:'MeodedPashut';
 	font-weight: $normal; /*(regular)*/
 	font-style: normal;
-	src: url('meodedpashut_oeregular.eot');
-	src: url('meodedpashut_oeregular.eot?#iefix') format('embedded-opentype'),
-		url('meodedpashut_oeregular.ttf') format('truetype'),
-		url('meodedpashut_oeregular.woff') format('woff'),
-		url('meodedpashut_oeregular.svg#MeodedPashut') format('svg');
+	src: asset-url('meodedpashut_oeregular.eot', font);
+	src: asset-url('meodedpashut_oeregular.eot?#iefix', font) format('embedded-opentype'),
+         asset-url('meodedpashut_oeregular.ttf', font) format('truetype'),
+         asset-url('meodedpashut_oeregular.woff', font) format('woff'),
+         asset-url('meodedpashut_oeregular.svg#MeodedPashut', font) format('svg');
 }
 
 @font-face{
 	font-family:'MeodedPashut';
 	font-weight: $bold; /*(bold)*/
 	font-style: normal;
-	src: url('meodedpashut_oebold.eot');
-	src: url('meodedpashut_oebold.eot?#iefix') format('embedded-opentype'),
-		url('meodedpashut_oebold.ttf') format('truetype'),
-		url('meodedpashut_oebold.woff') format('woff'),
-		url('meodedpashut_oebold.svg#MeodedPashutBold') format('svg');
+	src: asset-url('meodedpashut_oebold.eot', font);
+	src: asset-url('meodedpashut_oebold.eot?#iefix', font) format('embedded-opentype'),
+         asset-url('meodedpashut_oebold.ttf', font) format('truetype'),
+         asset-url('meodedpashut_oebold.woff', font) format('woff'),
+         asset-url('meodedpashut_oebold.svg#MeodedPashutBold', font) format('svg');
 }
 
 @font-face{
 	font-family:'MeodedPashut';
 	font-weight: $black; /*(black)*/
 	font-style: normal;
-	src: url('meodedpashut_oeblack.eot');
-	src: url('meodedpashut_oeblack.eot?#iefix') format('embedded-opentype'),
-		url('meodedpashut_oeblack.ttf') format('truetype'),
-		url('meodedpashut_oeblack.woff') format('woff'),
-		url('meodedpashut_oeblack.svg#MeodedPashutBlack') format('svg');
+	src: asset-url('meodedpashut_oeblack.eot', font);
+	src: asset-url('meodedpashut_oeblack.eot?#iefix', font) format('embedded-opentype'),
+         asset-url('meodedpashut_oeblack.ttf', font) format('truetype'),
+         asset-url('meodedpashut_oeblack.woff', font) format('woff'),
+         asset-url('meodedpashut_oeblack.svg#MeodedPashutBlack', font) format('svg');
 }

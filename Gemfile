@@ -13,7 +13,7 @@ group :assets do
   gem 'compass-rails'
   gem 'compass-photoshop-drop-shadow'
   gem 'uglifier', '>= 1.0.3'
-  gem "bootstrap-sass-rails-rtl"
+  gem "bootstrap-sass-rails-rtl", :git => "git://github.com/TheGiftsProject/bootstrap-sass-rails-rtl.git", :branch => "hotfix/full_include_paths"
 end
 
 gem 'enumify'

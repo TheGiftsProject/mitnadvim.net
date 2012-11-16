@@ -1,4 +1,7 @@
-.requests_index
+- content_for :stylesheets do
+  != stylesheet_link_tag "schools/show"
+
+.manage_requests
   .row.header
     .span8
       %h1= t("schools.pages.show.title")

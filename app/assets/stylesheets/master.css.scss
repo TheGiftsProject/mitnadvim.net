@@ -1,6 +1,6 @@
 $baseFontSize: 18px;
 
-@import "twitter/bootstrap_rtl";
+@import 'twitter/bootstrap_rtl';
 @import "compass";
 @import "photoshop-drop-shadow";
 
@@ -10,7 +10,7 @@ $baseFontSize: 18px;
 
 @import "components/header";
 @import "components/footer";
-@import "components/button";
+@import "components/buttons";
 @import "components/box";
 @import "components/modal";
 @import "components/popover";
@@ -19,12 +19,8 @@ $baseFontSize: 18px;
 @import "components/request_row";
 
 @import "pages/login_page";
-@import "pages/volunteer_modal.css.scss";
+@import "pages/volunteer_modal";
 
 @import "requests/examples";
-@import "requests/index";
 
-@import "homepage/welcome";
-@import "homepage/steps";
 @import "volunteers";
-@import "homepage/profile_box";

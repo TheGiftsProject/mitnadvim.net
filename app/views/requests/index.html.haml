@@ -1,29 +1,33 @@
-.row.homepage-top
-  .box.span8
-    .row
-      .span4.welcome
-        %h1= t("requests.pages.index.welcome.title")
-        %p= t("requests.pages.index.welcome.paragraph")
-      .span4.steps
-        %ol
-          - t("requests.pages.index.welcome.steps").each do |step|
-            %li
-              %span.step= step
-  .box.span4
-    - if user_signed_in?
-      != render :partial => "requests/logged_in"
-    - else
-      != render :partial => "requests/sign_up"
+- content_for :stylesheets do
+  != stylesheet_link_tag "requests/index"
 
-.row
-  .span12
-    .box
-      .header.no-margin
-        = t("requests.pages.index.list.caption")
-      .content
-        -if @active_requests.count > 0
-          != render partial: "components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}
-        -else
-          .empty_group{:style => "margin-top: 10px;"}
-            = t("requests.pages.index.list.no_requests")
+.requests_index
+  .row.top_panel
+    .box.span8.welcome
+      .row
+        .span4
+          %h1= t("requests.pages.index.welcome.title")
+          %p= t("requests.pages.index.welcome.paragraph")
+        .span4.steps
+          %ol
+            - t("requests.pages.index.welcome.steps").each do |step|
+              %li
+                %span.step= step
+    .box.span4.profile
+      - if user_signed_in?
+        != render :partial => "requests/logged_in"
+      - else
+        != render :partial => "requests/sign_up"
+
+  .row
+    .span12
+      .box
+        .header.no-margin
+          = t("requests.pages.index.list.caption")
+        .content
+          -if @active_requests.count > 0
+            != render partial: "components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}
+          -else
+            .empty_group{:style => "margin-top: 10px;"}
+              = t("requests.pages.index.list.no_requests")
 
