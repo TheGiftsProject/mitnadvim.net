@@ -1,8 +1,10 @@
 he:
   volunteers:
-    new:
-      title: "הרשמת מתנדב חדש"
-      action: "צור פרופיל חדש"
-      description_help: "ספר על עצמך בכמה מילים"
-      area_help: "האזור בו תרצה להתנדב"
-      success_notice: "המשתמש נוצר בהצלחה!"
+    pages:
+      new:
+        title: "הרשמת מתנדב חדש"
+        description_help: "ספר על עצמך בכמה מילים"
+        area_help: "האזור בו תרצה להתנדב"
+        actions:
+          create: "צור פרופיל חדש"
+
