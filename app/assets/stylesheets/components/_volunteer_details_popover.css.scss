@@ -1,0 +1,14 @@
+.volunteer_details {
+  margin: 0;
+
+  dt {
+    width: 80px;
+  }
+
+  dd {
+    margin-right: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+

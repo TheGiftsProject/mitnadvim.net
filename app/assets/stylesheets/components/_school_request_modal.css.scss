@@ -1,16 +1,4 @@
-.volunteer_details {
-  margin: 0;
-
-  dt {
-    width: 80px;
-  }
-
-  dd {
-    margin-right: 100px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-}
+@import "./volunteer_details_popover";
 
 .school_request_modal {
 
