@@ -1,0 +1,8 @@
+he:
+  components:
+    request_row:
+      volunteers: "מתנדבים"
+      actions:
+        more_details: "פרטים נוספים"
+        i_want_to_help: "אני רוצה לעזור"
+        im_helping: "התנדבתי"

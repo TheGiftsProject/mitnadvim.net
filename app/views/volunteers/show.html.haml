@@ -17,7 +17,7 @@
             != render partial: "layouts/components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'user'}
           -else
             .empty_group{:style => "margin-top: 10px;"}
-              = t("requests.no_requests")
+              = t("requests.pages.index.list.no_requests")
   -#
   -#-if @closed_requests.count > 0
   -#  .row

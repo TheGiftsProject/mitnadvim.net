@@ -1,5 +1,5 @@
 .info
   %strong= req.responses.count
-  %span= t("requests.row.volunteers")
+  %span= t("components.request_row.volunteers")
 .action
-  %a.btn{ href: "#school_request_modal#{req.id}", data: { toggle: "modal" } }= t("requests.row.actions.more_details")
+  %a.btn{ href: "#school_request_modal#{req.id}", data: { toggle: "modal" } }= t("components.request_row.actions.more_details")
