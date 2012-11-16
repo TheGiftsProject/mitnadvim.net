@@ -1,0 +1,17 @@
+he:
+  sessions:
+    pages:
+      new:
+        title:
+          volunteers: "על מנת לצפות בעמוד עליך להתחבר למערכת"
+          schools: "על מנת להיכנס לעמוד הניהול עליך להתחבר"
+        actions:
+          sign_in: "הכנס"
+          register:
+            volunteers:
+              note: "מתנדב חדש?"
+              link: "הירשם למערכת והחל להתנדב!"
+            schools:
+              note: "בית-ספר חדש?"
+              link: "הירשם למערכת והחל לקבל מתנדבים!"
+

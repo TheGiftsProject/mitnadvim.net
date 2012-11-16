@@ -1,12 +1,12 @@
 .login-page
   .box
-    %h2= t("login_page.title.#{@type}")
+    %h2= t("sessions.pages.new.title.#{@type}")
     %hr
     = form_tag sessions_path, :class => "form-horizontal" do
       = form_text_field(User.human_attribute_name("email"), "user[email]")
       = form_password_field(User.human_attribute_name("password"), "user[password]")
-      != submit_tag t("layout.header.enter"), :class => "btn btn-orange btn-big"
+      != submit_tag t("sessions.pages.new.actions.sign_in"), :class => "btn btn-orange btn-big"
     %hr
     %h3
-      %strong= t("login_page.new.#{@type}")
-      %a{:href => "#{@type}/new"}= t("login_page.new_link.#{@type}")
+      %strong= t("sessions.pages.new.actions.register.#{@type}.note")
+      %a{:href => "#{@type}/new"}= t("sessions.pages.new.actions.register.#{@type}.link")
