@@ -1,6 +1,6 @@
 $navbar-height: 60px;
 
-@import "user_panel";
+@import "./user_panel";
 
 header.navbar{
 
@@ -16,7 +16,9 @@ header.navbar{
   .container{
     width: 940px;
 
-    @import 'user_panel';
+    .user-panel {
+      @include user-panel;
+    }
   }
 
   .brand{

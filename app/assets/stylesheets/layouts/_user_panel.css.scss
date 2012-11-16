@@ -1,4 +1,4 @@
-.user-panel {
+@mixin user-panel {
   font-size: 14px;
   color: white;
   @include text-shadow(0 -1px 0 rgba(#000, 0.35));

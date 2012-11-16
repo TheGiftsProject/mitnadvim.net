@@ -6,10 +6,10 @@ $baseFontSize: 18px;
 
 @import "components/colors";
 @import "components/mixins";
-@import "components/font";
+@import "components/fonts";
 
-@import "components/header";
-@import "components/footer";
+@import "layouts/_header.css.scss";
+@import "layouts/_footer.css.scss";
 @import "components/buttons";
 @import "components/box";
 @import "components/modal";
@@ -17,10 +17,3 @@ $baseFontSize: 18px;
 @import "components/type";
 @import "components/volunteers";
 @import "components/request_row";
-
-@import "pages/login_page";
-@import "pages/volunteer_modal";
-
-@import "requests/examples";
-
-@import "volunteers";
