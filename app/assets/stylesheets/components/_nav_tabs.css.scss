@@ -1,0 +1,27 @@
+.nav-tabs {
+  margin: 0;
+  li{
+    @include photoshop-drop-shadow(90, 1px, 0, 4px, rgba(#000, 0.25));
+    @include border-top-radius(4px);
+    font-family: $title-fonts;
+    font-size: 22px;
+    width: 240px;
+    text-align: center;
+    margin-left: 10px;
+  }
+
+  & > .active {
+    font-weight: $bold;
+  }
+
+  & > li > a{
+    margin-left: 0;
+    border: none;
+    background: #f1f3f4;
+    color: #585f64;
+  }
+
+  & > .active > a, & > .active > a:hover {
+    border: none;
+  }
+}
