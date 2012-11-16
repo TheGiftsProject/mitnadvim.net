@@ -1,22 +1,23 @@
 he:
   schools:
-    show:
-      header: "ניהול בקשות התנדבות"
-      create_new: "צור בקשה חדשה"
-      active_requests: "בקשות פתוחות"
-      closed_requests: "בקשות שנענו"
-      submit_filter: "סנן התנדבות"
-      list_empty_title: "אין בקשות פתוחות"
-    edit:
-      title: "עריכת בית ספר"
-      successfully_updated: 'בית הספר עודכן בהצלחה.'
-      back_button: "חזרה"
-    signup:
-      title: "הרשמת בית ספר חדש"
-      create_button: "צור פרופיל בית ספר חדש"
-      successfully_created: 'פרופיל בית הספר נוצר בהצלחה.'
-      admin:
-        title: "אחראי מערכת"
+    pages:
+      new:
+        title: "הרשמת בית ספר חדש"
+        admin:
+          title: "אחראי מערכת"
+        actions:
+          create: "צור פרופיל בית ספר חדש"
+      show:
+        title: "ניהול בקשות התנדבות"
+        tabs:
+          open_requests: "בקשות פתוחות"
+          closed_requests: "בקשות שנענו"
+        actions:
+          create_request: "צור בקשה חדשה"
+        list:
+          no_requests: "אין בקשות פתוחות"
+      edit:
+        title: "עריכת בית ספר"
 
   activerecord:
     attributes:

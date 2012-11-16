@@ -40,7 +40,7 @@ class SchoolsController < ApplicationController
 
         sign_in(@admin_user)
 
-        format.html { redirect_to requests_path, notice: t("schools.signup.successfully_created") }
+        format.html { redirect_to requests_path, notice: t("flashes.schools.created") }
         format.json { render json: @school, status: :created, location: @school }
       else
         @errors = @school.errors.full_messages + @admin_user.errors.full_messages
@@ -61,7 +61,7 @@ class SchoolsController < ApplicationController
 
     respond_to do |format|
       if school_is_valid and admin_is_valid
-        format.html { redirect_to @school, notice: t("schools.signup.successfully_updated") }
+        format.html { redirect_to @school, notice: t("flashes.schools.updated") }
         format.json { head :no_content }
       else
         @errors = @school.errors.full_messages + @admin_user.errors.full_messages

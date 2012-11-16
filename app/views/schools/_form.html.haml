@@ -8,7 +8,7 @@
   = form_text_field School.human_attribute_name("address"), "school[address]", @school.address
   = form_textarea_field School.human_attribute_name("description"), "school[description]", @school.description
 
-  %h2= t("schools.signup.admin.title")
+  %h2= t("schools.pages.new.admin.title")
   %hr
 
   = form_text_field User.human_attribute_name("first_name"), "admin[first_name]", @admin_user.first_name
@@ -21,4 +21,4 @@
 
   = form_password_field User.human_attribute_name("password_confirmation"), "admin[password_confirmation]"
 
-  = form_submit_button t("schools.signup.create_button"), class: "btn-large btn-warning"
+  = form_submit_button t("schools.pages.new.actions.create"), class: "btn-large btn-warning"
