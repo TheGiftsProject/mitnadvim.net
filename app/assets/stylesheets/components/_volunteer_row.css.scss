@@ -1,0 +1,41 @@
+@mixin volunteer-row {
+  padding: 10px 15px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #d8d8d8;
+
+  &:last-child {
+    margin-bottom: 2px;
+    border-bottom: none;
+  }
+
+  img {
+    float: right;
+    margin-left: 15px;
+  }
+
+  .details {
+    float: right;
+    font-family: $body-fonts;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    width: 490px;
+    margin-top: 6px;
+
+    .name {
+      color: #227fde;
+      text-decoration: underline;
+    }
+
+    .note {
+      display: block;
+    }
+  }
+
+  .actions {
+    float: right;
+    margin-top: 15px;
+    margin-right: 5px;
+  }
+}
