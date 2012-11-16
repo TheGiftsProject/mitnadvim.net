@@ -1,4 +1,13 @@
 @import "master";
+@import "layouts/header";
+@import "layouts/footer";
+@import "components/buttons";
+@import "components/box";
+@import "components/nav_tabs";
+@import "components/modal";
+@import "components/popover";
+@import "components/type";
+@import "components/request_row";
 
 body{
   direction: rtl;

@@ -1,3 +1,9 @@
+/*
+  Note: This file should provide all the scss mixins and variables needed for compilation of other scss files.
+  If a file only contains selectors/mixins/variables that are used internally and aren't needed by other scss files,
+  then its import should not be in master.css.scss but in application.css.scss or other page-specific scss files.
+*/
+
 $baseFontSize: 18px;
 
 // vendor stylesheets
@@ -5,20 +11,6 @@ $baseFontSize: 18px;
 @import "compass";
 @import "photoshop-drop-shadow";
 
-// base
 @import "base/fonts";
 @import "base/colors";
 @import "base/effects";
-
-// layout
-@import "layouts/header";
-@import "layouts/footer";
-
-// components
-@import "components/buttons";
-@import "components/box";
-@import "components/nav_tabs";
-@import "components/modal";
-@import "components/popover";
-@import "components/type";
-@import "components/request_row";
