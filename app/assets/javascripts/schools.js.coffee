@@ -6,16 +6,4 @@ $(document).ready(() ->
     $(this).find(".volunteer .actions .btn-primary").popover("hide")
   )
 
-  $(".delete_request").click(() ->
-    requestId = $(this).attr("reqId")
-    $.ajax(
-      url: "/requests/#{requestId}"
-      type: "DELETE"
-      dataType: "json"
-      success: (result) =>
-        modalEl = $(this).parents(".school_request_modal")
-        modalEl.modal("hide")
-        Mitnadvim.showFlashMsg(modalEl.find(".flash_content .delete_success").text())
-    )
-  )
 )

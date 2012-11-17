@@ -52,8 +52,7 @@ class RequestsController < ApplicationController
     @request.destroy
 
     respond_to do |format|
-      format.html { redirect_to requests_url }
-      format.json { head :no_content }
+      format.html { redirect_to requests_url, notice: I18n.t("flashes.requests.deleted") }
     end
   end
 end
