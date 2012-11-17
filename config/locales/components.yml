@@ -6,3 +6,6 @@ he:
         more_details: "פרטים נוספים"
         i_want_to_help: "אני רוצה לעזור"
         im_helping: "התנדבתי"
+    response_row:
+      actions:
+        watch: "צפה בבקשה"

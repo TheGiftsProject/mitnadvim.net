@@ -1,7 +1,7 @@
-@import "./school_request_modal";
-@import "./request_details";
+@import "volunteers/response_modal";
+@import "components/request_details";
 
-.request_row {
+.response_row {
   padding: 5px 20px 5px 0;
   border-bottom: 1px solid #eee;
 
@@ -15,8 +15,6 @@
       padding-bottom: 0px;
     }
   }
-
-
 
   .actions {
     margin: 19px 0;

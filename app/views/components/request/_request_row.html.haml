@@ -1,19 +1,6 @@
 .request_row.row
-  .span7
-    .name
-      = req.name
-    .description
-      = req.description
-    .additional_data
-      .icon.location
-      %span
-        = req.school.try(:name)
-      .icon.duration
-      %span
-        = "#{Request.human_attribute_name("duration")}: #{req.duration} #{Request.human_attribute_name("duration_units")}"
-      .icon.schedule
-      %span
-        = req.recurrence.name
+  != render partial: "components/request/request_details", locals: {req: req}
+
   .span4
     .actions
       - if type == 'school'

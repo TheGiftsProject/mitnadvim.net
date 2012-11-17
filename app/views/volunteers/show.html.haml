@@ -8,7 +8,7 @@
         .header.light
           = t("users.profile.title")
         .content
-          != render partial: "volunteers/simple_profile", :locals => {:user => @user}
+          != render partial: "volunteers/simple_profile"
 
   .row
     .span12
@@ -16,17 +16,8 @@
         .header
           = t("users.profile.my_active_requests")
         .content
-          -if @active_requests.count > 0
-            != render partial: "components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'user'}
-          -else
+          - if @active_responses.count > 0
+            != render partial: "volunteers/response_row", :collection => @active_responses, :as => :response
+          - else
             .empty_group{:style => "margin-top: 10px;"}
               = t("requests.pages.index.list.no_requests")
-  -#
-  -#-if @closed_requests.count > 0
-  -#  .row
-  -#    .span12
-  -#      .box
-  -#        .header
-  -#          = t("users.profile.my_closed_requests")
-  -#        .content
-  -#          != render partial: "components/request/request_row", :collection => @closed_requests, :as => :req, :locals => {:type => 'volunteer'}

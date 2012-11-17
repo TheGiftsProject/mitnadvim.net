@@ -1,0 +1,40 @@
+.request_details {
+  .name {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+
+  .additional_data {
+    span{
+      font-size: 12px;
+      margin-left:10px;
+      @include inline-block;
+    }
+
+    .icon{
+      @include inline-block;
+
+      &.location {
+        width: 13px;
+        height: 18px;
+        background: url("/assets/ico-location.png") no-repeat;
+      }
+
+      &.duration {
+        width: 17px;
+        height: 17px;
+        background: url("/assets/ico-time.png") no-repeat;
+      }
+
+      &.schedule{
+        width: 19px;
+        height: 16px;
+        background: url("/assets/ico-schedule.png") no-repeat;
+      }
+    }
+  }
+}

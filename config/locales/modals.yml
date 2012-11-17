@@ -9,6 +9,9 @@ he:
         actions:
           submit: "אני רוצה לעזור!"
 
+      response:
+        header: "פרטי ההתנדבות"
+
     school:
       request:
         header: "בקשת התנדבות"

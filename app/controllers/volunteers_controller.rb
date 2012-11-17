@@ -1,13 +1,10 @@
 class VolunteersController < ApplicationController
 
   def show
-    @user = User.find(params[:id])
-    @closed_requests = @user.requests.closed
-    @active_requests   = @user.requests.active
+    @active_responses = current_user.responses.active
 
     respond_to do |format|
       format.html
-      format.json { render json: @user }
     end
   end
 
