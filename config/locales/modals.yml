@@ -27,3 +27,9 @@ he:
         details_popover:
           title: "פרטי מתנדב"
 
+    anonymous:
+      request:
+        note: "בשביל להתנדב עליך"
+        action: "להירשם למערכת"
+
+

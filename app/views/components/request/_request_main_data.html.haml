@@ -1,9 +1,16 @@
 .info
   %strong= req.category.name
 .action
-  - unless req.responded_users.include?(current_user)
-    %a.btn{href: "#user_request_modal_#{req.id}", data: {toggle: "modal"}}= t("components.request_row.actions.i_want_to_help")
+  - if current_user.present?
+    - if req.responded_users.include? current_user
+      %a.btn.disabled= t("components.request_row.actions.im_helping")
+    - else
+      %a.btn{href: "#user_request_modal_#{req.id}", data: {toggle: "modal"}}= t("components.request_row.actions.i_want_to_help")
   - else
-    %a.btn.disabled= t("components.request_row.actions.im_helping")
+    %a.btn{href: "#anonymous_request_modal_#{req.id}", data: {toggle: "modal"}}= t("components.request_row.actions.i_want_to_help")
 
-!= render partial: "modals/volunteer/request_modal", locals: {vrequest: req, id: "user_request_modal_#{req.id}"}
+
+- if current_user.present?
+  != render partial: "modals/volunteer/request_modal", locals: {vrequest: req, id: "user_request_modal_#{req.id}"}
+- else
+  != render partial: "modals/anonymous/request_modal", locals: {request: req, id: "anonymous_request_modal_#{req.id}"}
