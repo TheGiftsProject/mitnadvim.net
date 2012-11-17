@@ -1,6 +1,11 @@
 MitnadvimNet::Application.routes.draw do
 
   resources :requests do
+
+    member do
+      put :close
+    end
+
     resources :responses
   end
 

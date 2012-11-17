@@ -22,7 +22,7 @@
     .actions
       %a.btn.edit_request{:href => edit_request_path(vrequest)}= t("modals.school.request.actions.edit_request")
       != button_to t("modals.school.request.actions.delete_request"), vrequest, {:method => :delete, :class => "btn delete_request"}
-      %button.btn.complete_request{reqId: vrequest.id}= t("modals.school.request.actions.complete_request")
+      != button_to t("modals.school.request.actions.complete_request"), close_request_path(vrequest), {:method => :put, :class => "btn"}
   .modal-footer
     != render(partial: "modals/school/responded_volunteers", locals: {vrequest: vrequest})
 
