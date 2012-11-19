@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/TheGiftsProject/bootstrap-sass-rails-rtl.git
-  revision: 79a76b15fbef8f307a75a694fcdccf63f9d54fe2
-  branch: hotfix/full_include_paths
+  revision: 0033880f5da22624f4e45b76beb410bde138b808
+  branch: all_fixes
   specs:
     bootstrap-sass-rails-rtl (2.0.4.12)
       rails (~> 3.1)

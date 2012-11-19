@@ -1,6 +1,50 @@
 @import "./volunteer_details_popover";
 @import "./volunteer_row";
 
+.close_request_tip {
+
+  &.in {
+    opacity: 1;
+  }
+
+  .tooltip-inner {
+    background: white;
+    max-width: 312px;
+    width: 312px;
+    text-align: right;
+    color: black;
+    padding-right: 20px;
+    @include photoshop-drop-shadow(90, 2px, 0, 5px, rgba(#000, 0.5));
+
+    h2 {
+      font-family: $title-fonts;
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    h3 {
+      font-family: $body-fonts;
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: -2px;
+      margin-bottom: 4px;
+    }
+
+    textarea {
+      display: block;
+      width: 90%;
+      margin-top: 15px;
+      margin-bottom: 21px;
+      height: 61px;
+    }
+
+    .btn-primary {
+      width: 93px;
+    }
+  }
+}
+
 .school_request_modal {
 
   width: 700px;

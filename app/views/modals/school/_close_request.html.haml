@@ -6,4 +6,4 @@
       %label.checkbox.inline
         %input{type: "checkbox", name: "school_response[participants][]", value: user.id}= user.fullname
     %textarea{rows: 3, placeholder: t("modals.school.request.close_request.note_placeholder"), name: "school_response[note]" }
-  != submit_tag t("modals.school.request.close_request.action")
+  != submit_tag t("modals.school.request.close_request.action"), :class => "btn btn-primary btn-orange"

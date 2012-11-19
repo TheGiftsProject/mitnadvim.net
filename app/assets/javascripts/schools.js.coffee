@@ -7,6 +7,6 @@ $(document).ready(() ->
     $(this).find("[rel=tooltip]").tooltip("hide")
   )
 
-  $(".school_request_modal .close_request").tooltip(placement: "top", trigger: "manual")
+  $(".school_request_modal .close_request").tooltip(placement: "top", trigger: "manual", style: "close_request_tip")
   $(".school_request_modal .close_request").click(() -> $(this).tooltip("toggle"))
 )
