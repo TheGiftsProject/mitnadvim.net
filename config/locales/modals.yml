@@ -22,10 +22,16 @@ he:
         actions:
           edit_request: "ערוך בקשה"
           delete_request: "מחק בקשה"
-          complete_request: "סמן בקשה כהושלמה"
+          close_request: "סמן בקשה כהושלמה"
           watch_details: "צפה בפרטים"
         details_popover:
           title: "פרטי מתנדב"
+        close_request:
+          title: "סמן בקשה כהושלמה"
+          subtitle: "סמן את שמות המתנדבים אשר עזרו במשימה"
+          note_placeholder: "הוסף מילות הערכה למתנדבים"
+          action: "סיום"
+
 
     anonymous:
       request:

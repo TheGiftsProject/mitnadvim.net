@@ -47,15 +47,6 @@ class RequestsController < ApplicationController
     end
   end
 
-  def close
-    request = current_user.school.requests.find(params[:id])
-
-    request.closed = true
-    request.save!
-
-    redirect_to school_path(current_user.school), notice: I18n.t("flashes.requests.closed")
-  end
-
   def destroy
     @request = current_user.school.requests.find(params[:id])
     @request.destroy

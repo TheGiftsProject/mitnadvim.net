@@ -12,7 +12,7 @@ class SchoolsController < ApplicationController
 
   def show
     @closed_requests = params[:requests] == "closed"
-    @requests = (@closed_requests ? current_school.requests.closed.all : current_school.requests.not_closed.all)
+    @requests = (@closed_requests ? current_school.requests.closed.all : current_school.requests.active.all)
 
     respond_to do |format|
       format.html

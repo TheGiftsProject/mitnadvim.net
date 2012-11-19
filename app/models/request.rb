@@ -6,12 +6,12 @@ class Request < ActiveRecord::Base
   belongs_to :recurrence
   belongs_to :school
   has_many :responses, :dependent => :destroy
+  has_one :school_response, :dependent => :destroy
 
   has_many :responded_users, class_name: "User", source: :user, :through => :responses
 
   validates_presence_of :name, :description, :category, :recurrence, :duration
 
-  scope :not_closed, where(:closed => false)
   scope :closed, where(:closed => true)
   scope :active, where(:closed => false)
 

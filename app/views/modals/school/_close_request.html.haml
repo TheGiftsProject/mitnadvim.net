@@ -1,0 +1,9 @@
+!= form_tag(request_school_response_path(opts[:request]), {:class => "close_request"}) do
+  %h2= t("modals.school.request.close_request.title")
+  - if opts[:request].responded_users.present?
+    %h3= t("modals.school.request.close_request.subtitle")
+    - opts[:request].responded_users.each do |user|
+      %label.checkbox.inline
+        %input{type: "checkbox", name: "school_response[participants][]", value: user.id}= user.fullname
+    %textarea{rows: 3, placeholder: t("modals.school.request.close_request.note_placeholder"), name: "school_response[note]" }
+  != submit_tag t("modals.school.request.close_request.action")

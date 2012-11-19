@@ -3,7 +3,10 @@ $(document).ready(() ->
   $(".volunteer .actions .btn-primary").click(() -> $(this).popover("toggle"))
 
   $(".school_request_modal").on("hide", (ev) ->
-    $(this).find(".volunteer .actions .btn-primary").popover("hide")
+    $(this).find("[rel=popover]").popover("hide")
+    $(this).find("[rel=tooltip]").tooltip("hide")
   )
 
+  $(".school_request_modal .close_request").tooltip(placement: "top", trigger: "manual")
+  $(".school_request_modal .close_request").click(() -> $(this).tooltip("toggle"))
 )

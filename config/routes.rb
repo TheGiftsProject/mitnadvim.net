@@ -1,12 +1,8 @@
 MitnadvimNet::Application.routes.draw do
 
   resources :requests do
-
-    member do
-      put :close
-    end
-
     resources :responses
+    resource :school_response, only: [:create]
   end
 
   resources :schools
