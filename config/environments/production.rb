@@ -46,8 +46,8 @@ MitnadvimNet::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w(schools.js requests/index.css requests/new.css schools/show.css)
-  config.assets.precompile += %w(sessions/new.css volunteers/new.css volunteers/show.css)
+  config.assets.precompile += ["schools.js", "requests/index.css", "requests/new.css", "schools/show.css"]
+  config.assets.precompile += ["sessions/new.css", "volunteers/new.css", "volunteers/show.css"]
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
