@@ -2,6 +2,7 @@ class VolunteersController < ApplicationController
 
   def show
     @active_responses = current_user.responses.active
+    @school_responses = current_user.school_responses
 
     respond_to do |format|
       format.html

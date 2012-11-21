@@ -1,0 +1,24 @@
+.response_modal.modal.hide.fade{id: id}
+  .modal-header
+    %button.close{data: {dismiss: "modal"}, aria: {hidden: true}} &times;
+    %h3= t("modals.volunteer.response.header")
+
+  .modal-body
+    %h1= response.request.name
+    %hr
+    %dl.dl-horizontal
+      %dt= Request.human_attribute_name("description")
+      %dd= response.request.description
+
+      %dt= Request.human_attribute_name("requesting_school")
+      %dd= response.request.school.name
+
+      %dt= Request.human_attribute_name("duration")
+      %dd= "#{response.request.duration} #{Request.human_attribute_name("duration_units")}"
+
+      %dt= Request.human_attribute_name("start_date")
+      %dd= l(response.request.created_at.in_time_zone("Israel"), :format => :long)
+
+      %dt= SchoolResponse.human_attribute_name("note")
+      %dd
+        != text_area_tag :note, response.note, :disabled => :disabled

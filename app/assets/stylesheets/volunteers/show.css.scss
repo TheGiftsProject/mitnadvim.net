@@ -2,10 +2,16 @@
 @import "volunteers/response_row";
 
 .volunteer_profile {
-  >.row {
+
+  .profile_details {
     margin-bottom: 18px;
   }
+
   .user_details {
     margin-top: 10px;
   }
+}
+
+.closed_requests {
+  margin-bottom: 20px;
 }
