@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/TheGiftsProject/bootstrap-sass-rails-rtl.git
+  remote: git@github.com:TheGiftsProject/bootstrap-sass-rails-rtl.git
   revision: 0033880f5da22624f4e45b76beb410bde138b808
   branch: all_fixes
   specs:
