@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :responses
   has_many :requests, :through => :responses
+  has_and_belongs_to_many :school_responses
   #validates :password, confirmation: true, length: { minimum: 2 }, on: :create
   #validates_presence_of :password_confirmation
 

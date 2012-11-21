@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121118233047) do
+ActiveRecord::Schema.define(:version => 20121121170636) do
 
   create_table "areas", :force => true do |t|
     t.string   "name"
@@ -61,6 +61,11 @@ ActiveRecord::Schema.define(:version => 20121118233047) do
   end
 
   add_index "school_responses", ["request_id"], :name => "index_school_responses_on_request_id"
+
+  create_table "school_responses_users", :force => true do |t|
+    t.integer "school_response_id"
+    t.integer "user_id"
+  end
 
   create_table "schools", :force => true do |t|
     t.string   "name"
