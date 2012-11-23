@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:user][:email], params[:user][:password])
     if user
       session[:user_id] = user.id
-      return_url = user.school? ? requests_path : root_path
+      return_url = user.school? ? school_path(user.school) : root_path
       redirect_to return_url, :notice => I18n.t("flashes.logged_in")
     else
       flash.now.alert = I18n.t('errors.messages.login_fail')
