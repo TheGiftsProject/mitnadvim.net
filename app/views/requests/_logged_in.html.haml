@@ -5,4 +5,4 @@
     .user_details
       = "#{current_user.first_name} #{current_user.last_name}"
       %br
-      %a{:href => volunteer_path(current_user.id)} #{t("requests.pages.index.profile.logged_in.action")}
+      %a{:href => user_path(current_user.id)} #{t("requests.pages.index.profile.logged_in.action")}

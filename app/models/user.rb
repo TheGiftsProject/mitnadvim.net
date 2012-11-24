@@ -6,17 +6,14 @@ class User < ActiveRecord::Base
   attr_accessible :school, :school_id, :password, :password_confirmation, :role
 
   belongs_to :area
-  belongs_to :school
+  belongs_to :school # this is only relevant to school admin users.
 
   has_many :responses
   has_many :requests, :through => :responses
   #validates :password, confirmation: true, length: { minimum: 2 }, on: :create
   #validates_presence_of :password_confirmation
 
-  enum :role, [:admin, :school, :volunteer]
-
   before_save :encrypt_password
-
 
   validates_presence_of   :email
   validates_uniqueness_of :email
@@ -26,6 +23,8 @@ class User < ActiveRecord::Base
   validates :password, :presence => true,
             :confirmation => true,
             :length => {:within => 6..40}
+
+  enum :role, [:volunteer, :school]
 
   def fullname
     "#{first_name} #{last_name}"

@@ -11,8 +11,7 @@ MitnadvimNet::Application.routes.draw do
   end
 
   resources :schools
-  resources :users
-  resources :volunteers, :only => [:new, :create, :show]
+  resources :users, :only => [:new, :create, :show]
 
   root :to => "requests#index"
   match 'widgets' => 'application#widgets'

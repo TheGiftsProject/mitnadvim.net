@@ -1,4 +1,4 @@
-class VolunteersController < ApplicationController
+class UsersController < ApplicationController
 
   def show
     @active_responses = current_user.responses.active
@@ -11,7 +11,7 @@ class VolunteersController < ApplicationController
 
   def create
     @user = User.new params[:user]
-    @user.role = "volunteer"
+    @user.role = :volunteer
 
     if @user.save
       sign_in(@user)
