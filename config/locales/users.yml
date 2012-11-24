@@ -1,5 +1,14 @@
 he:
   users:
+
+    pages:
+      new:
+        title: "הרשמת משתמש חדש"
+        description_help: "ספר על עצמך בכמה מילים"
+        area_help: "האזור בו תרצה להתנדב"
+        actions:
+          create: "צור פרופיל חדש"
+
     profile:
       title: "הפרופיל שלי"
       my_closed_requests: "בקשות התנדבות שנענו"
