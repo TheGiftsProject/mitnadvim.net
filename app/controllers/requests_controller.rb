@@ -4,7 +4,7 @@ class RequestsController < ApplicationController
   before_filter :load_school_request, :only => [:edit, :update, :destroy, :close]
 
   def index
-    @active_requests = Request.active
+    @active_requests = Request.opened
   end
 
   def new
@@ -15,6 +15,7 @@ class RequestsController < ApplicationController
   end
 
   def create
+    params[:request][:status] = "opened"
     @request = current_school.requests.build(params[:request])
 
     if @request.save

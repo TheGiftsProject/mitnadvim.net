@@ -3,7 +3,7 @@ class Response < ActiveRecord::Base
   attr_accessible :request_id, :status, :note, :user_id
   attr_accessible :request, :user
 
-  scope :active, joins(:request).where("responses.status = 'created' AND requests.closed = false")
+  scope :active, joins(:request).where("responses.status = 'created' AND requests.status = 'opened'")
   scope :completed, where(:status => "completed")
   scope :belong_to_users, lambda {|uid| where(:user_id => uid)}
 
