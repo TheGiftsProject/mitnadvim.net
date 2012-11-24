@@ -18,7 +18,7 @@ class RequestsController < ApplicationController
     @request = current_school.requests.build(params[:request])
 
     if @request.save
-      redirect_to school_path(current_school), notice: I18n.t("flashes.requests.created")
+      redirect_to current_school, notice: I18n.t("flashes.requests.created")
     else
       render :action => "new"
     end
@@ -26,7 +26,7 @@ class RequestsController < ApplicationController
 
   def update
     if @request.update_attributes(params[:request])
-      redirect_to school_path(current_school), notice: I18n.t("flashes.requests.updated")
+      redirect_to current_school, notice: I18n.t("flashes.requests.updated")
     else
       render :action => "edit"
     end
@@ -35,13 +35,13 @@ class RequestsController < ApplicationController
   def destroy
     @request.destroy
 
-    redirect_to school_path(current_school), notice: I18n.t("flashes.requests.deleted")
+    redirect_to current_school, notice: I18n.t("flashes.requests.deleted")
   end
 
   def close
     @request.close!(params[:users], params[:note])
 
-    redirect_to school_path(current_school)
+    redirect_to current_school
   end
 
   private

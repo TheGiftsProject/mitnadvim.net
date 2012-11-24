@@ -1,0 +1,16 @@
+= form_text_field(User.human_attribute_name("first_name"), "user[first_name]", user.first_name)
+= form_text_field(User.human_attribute_name("last_name"), "user[last_name]", user.last_name)
+= form_field_wrapper(User.human_attribute_name("birth_year"), "user[birth_year]") do
+  = select_tag("user[birth_year]", year_options(user.birth_year))
+= form_textarea_field(User.human_attribute_name("description"), "user[description]", user.description) do
+  %span.help-inline= t("users.pages.new.description_help")
+= form_field_wrapper(User.human_attribute_name("area"), "user[area_id]") do
+  = select_tag("user[area_id]", area_options(user.area_id))
+  %span.help-inline= t("users.pages.new.area_help")
+= form_text_field(User.human_attribute_name("email"), "user[email]", user.email)
+= form_text_field(User.human_attribute_name("phone_number"), "user[phone_number]", user.phone_number)
+= form_field_wrapper(User.human_attribute_name("gender"), "user[gender]") do
+  = select_tag("user[gender]", gender_options(user.gender))
+= form_password_field(User.human_attribute_name("password"), "user[password]") do
+  %span.help-inline= User.human_attribute_name("password_limit")
+= form_password_field(User.human_attribute_name("password_confirmation"), "user[password_confirmation]")
