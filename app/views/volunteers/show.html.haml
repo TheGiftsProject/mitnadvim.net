@@ -16,8 +16,8 @@
         .header
           = t("users.profile.my_closed_requests")
         .content
-          - if @school_responses.count > 0
-            != render partial: "volunteers/school_response_row", :collection => @school_responses, :as => :response
+          - if @completed_responses.count > 0
+            != render partial: "volunteers/school_response_row", :collection => @completed_responses, :as => :response
           - else
             .empty_group{:style => "margin-top: 10px;"}
               = t("requests.pages.index.list.no_requests")

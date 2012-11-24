@@ -1,5 +1,0 @@
-he:
-  activerecord:
-    attributes:
-      school_response:
-        note: 'מסר מביה"ס'
