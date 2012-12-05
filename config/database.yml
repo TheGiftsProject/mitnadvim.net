@@ -1,5 +1,6 @@
 defaults: &defaults
   adapter: mysql2
+  host: localhost
   username: root
   password: hello
   encoding: utf8
