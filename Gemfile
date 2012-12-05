@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 
 gem 'haml'
-gem 'pg'
+gem 'mysql2'
 gem 'thin'
 gem 'paranoia'
 

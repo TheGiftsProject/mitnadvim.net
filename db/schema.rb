@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(:version => 20121124210420) do
     t.text     "description"
     t.string   "photo_url"
     t.integer  "category_id"
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.integer  "recurrence_id"
     t.integer  "duration"
     t.string   "status",        :default => "opened"
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(:version => 20121124210420) do
     t.integer  "request_id"
     t.integer  "user_id"
     t.string   "status",           :default => "created"
-    t.datetime "created_at",                           :null => false
-    t.datetime "updated_at",                           :null => false
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
     t.text     "note"
     t.text     "note_from_school"
   end
