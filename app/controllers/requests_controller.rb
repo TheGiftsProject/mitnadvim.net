@@ -2,6 +2,7 @@ class RequestsController < ApplicationController
 
   before_filter :must_be_school, :only => [:new, :edit, :create, :update, :destroy, :close]
   before_filter :load_school_request, :only => [:edit, :update, :destroy, :close]
+  before_filter :load_request, :only => [:modal]
 
   def index
     @active_requests = Request.opened
@@ -45,10 +46,19 @@ class RequestsController < ApplicationController
     redirect_to current_school
   end
 
+  def modal
+    partial = user_signed_in? ? "requests/modals/user_modal" : "requests/modals/anonymous_modal"
+    render :partial => partial, :layout => false
+  end
+
   private
 
   def load_school_request
     @request = current_school.requests.find(params[:id])
+  end
+
+  def load_request
+    @request = Request.find(params[:id])
   end
 
 end

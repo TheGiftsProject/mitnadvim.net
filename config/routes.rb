@@ -2,6 +2,7 @@ MitnadvimNet::Application.routes.draw do
 
   resources :requests do
     member do
+      get :modal
       put :close
     end
 
