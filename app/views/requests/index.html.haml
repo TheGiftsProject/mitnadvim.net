@@ -19,10 +19,10 @@
       - else
         != render :partial => "requests/sign_up"
 
-  .row
+  .row.main_panel
     .span12
       .box
-        .header.no-margin
+        .header.no-margin.requests_list_title
           = t("requests.pages.index.list.caption")
         .content
           -if @active_requests.count > 0

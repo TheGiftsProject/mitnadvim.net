@@ -20,4 +20,14 @@
       @include profile-box;
     }
   }
+
+  .main_panel {
+    .box {
+      padding: 0;
+
+      .header.requests_list_title {
+        margin: 0;
+      }
+    }
+  }
 }
