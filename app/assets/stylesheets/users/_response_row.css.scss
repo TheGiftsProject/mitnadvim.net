@@ -2,7 +2,8 @@
 @import "components/request_details";
 
 .response_row {
-  padding: 5px 20px 5px 0;
+  padding: 5px 0px 5px 0;
+  margin-right: 0;
   border-bottom: 1px solid #eee;
 
   &:last-child {
@@ -13,6 +14,14 @@
     padding-bottom: 10px;
     &:last-child{
       padding-bottom: 0px;
+    }
+  }
+
+  &:hover {
+    background-color: #f5f5f5;
+
+    .name {
+      color: #3F7BE1;
     }
   }
 
