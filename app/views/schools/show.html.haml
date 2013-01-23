@@ -21,8 +21,11 @@
     .list.box.span12.tab-content
       - if @requests.empty?
         .empty
-          %span= t("schools.pages.show.list.no_requests")
-          %a.btn.btn-orange{ :href => new_request_path }= t("schools.pages.show.actions.create_request")
+          - if @closed_requests
+            %span= t("schools.pages.show.list.no_closed_requests")
+          - else
+            %span= t("schools.pages.show.list.no_open_requests")
+            %a.btn.btn-orange{ :href => new_request_path }= t("schools.pages.show.actions.create_request")
       - else
         - @requests.each do |req|
           != render partial: "components/request/request_row", locals: { req: req, type: "school" }

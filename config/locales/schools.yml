@@ -11,11 +11,12 @@ he:
         title: "ניהול בקשות התנדבות"
         tabs:
           open_requests: "בקשות פתוחות"
-          closed_requests: "בקשות שנענו"
+          closed_requests: 'בקשות שהסתיימו'
         actions:
           create_request: "צור בקשה חדשה"
         list:
-          no_requests: "אין בקשות פתוחות"
+          no_open_requests: "אין בקשות פתוחות"
+          no_closed_requests: 'אין בקשות שהסתיימו'
       edit:
         title: "עריכת בית ספר"
 
