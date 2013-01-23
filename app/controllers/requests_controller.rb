@@ -5,6 +5,7 @@ class RequestsController < ApplicationController
 
   def index
     @active_requests = Request.opened.newest_first
+    @after_response = params[:after_response]
   end
 
   def new

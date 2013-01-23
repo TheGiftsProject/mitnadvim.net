@@ -14,3 +14,6 @@ class window.Mitnadvim
     flashContainerEl.append(flashEl)
     messages.append(flashContainerEl)
 
+  @showRequestSentMsg: ->
+    $('.request_sent_modal').modal('show')
+

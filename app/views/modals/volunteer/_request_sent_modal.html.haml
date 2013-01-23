@@ -1,0 +1,10 @@
+.request_sent_modal.modal.hide.fade
+  .modal-header
+    %button.close{ data: {dismiss:"modal"}, aria: { hidden: true}} &times;
+    #h3= t('modals.volunteer.request_sent.title')
+
+  .modal-body
+    %span= t('modals.volunteer.request_sent.note.sentence1')
+    %br
+    %span= t('modals.volunteer.request_sent.note.sentence2')
+

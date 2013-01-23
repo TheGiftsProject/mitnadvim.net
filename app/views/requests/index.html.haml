@@ -1,5 +1,10 @@
 - content_for :stylesheets do
   != stylesheet_link_tag "requests/rindex"
+- if @after_response
+  - content_for :javascripts do
+    :javascript
+      Mitnadvim.showRequestSentMsg();
+
 
 .requests_index
   .row.top_panel
@@ -31,3 +36,4 @@
             .empty_group{:style => "margin-top: 10px;"}
               = t("requests.pages.index.list.no_requests")
 
+!= render partial: 'modals/volunteer/request_sent_modal'
