@@ -17,7 +17,13 @@
     }
   }
 
+  &:hover {
+    background-color: #f5f5f5;
 
+    .name {
+      color: #3F7BE1;
+    }
+  }
 
   .actions {
     margin: 19px 0;
