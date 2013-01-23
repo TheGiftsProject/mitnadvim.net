@@ -6,6 +6,7 @@ class Response < ActiveRecord::Base
   scope :active, joins(:request).where("responses.status = 'created' AND requests.status = 'opened'")
   scope :completed, where(:status => "completed")
   scope :belong_to_users, lambda {|uid| where(:user_id => uid)}
+  scope :newest_first, order('created_at DESC')
 
   belongs_to :request
   belongs_to :user

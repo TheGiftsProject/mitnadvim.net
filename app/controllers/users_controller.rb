@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
   def show
-    @active_responses = current_user.responses.active
-    @completed_responses = current_user.responses.completed
+    @active_responses = current_user.responses.active.newest_first
+    @completed_responses = current_user.responses.completed.newest_first
   end
 
   def new

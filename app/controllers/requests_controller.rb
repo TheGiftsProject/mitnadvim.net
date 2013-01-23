@@ -4,7 +4,7 @@ class RequestsController < ApplicationController
   before_filter :load_school_request, :only => [:edit, :update, :destroy, :close]
 
   def index
-    @active_requests = Request.opened
+    @active_requests = Request.opened.newest_first
   end
 
   def new

@@ -7,7 +7,7 @@ class SchoolsController < ApplicationController
 
   def show
     @closed_requests = params[:requests] == "closed"
-    @requests = (@closed_requests ? current_school.requests.closed : current_school.requests.opened)
+    @requests = (@closed_requests ? current_school.requests.closed : current_school.requests.opened).newest_first
   end
 
   def edit
