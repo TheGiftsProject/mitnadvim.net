@@ -19,10 +19,11 @@
       %dt= Request.human_attribute_name("start_date")
       %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
 
-    .actions
-      %a.btn.edit_request{:href => edit_request_path(vrequest)}= t("modals.school.request.actions.edit_request")
-      != button_to t("modals.school.request.actions.delete_request"), vrequest, {:method => :delete, :class => "btn delete_request"}
-      %button.btn.close_request{rel: "tooltip", "data-html" => true, "data-title" => block_to_partial("modals/school/close_request", request: vrequest)}= t("modals.school.request.actions.close_request")
+    - if vrequest.opened?
+      .actions
+        %a.btn.edit_request{:href => edit_request_path(vrequest)}= t("modals.school.request.actions.edit_request")
+        != button_to t("modals.school.request.actions.delete_request"), vrequest, {:method => :delete, :class => "btn delete_request"}
+        %button.btn.close_request{rel: "tooltip", "data-html" => true, "data-title" => block_to_partial("modals/school/close_request", request: vrequest)}= t("modals.school.request.actions.close_request")
   .modal-footer
     != render(partial: "modals/school/responded_volunteers", locals: {vrequest: vrequest})
 

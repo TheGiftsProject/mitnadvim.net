@@ -1,5 +1,8 @@
 .info
-  %strong= req.responses.count
+  - if req.opened?
+    %strong= req.responses.count
+  - else
+    %strong= req.responses.completed.count
   %span= t("components.request_row.volunteers")
 .action
   %a.btn{ href: "#school_request_modal#{req.id}", data: { toggle: "modal" } }= t("components.request_row.actions.more_details")

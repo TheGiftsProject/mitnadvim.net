@@ -1,10 +1,22 @@
 .volunteers
-  %span.responded= t("modals.school.request.responded_volunteers", count: vrequest.responses.length)
-  - vrequest.responses.each do |response|
-    .volunteer
-      != image_tag("avatar.png")
-      .details
-        %span.name= "#{response.user.first_name} #{response.user.last_name}"
-        %span.note= response.note
-      .actions
-        %button.btn.btn-primary.btn-orange{rel: "popover", "data-html" => true, "data-title" => t("modals.school.request.details_popover.title"), "data-content" => block_to_partial("modals/school/volunteer_details", volunteer: response.user)}= t("modals.school.request.actions.watch_details")
+  - if vrequest.opened?
+    %span.responded= t("modals.school.request.responded_volunteers", count: vrequest.responses.length)
+    - vrequest.responses.each do |response|
+      .volunteer
+        != image_tag("avatar.png")
+        .details
+          %span.name= "#{response.user.first_name} #{response.user.last_name}"
+          %span.note= response.note
+        .actions
+          %button.btn.btn-primary.btn-orange{rel: "popover", "data-html" => true, "data-title" => t("modals.school.request.details_popover.title"), "data-content" => block_to_partial("modals/school/volunteer_details", volunteer: response.user)}= t("modals.school.request.actions.watch_details")
+  - else
+    %span.responded= t("modals.school.request.completed_volunteers", count: vrequest.responses.completed.length)
+    - vrequest.responses.completed.each do |response|
+      .volunteer
+        != image_tag("avatar.png")
+        .details
+          %span.name= "#{response.user.first_name} #{response.user.last_name}"
+          %span.note= response.note
+        .actions
+          %button.btn.btn-primary.btn-orange{rel: "popover", "data-html" => true, "data-title" => t("modals.school.request.details_popover.title"), "data-content" => block_to_partial("modals/school/volunteer_details", volunteer: response.user)}= t("modals.school.request.actions.watch_details")
+
