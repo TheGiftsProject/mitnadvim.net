@@ -1,4 +1,4 @@
-.modal.hide.fade{ id: id }
+.volunteer_request_modal.modal.hide.fade{ id: id }
   .modal-header
     %button.close{ data: {dismiss:"modal"}, aria: { hidden: true}} &times;
     %h3= t("modals.volunteer.request.header")
@@ -24,5 +24,5 @@
         %dd
           != text_area_tag :note,"", placeholder: "#{t("modals.volunteer.request.fields.placeholders.note")}"
 
-      %dd
         %button.btn.btn-primary.btn-orange{type:"submit"}= t("modals.volunteer.request.actions.submit")
+        %span.help-inline= t('modals.volunteer.request.notice')
