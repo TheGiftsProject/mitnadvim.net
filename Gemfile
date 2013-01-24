@@ -27,5 +27,3 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'sextant' #rails/routes
 end
-
-gem 'heroku'
