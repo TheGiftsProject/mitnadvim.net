@@ -6,16 +6,26 @@
   padding: 5px 0px 5px 0;
   margin-right: 0;
   border-bottom: 1px solid #eee;
+  position: relative;
+  @include box-sizing(border-box);
+  height: 110px;
 
   &:last-child {
     border-bottom: none;
   }
 
-  div {
-    padding-bottom: 10px;
-    > &:last-child{
-      padding-bottom: 0px;
-    }
+  .name {
+    margin-bottom: 10px;
+  }
+
+  .description {
+    @include text-ellipsis;
+
+    margin-bottom: 10px;
+  }
+
+  .additional_data {
+    margin-bottom: 5px;
   }
 
   &:hover {
@@ -27,8 +37,9 @@
   }
 
   .actions {
-    margin: 19px 0;
-    text-align: left;
+    position: absolute;
+    left: 20px;
+    top: 40px;
 
     .info, .action {
       @include inline-block();
@@ -36,7 +47,15 @@
 
     .info {
       color: $grey-light;
+      margin-top: -5px;
       margin-left: 5px;
+    }
+
+    .action {
+      .btn {
+        width: 111px;
+        padding: 5px 10px;
+      }
     }
   }
 }

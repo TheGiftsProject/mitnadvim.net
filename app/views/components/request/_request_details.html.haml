@@ -1,6 +1,6 @@
 .span7.request_details
   .name= req.name
-  .description= req.description
+  .description{:title => req.description}= req.description
   .additional_data
     .icon.location
     %span= req.school.try(:name)
