@@ -27,3 +27,7 @@
         %dd
           %button.btn.btn-primary.btn-orange{type:"submit"}= t("modals.volunteer.request.actions.submit")
           %span.help-inline.send_note= t('modals.volunteer.request.notice')
+
+  - if vrequest.responded_users.count > 0
+    .modal-footer
+      %span= t('modals.volunteer.request.responded_volunteers', count: vrequest.responded_users.count)
