@@ -1,15 +1,27 @@
 .volunteer_request_modal {
+  width: 700px;
+
+  form {
+    margin: 0;
+  }
+
+  dl {
+    margin-bottom: 0;
+  }
+
+  dd:last-child {
+    padding-bottom: 10px;
+  }
 
   button {
     @include inline-block;
-    margin-right: 9px;
   }
 
   .send_note {
-    position: absolute;
-    top: 339px;
-    right: 165px;
-    width: 330px;
+    width: 350px;
+    font-weight: bold;
+    padding: 0;
+    margin-right: 15px;
   }
 
 }

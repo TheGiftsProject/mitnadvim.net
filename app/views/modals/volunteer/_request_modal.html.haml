@@ -24,5 +24,6 @@
         %dd
           != text_area_tag :note,"", placeholder: "#{t("modals.volunteer.request.fields.placeholders.note")}"
 
-        %button.btn.btn-primary.btn-orange{type:"submit"}= t("modals.volunteer.request.actions.submit")
-        .send_note= t('modals.volunteer.request.notice')
+        %dd
+          %button.btn.btn-primary.btn-orange{type:"submit"}= t("modals.volunteer.request.actions.submit")
+          %span.help-inline.send_note= t('modals.volunteer.request.notice')
