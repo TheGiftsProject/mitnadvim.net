@@ -1,59 +1,7 @@
 @import "users/response_modal";
 @import "components/request_details";
+@import 'components/row_style';
 
 .response_row {
-  padding: 5px 0px 5px 0;
-  margin-right: 0;
-  border-bottom: 1px solid #eee;
-  position: relative;
-  @include box-sizing(border-box);
-  height: 110px;
-
-  &:last-child {
-    border-bottom: none;
-  }
-
-  &:hover {
-    background-color: #f5f5f5;
-
-    .name {
-      color: #3F7BE1;
-    }
-  }
-
-  .name {
-    margin-bottom: 10px;
-  }
-
-  .description {
-    @include text-ellipsis;
-    margin-bottom: 10px;
-  }
-
-  .additional_data {
-    margin-bottom: 5px;
-  }
-
-  .actions {
-    position: absolute;
-    left: 20px;
-    top: 40px;
-
-    .info, .action {
-      @include inline-block();
-    }
-
-    .info {
-      color: $grey-light;
-      margin-top: -5px;
-      margin-left: 5px;
-    }
-
-    .action {
-      .btn {
-        width: 111px;
-        padding: 5px 10px;
-      }
-    }
-  }
+  @include row-style;
 }
