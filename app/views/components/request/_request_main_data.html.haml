@@ -11,6 +11,6 @@
 
 
 - if current_user.present?
-  != render partial: "modals/volunteer/request_modal", locals: {vrequest: req, id: "user_request_modal_#{req.id}"}
+  != render "modals/volunteer/request_modal", vrequest: req, id: "user_request_modal_#{req.id}"
 - else
-  != render partial: "modals/anonymous/request_modal", locals: {request: req, id: "anonymous_request_modal_#{req.id}"}
+  != render "modals/anonymous/request_modal", request: req, id: "anonymous_request_modal_#{req.id}"

@@ -1,10 +1,10 @@
 .request_row.row
-  != render partial: "components/request/request_details", locals: {req: req}
+  != render "components/request/request_details", req: req
 
   .actions
     - if type == 'school'
-      != render partial: "components/request/request_school_data", :locals => {:req => req}
+      != render "components/request/request_school_data", :req => req
     - elsif type == 'user'
-      != render partial: "components/request/request_user_data", :locals => {:req => req}
+      != render "components/request/request_user_data", :req => req
     - else
-      != render partial: "components/request/request_main_data", :locals => {:req => req}
+      != render "components/request/request_main_data", :req => req

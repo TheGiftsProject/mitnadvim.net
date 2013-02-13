@@ -20,9 +20,9 @@
                 %span.step= step
     .box.span4.profile
       - if user_signed_in?
-        != render :partial => "requests/logged_in"
+        != render "requests/logged_in"
       - else
-        != render :partial => "requests/sign_up"
+        != render "requests/sign_up"
 
   .row.main_panel
     .span12
@@ -31,9 +31,9 @@
           = t("requests.pages.index.list.caption")
         .content
           -if @active_requests.count > 0
-            != render partial: "components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}
+            != render :partial => "components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}
           -else
             .empty_group{:style => "margin-top: 10px;"}
               = t("requests.pages.index.list.no_requests")
 
-!= render partial: 'modals/volunteer/request_sent_modal'
+!= render 'modals/volunteer/request_sent_modal'

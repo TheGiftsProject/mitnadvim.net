@@ -1,5 +1,5 @@
 .response_row.row
-  != render partial: "components/request/request_details", locals: {req: response.request}
+  != render "components/request/request_details", req: response.request
 
   .actions
     .info
@@ -7,4 +7,4 @@
     .action
       %a.btn{href: "#response_modal_#{response.id}", data: {toggle: "modal"}}= t("components.response_row.actions.watch")
 
-  != render partial: "modals/volunteer/response_modal", locals: {response: response, id: "response_modal_#{response.id}"}
+  != render "modals/volunteer/response_modal", response: response, id: "response_modal_#{response.id}"

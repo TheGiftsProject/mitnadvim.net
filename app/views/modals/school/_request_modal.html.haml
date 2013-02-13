@@ -25,7 +25,7 @@
         != button_to t("modals.school.request.actions.delete_request"), vrequest, {:method => :delete, :class => "btn delete_request"}
         %button.btn.close_request{rel: "tooltip", "data-html" => true, "data-title" => block_to_partial("modals/school/close_request", request: vrequest)}= t("modals.school.request.actions.close_request")
   .modal-footer
-    != render(partial: "modals/school/responded_volunteers", locals: {vrequest: vrequest})
+    != render "modals/school/responded_volunteers", vrequest: vrequest
 
   .flash_content
     .delete_success= t("flashes.requests.deleted")
