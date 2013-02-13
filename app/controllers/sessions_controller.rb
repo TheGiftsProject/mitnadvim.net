@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    @type = params.key?(:school) ? "schools" : "volunteers"
+    @type ||= params.key?(:school) ? "schools" : "volunteers"
   end
 
   def create
@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
       redirect_to return_url, :notice => I18n.t("flashes.logged_in")
     else
       flash.now.alert = I18n.t('errors.messages.login_fail')
+      @type = params[:user][:type]
       render "new"
     end
   end

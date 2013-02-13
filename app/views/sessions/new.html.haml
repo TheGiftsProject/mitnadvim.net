@@ -8,6 +8,7 @@
     = form_tag sessions_path, :class => "form-horizontal" do
       = form_text_field(User.human_attribute_name("email"), "user[email]")
       = form_password_field(User.human_attribute_name("password"), "user[password]")
+      = hidden_field_tag 'user[type]', @type
       != submit_tag t("sessions.pages.new.actions.sign_in"), :class => "btn btn-orange btn-big"
     %hr
     %h3

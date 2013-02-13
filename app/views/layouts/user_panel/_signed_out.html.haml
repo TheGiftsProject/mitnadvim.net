@@ -6,4 +6,5 @@
   != form_tag sessions_path, :class => "navbar-form" do |f|
     != email_field_tag 'user[email]',"", :placeholder => t("activerecord.attributes.user.email")
     != password_field_tag 'user[password]',"", :placeholder => t("activerecord.attributes.user.password")
+    != hidden_field_tag 'user[type]', 'volunteers'
     != submit_tag t("layout.header.user_panel.logged_out.volunteer.sign_in"), :class => "btn btn-orange btn-small"
