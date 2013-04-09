@@ -22,9 +22,7 @@ $box-radius: 5px;
 
   .header{
     height: 34px;
-    @include background-image(
-      linear-gradient(bottom,#565e62,#7a858a)
-    );
+    @include background-image(linear-gradient(bottom,#565e62,#7a858a));
     @include photoshop-drop-shadow(90, 1px, 0, 4px, rgba(#000, 0.25));
 
     margin: $negative-box-padding $negative-box-padding $box-padding $negative-box-padding;
@@ -48,6 +46,19 @@ $box-radius: 5px;
 
     &.no-margin{
       margin-bottom: 0;
+    }
+  }
+
+  .filter {
+    background-color: #ebebeb;
+    padding: 9px 8px 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dedfe0;
+    .custom-span {
+      width: 168px;
+    }
+    form {
+      margin: 0;
     }
   }
 

@@ -1,0 +1,7 @@
+.filter
+  = form_tag(requests_path, class: 'form-inline', method: :get) do
+    = select_tag "filter[category]", category_options(params[:category]), prompt: t('requests.pages.index.filter.category'), class: 'custom-span'
+    = select_tag "filter[recurrence]", recurrence_options(params[:recurrence]), prompt: t('requests.pages.index.filter.recurrence'), class: 'span2'
+    = select_tag "filter[area]", area_options(params[:category]), prompt: t('requests.pages.index.filter.area'), class: 'custom-span'
+    = select_tag "filter[school]", nil, prompt: t('requests.pages.index.filter.school'), class: 'span4'
+    = submit_tag t("requests.pages.index.filter.action"), :class => "btn"
