@@ -1,6 +1,6 @@
 #= require jquery
 #= require jquery_ujs
-#= require angular
+#= require knockout
 #= require twitter/bootstrap
 
 class window.Mitnadvim
