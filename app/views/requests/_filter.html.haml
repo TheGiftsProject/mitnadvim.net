@@ -1,7 +1,15 @@
-.filter
-  = form_tag(requests_path, class: 'form-inline', method: :get) do
-    = select_tag "filter[category]", category_options(params[:category]), prompt: t('requests.pages.index.filter.category'), class: 'custom-span'
-    = select_tag "filter[recurrence]", recurrence_options(params[:recurrence]), prompt: t('requests.pages.index.filter.recurrence'), class: 'span2'
-    = select_tag "filter[area]", area_options(params[:category]), prompt: t('requests.pages.index.filter.area'), class: 'custom-span'
-    = select_tag "filter[school]", nil, prompt: t('requests.pages.index.filter.school'), class: 'span4'
+.filter{'ng-app' => ''}
+  = form_tag(requests_path, class: 'form-inline', method: :get, 'ng-controller' => 'FilterCtrl') do
+    = select_tag "category", category_options(params[:category]), prompt: t('requests.pages.index.filter.category'), class: 'custom-span'
+    = select_tag "recurrence", recurrence_options(params[:recurrence]), prompt: t('requests.pages.index.filter.recurrence'), class: 'span2'
+    = select_tag "area", area_options(params[:area]), prompt: t('requests.pages.index.filter.area'), class: 'custom-span', 'ng-model' => 'area', 'ng-change' => 'loadSchools()', 'ng-init' => "area = #{params[:area]}"
+    %select{name: 'school', class: 'span4', 'ng-model' => 'school', 'ng-init' => "school = #{params[:school].present? ? params[:school] : ' '}"}
+      %option{value: ''}= t('requests.pages.index.filter.school')
+      %option{'ng-repeat' => 'school in schools', value: '{{school.id}}'} {{school.name}}
     = submit_tag t("requests.pages.index.filter.action"), :class => "btn"
+
+%script{type: 'text/javascript'}
+  window.filter_ctrl = {schools: #{raw School.from_area(params[:area]).to_json}};
+
+- content_for :javascripts do
+  != javascript_include_tag "filter"
