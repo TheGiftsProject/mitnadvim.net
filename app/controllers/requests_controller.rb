@@ -4,7 +4,11 @@ class RequestsController < ApplicationController
   before_filter :load_school_request, :only => [:edit, :update, :destroy, :close]
 
   def index
-    @active_requests = Request.opened.newest_first
+    @active_requests = Request.opened.newest_first.includes(:school)
+    @active_requests = @active_requests.where(category_id: params[:category]) if params[:category].present?
+    @active_requests = @active_requests.where(recurrence_id: params[:recurrence]) if params[:recurrence].present?
+    @active_requests = @active_requests.where(schools: {id: params[:school]}) if params[:school].present?
+    @active_requests = @active_requests.where(schools: {area_id: params[:area]}) if params[:area].present?
     @after_response = params[:after_response]
   end
 
