@@ -1,9 +1,7 @@
 
 class FilterCtrl
   constructor: () ->
-    console.log 'schools: ' + window.filterCtrl.schools
     @schools = ko.observableArray(window.filterCtrl.schools)
-    console.log 'school: ' + window.filterCtrl.school
     @school = ko.observable(window.filterCtrl.school)
     @area = ko.observable()
 
