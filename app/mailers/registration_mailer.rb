@@ -10,4 +10,9 @@ class RegistrationMailer < ActionMailer::Base
     @school = school
     mail(to: @school.admin.email, subject: I18n.t('email.subject.welcome_school'))
   end
+
+  def new_response(response)
+    @response = response
+    mail(to: @response.request.school.admin.email, subject: I18n.t('email.subject.new_response'))
+  end
 end
