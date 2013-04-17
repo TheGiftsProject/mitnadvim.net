@@ -6,6 +6,7 @@ he:
         title: "הרשמת משתמש חדש"
         description_help: "ספר על עצמך בכמה מילים"
         area_help: "האזור בו תרצה להתנדב"
+        birth_year_prompt: 'בחר שנת לידה'
         actions:
           create: "צור פרופיל חדש"
 

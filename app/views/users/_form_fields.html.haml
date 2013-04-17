@@ -1,7 +1,7 @@
 = form_text_field(User.human_attribute_name("first_name"), "user[first_name]", user.first_name)
 = form_text_field(User.human_attribute_name("last_name"), "user[last_name]", user.last_name)
 = form_field_wrapper(User.human_attribute_name("birth_year"), "user[birth_year]") do
-  = select_tag("user[birth_year]", year_options(user.birth_year))
+  = select_tag("user[birth_year]", year_options(user.birth_year), prompt: t('users.pages.new.birth_year_prompt'))
 = form_textarea_field(User.human_attribute_name("description"), "user[description]", user.description) do
   %span.help-inline= t("users.pages.new.description_help")
 = form_field_wrapper(User.human_attribute_name("area"), "user[area_id]") do
