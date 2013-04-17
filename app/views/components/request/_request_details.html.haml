@@ -8,3 +8,4 @@
     %span= "#{Request.human_attribute_name("duration")}: #{req.duration} #{Request.human_attribute_name("duration_units")}"
     .icon.schedule
     %span= req.recurrence.name
+    %span= l(req.created_at.in_time_zone('Israel'), format: :long)
