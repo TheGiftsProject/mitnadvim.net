@@ -4,9 +4,14 @@
   = select_tag("user[birth_year]", year_options(user.birth_year), prompt: t('users.pages.new.birth_year_prompt'))
 = form_textarea_field(User.human_attribute_name("description"), "user[description]", user.description) do
   %span.help-inline= t("users.pages.new.description_help")
-= form_field_wrapper(User.human_attribute_name("area"), "user[area_id]") do
-  = select_tag("user[area_id]", area_options(user.area_id))
-  %span.help-inline= t("users.pages.new.area_help")
+- if registration_type == :school
+  = form_field_wrapper(User.human_attribute_name("school_area"), "user[area_id]") do
+    = select_tag("user[area_id]", area_options(user.area_id))
+    %span.help-inline= t("users.pages.new.school_area_help")
+- else
+  = form_field_wrapper(User.human_attribute_name("area"), "user[area_id]") do
+    = select_tag("user[area_id]", area_options(user.area_id))
+    %span.help-inline= t("users.pages.new.area_help")
 = form_text_field(User.human_attribute_name("email"), "user[email]", user.email)
 = form_text_field(User.human_attribute_name("phone_number"), "user[phone_number]", user.phone_number)
 = form_field_wrapper(User.human_attribute_name("gender"), "user[gender]") do
