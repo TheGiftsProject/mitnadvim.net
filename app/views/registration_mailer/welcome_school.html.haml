@@ -9,7 +9,5 @@
 
       }
   %body
-    %h1
-      Welcome new school, #{@school.name}!
-    %p
-      Some text for new school...
+    %h1= t 'email.welcome_school.title', school: @school.name
+    %p= t 'email.welcome_school.body'

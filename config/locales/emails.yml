@@ -1,6 +1,14 @@
 he:
   email:
-    subject:
-      welcome_user: "ברוכים הבאים למתנדבים.נט"
-      welcome_school: "ברוכים הבאים למתנדבים.נט"
-      new_response: "מתנדב נענה לבקשתך"
+    welcome_user:
+      subject: "ברוכים הבאים למתנדבים.נט"
+      title: "ברוכים הבאים למתנדבים.נט, %{user}"
+      body: ""
+    welcome_school:
+      subject: "ברוכים הבאים למתנדבים.נט"
+      title: "ברוכים הבאים למתנדבים.נט, %{school}"
+      body: ""
+    new_response:
+      subject: "מתנדב נענה לבקשתך"
+      title: "%{admin} שלום."
+      body: "משתמש %{user} נענה לבקשתך על התנדבות."

@@ -9,7 +9,5 @@
 
       }
   %body
-    %h1
-      Hello, #{@response.request.school.admin.fullname}.
-    %p
-      #{@response.user.fullname} has answered your volunteer request.
+    %h1= t 'email.new_response.title', admin: @response.request.school.admin.fullname
+    %p= t 'email.new_response.body', user: @response.user.fullname
