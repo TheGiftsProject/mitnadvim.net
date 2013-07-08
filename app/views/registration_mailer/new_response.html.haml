@@ -2,12 +2,6 @@
 %html
   %head
     %style
-      h1 {
-
-      }
-      p {
-
-      }
   %body
     %h1= t 'email.new_response.title', admin: @response.request.school.admin.fullname
     %p= t 'email.new_response.body', user: @response.user.fullname
