@@ -1,14 +1,23 @@
 
-class FilterCtrl
-  constructor: () ->
-    @schools = ko.observableArray(window.filterCtrl.schools)
-    @school = ko.observable(window.filterCtrl.school)
-    @area = ko.observable()
+$ ->
+  setSchools = (schools) ->
+    #remove all options except the prompt
+    html = ''
+    $.each(schools, ->
+      html += "<option value='#{this.id}'>#{this.name}</option>"
+    )
+    $('#school option[value!=""]').remove()
+    $('#school').append(html);
 
-    ko.applyBindings @, $('#request_filter')[0]
-  loadSchools: ->
-    $.get("/schools.json?area=#{@area()}").success (data) =>
-      console.log data
-      @schools(data)
+  selectSchool = (school_id) ->
+    $('#school').val(school_id)
 
-window.filter_ctrl = new FilterCtrl();
+  $('form#request_filter #area').on('change', ->
+    area_id = $(this).val()
+    $.get("/schools.json?area=#{area_id}").success (data) =>
+          console.log data
+          setSchools(data)
+  )
+
+  setSchools(window.filterCtrl.schools)
+  selectSchool(window.filterCtrl.school)

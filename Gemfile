@@ -15,7 +15,6 @@ group :assets do
   gem 'compass-photoshop-drop-shadow'
   gem 'uglifier', '>= 1.0.3'
   gem "bootstrap-sass-rails-rtl", :git => "git://github.com/TheGiftsProject/bootstrap-sass-rails-rtl.git", :branch => "all_fixes"
-  gem 'knockoutjs-rails'
 end
 
 gem 'enumify'
