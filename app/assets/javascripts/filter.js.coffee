@@ -15,7 +15,6 @@ $ ->
   $('form#request_filter #area').on('change', ->
     area_id = $(this).val()
     $.get("/schools.json?area=#{area_id}").success (data) =>
-          console.log data
           setSchools(data)
   )
 
