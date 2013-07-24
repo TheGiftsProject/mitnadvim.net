@@ -1,4 +1,7 @@
 MitnadvimNet::Application.configure do
+  # ignore for test environments
+  return if Rails.env.test?
+
   # Mailer configuration
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
