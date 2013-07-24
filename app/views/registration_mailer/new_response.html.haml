@@ -1,7 +1,2 @@
-!!!
-%html
-  %head
-    %style
-  %body
-    %h1= t 'email.new_response.title', admin: @response.request.school.admin.fullname
-    %p= t 'email.new_response.body', user: @response.user.fullname
+%h1= t 'email.new_response.title', admin: @response.request.school.admin.fullname
+%p= t 'email.new_response.body', user: @response.user.fullname
