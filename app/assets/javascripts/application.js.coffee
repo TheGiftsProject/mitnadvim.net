@@ -1,6 +1,8 @@
 #= require jquery
 #= require jquery_ujs
 #= require twitter/bootstrap
+#= require plugins/jquery_filteron
+#= require filter
 
 class window.Mitnadvim
 
