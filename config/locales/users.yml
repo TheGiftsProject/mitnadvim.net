@@ -34,7 +34,7 @@ he:
         password_confirmation: "הזן סיסמה שנית"
         password_limit: "לפחות 6 תווים"
         description: "תיאור"
-        area: "איזור התנדבות"
+        area: "איזור"
         school_area: 'איזור ביה"ס'
     errors:
       models:
