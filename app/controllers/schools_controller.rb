@@ -1,10 +1,6 @@
 class SchoolsController < ApplicationController
 
   def index
-    respond_to do |f|
-      f.html {}
-      f.json {render json: School.from_area(params[:area])}
-    end
   end
 
   def new
