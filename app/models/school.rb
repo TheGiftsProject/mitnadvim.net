@@ -10,9 +10,4 @@ class School < ActiveRecord::Base
 
   validates_associated :area
 
-  def self.from_area(area_id)
-    return School.all unless area_id.present?
-    School.where(area_id: area_id)
-  end
-
 end
