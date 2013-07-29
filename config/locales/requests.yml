@@ -40,6 +40,13 @@ he:
           caption: "בקשות התנדבות פתוחות"
           no_requests: "לא נמצאו בקשות"
 
+        filter:
+          area: 'כל האזורים בארץ'
+          category: 'כל סוגי התנדבויות'
+          recurrence: 'כל סוגי הישנות'
+          school: 'כל בתי הספר'
+          action: 'מצא התנדבויות'
+
   activerecord:
     attributes:
       request:

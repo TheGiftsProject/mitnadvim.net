@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
     if @user.save
       sign_in(@user)
+      RegistrationMailer.delay.welcome_user(@user)
       redirect_to root_path, :notice => t("flashes.users.created")
     else
       @errors = @user.errors.full_messages
