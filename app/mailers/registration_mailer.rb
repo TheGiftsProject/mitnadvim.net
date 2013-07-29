@@ -1,4 +1,5 @@
 class RegistrationMailer < ActionMailer::Base
+  layout 'mail'
   default from: "noreply@mitnadvim.net"
 
   def welcome_user(user_id)
