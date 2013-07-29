@@ -6,7 +6,6 @@ he:
         title: "הרשמת משתמש חדש"
         description_help: "ספר על עצמך בכמה מילים"
         area_help: "האיזור בו תרצה להתנדב"
-        school_area_help: 'איזור בו ממוקם ביה"ס'
         birth_year_prompt: 'בחר שנת לידה'
         actions:
           create: "צור פרופיל חדש"
@@ -35,7 +34,6 @@ he:
         password_limit: "לפחות 6 תווים"
         description: "תיאור"
         area: "איזור"
-        school_area: 'איזור ביה"ס'
     errors:
       models:
         user:
