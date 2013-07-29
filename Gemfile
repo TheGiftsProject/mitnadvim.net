@@ -22,7 +22,7 @@ gem 'jquery-rails'
 gem "bcrypt-ruby", :require => "bcrypt"
 
 group :development, :test do
-  #gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'rspec-rails'
   gem 'awesome_print'
   gem 'quiet_assets'
