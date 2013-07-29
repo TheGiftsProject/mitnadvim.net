@@ -7,5 +7,5 @@
 
   %h2= t("schools.pages.new.admin.title")
   %hr
-  = render "users/form_fields", user: @admin_user, registration_type: :school
+  = render "users/form_fields", user: @admin_user
   = form_submit_button t("schools.pages.new.actions.create"), class: "btn btn-orange"
