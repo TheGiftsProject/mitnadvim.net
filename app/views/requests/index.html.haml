@@ -29,6 +29,7 @@
       .box
         .header.no-margin.requests_list_title
           = t("requests.pages.index.list.caption")
+        != render 'filter'
         .content
           -if @active_requests.count > 0
             != render :partial => "components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}

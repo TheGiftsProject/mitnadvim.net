@@ -8,4 +8,8 @@ module RequestsHelper
     options_from_collection_for_select(Recurrence.all, :id, :name, selected)
   end
 
+  def school_options(area, selected)
+    options_from_collection_for_select(School.from_area(area), :id, :name, selected)
+  end
+
 end
