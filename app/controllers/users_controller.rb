@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
     if @user.save
       sign_in(@user)
-      RegistrationMailer.welcome_user(@user).deliver # Should be delayed
+      #RegistrationMailer.delay.welcome_user(@user) Doesn't work in production due to Google preventing sign in
       redirect_to root_path, :notice => t("flashes.users.created")
     else
       @errors = @user.errors.full_messages

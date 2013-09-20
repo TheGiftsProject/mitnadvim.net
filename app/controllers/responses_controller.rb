@@ -4,7 +4,7 @@ class ResponsesController < ApplicationController
     request = Request.find(params[:request_id])
     @response = request.responses.create(user: current_user, note: params[:note])
 
-    RegistrationMailer.new_response(@response).deliver # Should be delayed
+    #RegistrationMailer.delay.new_response(@response) doesn't work in production, due to Google preventing sign in
     redirect_to root_url(:after_response => true)
   end
 
