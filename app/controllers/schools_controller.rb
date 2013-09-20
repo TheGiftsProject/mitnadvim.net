@@ -30,7 +30,7 @@ class SchoolsController < ApplicationController
 
     if school_is_valid and admin_is_valid
       sign_in(@admin_user)
-      RegistrationMailer.delay.welcome_school(@school)
+      RegistrationMailer.welcome_school(@school).deliver # Should be delayed
       redirect_to requests_path, notice: t("flashes.schools.created")
     else
       @errors = @school.errors.full_messages + @admin_user.errors.full_messages
