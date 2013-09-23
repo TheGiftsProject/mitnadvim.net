@@ -1,6 +1,12 @@
 @import "master";
 @import "layouts/header";
 @import "layouts/footer";
+@import "requests/new";
+@import "requests/rindex";
+@import "schools/show";
+@import "sessions/new";
+@import "users/new";
+@import "users/show";
 
 body{
   direction: rtl;
