@@ -15,7 +15,7 @@ group :assets do
   gem 'compass-rails'
   gem 'compass-photoshop-drop-shadow'
   gem 'uglifier'
-  gem "bootstrap-sass-rails-rtl", :git => "git://github.com/TheGiftsProject/bootstrap-sass-rails-rtl.git", :branch => "all_fixes"
+  gem 'anjlab-bootstrap-rails', '~> 3', :require => 'bootstrap-rails'
 end
 
 gem 'enumify'
