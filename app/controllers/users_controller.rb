@@ -15,12 +15,12 @@ class UsersController < ApplicationController
 
     if @user.save
       sign_in(@user)
-      #RegistrationMailer.delay.welcome_user(@user) Doesn't work in production due to Google preventing sign in
-      redirect_to root_path, :notice => t("flashes.users.created")
+      RegistrationMailer.welcome_user(@user).deliver
+      redirect_to root_path, :notice => t('flashes.users.created')
     else
       @errors = @user.errors.full_messages
       flash[:error] = @errors
-      render :action => "new"
+      render :action => 'new'
     end
 
   end

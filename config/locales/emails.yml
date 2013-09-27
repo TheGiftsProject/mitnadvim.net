@@ -8,7 +8,7 @@ he:
       subject: "ברוכים הבאים למתנדבים.נט"
       title: "ברוכים הבאים למתנדבים.נט, %{school}"
       body: ""
-    new_response:
+    volunteer_responded:
       subject: "מתנדב נענה לבקשתך"
       title: "%{admin} שלום."
       body: "משתמש %{user} נענה לבקשתך על התנדבות."
