@@ -1,8 +1,7 @@
-.user-panel.pull-right
-  - if user_signed_in?
-    - if current_user.volunteer?
-      != render "layouts/user_panel/signed_in_volunteer"
-    - else
-      != render "layouts/user_panel/signed_in_school"
+- if user_signed_in?
+  - if current_user.volunteer?
+    != render "layouts/user_panel/signed_in_volunteer"
   - else
-    != render "layouts/user_panel/signed_out"
+    != render "layouts/user_panel/signed_in_school"
+- else
+  != render "layouts/user_panel/signed_out"

@@ -10,10 +10,10 @@ $box-radius: 5px;
   padding: $box-padding;
   @include box-sizing(border-box);
 
-  color: $grey-text;
+  color: $gray-text;
 
   h1,h2,h3,h4,h5{
-    color: $grey-title-text;
+    color: $gray-title-text;
   }
 
   hr{

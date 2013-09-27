@@ -1,10 +1,11 @@
-.navbar-text.signed_out
-  %a{:href => sign_in_path(:school => "")}!= t("layout.header.user_panel.logged_out.school.entrance")
-  %span ·
-  %strong!= t("layout.header.user_panel.logged_out.volunteer.already_signed_up")
-  %span!= t("layout.header.user_panel.logged_out.volunteer.sign_in_now")
-  != form_tag sessions_path, :class => "navbar-form" do |f|
-    != email_field_tag 'user[email]',"", :placeholder => t("activerecord.attributes.user.email")
-    != password_field_tag 'user[password]',"", :placeholder => t("activerecord.attributes.user.password")
-    != hidden_field_tag 'user[type]', 'volunteers'
-    != submit_tag t("layout.header.user_panel.logged_out.volunteer.sign_in"), :class => "btn btn-orange btn-small"
+%a{:href => sign_in_path(:school => "")}!= t("layout.header.user_panel.logged_out.school.entrance")
+%span ·
+%strong= t("layout.header.user_panel.logged_out.volunteer.already_signed_up")
+%span!= t("layout.header.user_panel.logged_out.volunteer.sign_in_now")
+!= form_tag sessions_path, :role => :form, :class => 'form-inline' do |f|
+  .form-group
+    != email_field_tag 'user[email]',"", :placeholder => t("activerecord.attributes.user.email"), :class => 'form-control input-sm'
+  .form-group
+    != password_field_tag 'user[password]',"", :placeholder => t("activerecord.attributes.user.password"), :class => 'form-control input-sm'
+  != hidden_field_tag 'user[type]', 'volunteers'
+  != submit_tag t("layout.header.user_panel.logged_out.volunteer.sign_in"), :class => "btn btn-sm"

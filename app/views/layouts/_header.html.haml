@@ -1,7 +1,9 @@
-%header.navbar.navbar-static-top
-  .navbar-inner
-    .container
-      %a.brand{:href => root_path}
-        = t("layout.header.title")
-        .face
-      != render "layouts/user_panel/user_panel"
+%header
+  .container
+    .row
+      .col-lg-3.pull-right
+        %a.brand{:href => root_path}
+          = t("layout.header.title")
+          = image_tag('face.png')
+      .col-lg-9.user-panel.pull-right
+        != render "layouts/user_panel/user_panel"

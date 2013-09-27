@@ -1,0 +1,12 @@
+@import "new_styles/user_panel";
+
+$header-height: 60px;
+
+header {
+  height: $header-height;
+  @include background-image(linear-gradient(bottom,#565e62,#7a858a));
+
+  .user-panel {
+    @include user-panel;
+  }
+}
