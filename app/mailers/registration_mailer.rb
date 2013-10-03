@@ -2,6 +2,7 @@ class RegistrationMailer < BaseMailer
 
   def welcome_user(user)
     @user = user
+    @link = root_url(:host => 'local.mitnadvim.net')
     mail(to: @user.email, subject: I18n.t('email.welcome_user.subject'))
   end
 

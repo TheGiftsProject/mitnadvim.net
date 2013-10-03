@@ -1,9 +1,13 @@
 he:
   email:
+    layout:
+      brand: "מתנדבים.נט"
     welcome_user:
       subject: "ברוכים הבאים למתנדבים.נט"
-      title: "ברוכים הבאים למתנדבים.נט, %{user}"
-      body: ""
+      hello: ", שלום %{user}"
+      message1: "!הרשמתך למערכת בוצעה בהצלחה"
+      message2: ".מעתה תוכל/י להתנדב לפעילויות באתר"
+      action: "לאתר מתנדבים.נט"
     welcome_school:
       subject: "ברוכים הבאים למתנדבים.נט"
       title: "ברוכים הבאים למתנדבים.נט, %{school}"

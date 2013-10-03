@@ -1,0 +1,50 @@
+$title-fonts: 'MeodedPashut', Arial, san-serif;
+$background-color: #e8edf0;
+
+body {
+  text-align: right;
+}
+
+.message_container {
+  width: 500px;
+}
+
+.header_container {
+  background: #677075;
+}
+
+.content_container {
+  background: $background-color;
+  > table {
+    width: 100%;
+  }
+}
+
+.brand{
+  font-family: $title-fonts;
+  font-size: 52px;
+  color: white;
+  font-weight: bold;
+  line-height: 60px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.action {
+  .button {
+    td {
+      background: #e9a825;
+      padding: 5px 10px;
+    }
+  }
+
+  .action_text {
+    span {
+      font-weight: bold;
+      font-size: 18px;
+      color: white;
+    }
+  }
+}
