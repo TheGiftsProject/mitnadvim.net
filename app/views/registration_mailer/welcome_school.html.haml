@@ -1,2 +1,4 @@
-%h1= t 'email.welcome_school.title', school: @school.name
-%p= t 'email.welcome_school.body'
+%p= t 'email.welcome_school.hello', :user => @school.admin.fullname
+%p= t 'email.welcome_school.message1', :school => @school.name
+%p= t 'email.welcome_school.message2'
+= render 'base_mailer/mail_action_button', :action => t('email.welcome_school.action')

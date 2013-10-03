@@ -10,8 +10,10 @@ he:
       action: "לאתר מתנדבים.נט"
     welcome_school:
       subject: "ברוכים הבאים למתנדבים.נט"
-      title: "ברוכים הבאים למתנדבים.נט, %{school}"
-      body: ""
+      hello: ", שלום %{user}"
+      message1: '!בית הספר "%{school}" נרשם בהצלחה במערכת'
+      message2: ".מעתה תוכל/י לפרסם פעילויות ולקבל פניות ממתנדבים"
+      action: "התחל לפרסם פעילויות"
     volunteer_responded:
       subject: "מתנדב נענה לבקשתך"
       title: "%{admin} שלום."
