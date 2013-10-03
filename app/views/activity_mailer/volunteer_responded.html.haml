@@ -1,2 +1,3 @@
-%h1= t 'email.new_response.title', admin: @response.request.school.admin.fullname
-%p= t 'email.volunteer_responded.body', user: @response.user.fullname
+%p= t 'email.volunteer_responded.hello', :user => @response.request.school.admin.fullname
+%p= t 'email.volunteer_responded.message1', user: @response.user.fullname, :activity => @response.request.name
+= render 'base_mailer/mail_action_button', :action => t('email.volunteer_responded.action')

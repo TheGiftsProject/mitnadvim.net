@@ -16,5 +16,6 @@ he:
       action: "התחל לפרסם פעילויות"
     volunteer_responded:
       subject: "מתנדב נענה לבקשתך"
-      title: "%{admin} שלום."
-      body: "משתמש %{user} נענה לבקשתך על התנדבות."
+      hello: ", שלום %{user}"
+      message1: '.בקשת ההתנדבות "%{activity}" נענתה ע"י %{user}'
+      action: "צפה בבקשות שנענו"
