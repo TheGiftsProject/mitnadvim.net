@@ -15,7 +15,7 @@ group :assets do
   gem 'compass-rails'
   gem 'compass-photoshop-drop-shadow'
   gem 'uglifier'
-  gem "bootstrap-sass-rails-rtl", :git => "git://github.com/TheGiftsProject/bootstrap-sass-rails-rtl.git", :branch => "all_fixes"
+  gem 'bootstrap-sass-rails-rtl', :git => 'git://github.com/TheGiftsProject/bootstrap-sass-rails-rtl.git', :branch => 'all_fixes'
 end
 
 gem 'enumify'
@@ -27,4 +27,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'awesome_print'
   gem 'quiet_assets'
+end
+
+group :development do
+  gem 'rails_email_preview'
 end

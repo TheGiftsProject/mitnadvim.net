@@ -1,0 +1,9 @@
+he:
+  layouts:
+    rails_email_preview:
+      application:
+        head_title: "אי-מיילים - תצוגה מקדימה"
+  rails_email_preview:
+    emails:
+      index:
+        list_title: "אי-מיילים שנשלחים מהאפליקציה"
