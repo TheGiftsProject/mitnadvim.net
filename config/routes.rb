@@ -1,7 +1,5 @@
 MitnadvimNet::Application.routes.draw do
 
-  mount RailsEmailPreview::Engine, at: 'emails'
-
   resources :requests do
     member do
       put :close
