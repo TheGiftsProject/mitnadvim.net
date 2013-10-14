@@ -1,5 +1,3 @@
-configure_email_preview if Rails.env.development?
-
 def configure_email_preview
   require 'rails_email_preview'
 
@@ -10,4 +8,8 @@ def configure_email_preview
     }
   end
 end
+
+configure_email_preview if Rails.env.development?
+
+
 
