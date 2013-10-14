@@ -55,6 +55,8 @@ module MitnadvimNet
     # parameters by using an attr_accessible or attr_protected declaration.
     config.active_record.whitelist_attributes = true
 
+    config.asset_host = ENV['APP_HOST']
+
     # Enable the asset pipeline
     config.assets.enabled = true
 
