@@ -20,12 +20,10 @@ body {
   }
 }
 
-.brand{
-  font-family: $title-fonts;
-  font-size: 52px;
-  color: white;
-  font-weight: bold;
-  line-height: 60px;
+.logo {
+  img {
+    margin-top: -4px;
+  }
 }
 
 h1 {
