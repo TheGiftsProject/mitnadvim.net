@@ -32,5 +32,10 @@ module UserSupport
       forbidden_page
     end
   end
+
+  def user_must_be_signed_in
+    redirect_to sign_in_path unless user_signed_in?
+  end
+
 end
 

@@ -1,5 +1,7 @@
 class SchoolsController < ApplicationController
 
+  before_filter :school_admin_must_be_signed_in, :only => [:show, :edit]
+
   def index
   end
 
@@ -9,7 +11,7 @@ class SchoolsController < ApplicationController
   end
 
   def show
-    @closed_requests = params[:requests] == "closed"
+    @closed_requests = params[:requests] == 'closed'
     @requests = (@closed_requests ? current_school.requests.closed : current_school.requests.opened).newest_first
   end
 
