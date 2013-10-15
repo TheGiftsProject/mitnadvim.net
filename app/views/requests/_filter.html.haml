@@ -4,7 +4,7 @@
     = select_tag "recurrence", recurrence_options(params[:recurrence]), prompt: t('requests.pages.index.filter.recurrence'), class: 'span2'
     = select_tag "area", area_options(params[:area]), prompt: t('requests.pages.index.filter.area'), class: 'custom-span'
     = select_tag 'school', school_options(params[:school]), prompt: t('requests.pages.index.filter.school'), class: 'span4'
-    = submit_tag t("requests.pages.index.filter.action"), :class => "btn"
+    = submit_tag t("requests.pages.index.filter.action"), :class => 'btn btn-primary btn-orange'
 
 %script{type: 'text/javascript'}
   window.filterCtrl = #{raw Area.areas_with_schools.to_json};
