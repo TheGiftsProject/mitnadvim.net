@@ -15,7 +15,7 @@ class ActivityMailerPreview
   end
 
   def completed_response
-    Response.where(:status => :completed).last
+    Response.completed.last
   end
 
 end
