@@ -1,8 +1,12 @@
 %dl.dl-horizontal.volunteer_details
-  %dt= User.human_attribute_name("name")
+  %dt= User.human_attribute_name('name')
   %dd= opts[:volunteer].fullname
-  %dt= User.human_attribute_name("email")
+  %dt= User.human_attribute_name('email')
   %dd{:title => opts[:volunteer].email}= opts[:volunteer].email
-  %dt= User.human_attribute_name("phone_number")
+  %dt= User.human_attribute_name('phone_number')
   %dd= opts[:volunteer].phone_number
+  %dt= User.human_attribute_name('gender')
+  %dd= opts[:volunteer].gender
+  %dt= User.human_attribute_name('age')
+  %dd= opts[:volunteer].age
 

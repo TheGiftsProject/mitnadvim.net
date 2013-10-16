@@ -29,6 +29,7 @@ he:
         phone_number: "מספר טלפון"
         gender: "מין"
         birth_year: "שנת לידה"
+        age: 'גיל'
         password: "סיסמה"
         password_confirmation: "הזן סיסמה שנית"
         password_limit: "לפחות 6 תווים"

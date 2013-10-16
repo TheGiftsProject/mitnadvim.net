@@ -30,6 +30,10 @@ class User < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
+  def age
+    Date.today.year - birth_year
+  end
+
   def encrypt_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt
