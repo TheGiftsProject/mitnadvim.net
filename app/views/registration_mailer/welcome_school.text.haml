@@ -1,1 +1,3 @@
-= t 'email.welcome_school.title', school: @school.name
+= t 'email.welcome_school.hello', :user => @school.admin.fullname
+= t 'email.welcome_school.message1', :school => @school.name
+= t 'email.welcome_school.message2'
