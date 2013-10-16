@@ -41,4 +41,3 @@ create_category('התנדבות מהבית')
 create_category('תחזוקה ושיפוץ')
 
 # Programs
-

@@ -7,6 +7,8 @@ he:
         description_help: "ספר על עצמך בכמה מילים"
         area_help: "האיזור בו תרצה להתנדב"
         birth_year_prompt: 'בחר שנת לידה'
+        program_prompt: 'ללא תוכנית'
+        program_help: 'שדה זה אינו חובה'
         actions:
           create: "צור פרופיל חדש"
 
@@ -35,6 +37,7 @@ he:
         password_limit: "לפחות 6 תווים"
         description: "תיאור"
         area: "איזור"
+        program: 'תוכנית התנדבות'
     errors:
       models:
         user:

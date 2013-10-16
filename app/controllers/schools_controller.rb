@@ -7,7 +7,7 @@ class SchoolsController < ApplicationController
 
   def new
     @school = School.new
-    @admin_user = User.new
+    @admin_user = User.new(:role => :school)
   end
 
   def show
