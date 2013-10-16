@@ -9,7 +9,8 @@ class RequestsController < ApplicationController
     @active_requests = @active_requests.where(recurrence_id: params[:recurrence]) if params[:recurrence].present?
     @active_requests = @active_requests.where(schools: {id: params[:school]}) if params[:school].present?
     @active_requests = @active_requests.where(schools: {area_id: params[:area]}) if params[:area].present?
-    @after_response = params[:after_response]
+
+    @after_response = session.delete(:after_response)
   end
 
   def new
