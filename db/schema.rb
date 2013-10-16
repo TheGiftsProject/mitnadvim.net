@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626130131) do
+ActiveRecord::Schema.define(:version => 20131016183217) do
 
   create_table "areas", :force => true do |t|
     t.string   "name"
@@ -40,6 +40,12 @@ ActiveRecord::Schema.define(:version => 20130626130131) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
+  create_table "programs", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "recurrences", :force => true do |t|
     t.string   "name"
@@ -96,6 +102,9 @@ ActiveRecord::Schema.define(:version => 20130626130131) do
     t.integer  "birth_year"
     t.string   "role",          :default => "volunteer"
     t.string   "description"
+    t.integer  "program_id"
   end
+
+  add_index "users", ["program_id"], :name => "index_users_on_program_id"
 
 end

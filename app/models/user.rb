@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   belongs_to :area
   belongs_to :school # this is only relevant to school admin users.
+  belongs_to :program # this is only relevant to volunteers
 
   has_many :responses
   has_many :requests, :through => :responses
