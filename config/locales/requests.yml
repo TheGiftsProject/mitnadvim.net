@@ -54,7 +54,7 @@ he:
         filter:
           area: 'כל האזורים בארץ'
           category: 'כל סוגי התנדבויות'
-          recurrence: 'כל סוגי הישנות'
+          recurrence: 'כל סוגי התדירות'
           school: 'כל בתי הספר'
           action: 'מצא התנדבויות'
 
@@ -65,7 +65,7 @@ he:
         description: "תיאור הבקשה"
         category: "סוג ההתנדבות"
         start_date: "תאריך ושעה"
-        recurrence: "פרק זמן"
+        recurrence: 'תדירות'
         duration: "משך ההתנדבות"
         duration_units: "שעות"
         requesting_school: "ביה\"ס המבקש"
