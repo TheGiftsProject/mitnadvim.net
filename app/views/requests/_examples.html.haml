@@ -1,19 +1,8 @@
-%h3= t("requests.examples.title")
-%hr
-%section
-  .title= t("requests.examples.sections.title")
-  .description= t("requests.examples.sections.description")
-  .type= t("requests.examples.sections.type")
-  .time= t("requests.examples.sections.time")
-%hr
-%section
-  .title= t("requests.examples.sections.title")
-  .description= t("requests.examples.sections.description")
-  .type= t("requests.examples.sections.type")
-  .time= t("requests.examples.sections.time")
-%hr
-%section
-  .title= t("requests.examples.sections.title")
-  .description= t("requests.examples.sections.description")
-  .type= t("requests.examples.sections.type")
-  .time= t("requests.examples.sections.time")
+%h3= t('requests.examples_pane.title')
+- t('requests.examples_pane.examples').each do |example|
+  %hr
+  %section
+    .title= example['title']
+    .description= example['description']
+    .type= example['type']
+    .time= example['time']
