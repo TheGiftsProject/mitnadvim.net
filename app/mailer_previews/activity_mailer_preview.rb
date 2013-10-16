@@ -4,10 +4,18 @@ class ActivityMailerPreview
     ActivityMailer.volunteer_responded response
   end
 
+  def activity_completed
+    ActivityMailer.activity_completed completed_response
+  end
+
   private
 
   def response
     Response.last
+  end
+
+  def completed_response
+    Response.where(:status => :completed).last
   end
 
 end

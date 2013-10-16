@@ -19,3 +19,9 @@ he:
       hello: "שלום %{user},"
       message1: 'בקשת ההתנדבות "%{activity}" נענתה ע"י %{user}.'
       action: "צפה בבקשות שנענו"
+    activity_completed:
+      subject: "ההתנדבות הסתיימה"
+      hello: "שלום %{user},"
+      message1: 'בקשת ההתנדבות "%{activity}" הסתיימה.'
+      note_from_school: "מסר מבית הספר: %{note}"
+      action: "צפה בבקשות שלך"
