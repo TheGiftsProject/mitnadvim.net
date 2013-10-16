@@ -10,4 +10,8 @@ class School < ActiveRecord::Base
 
   validates_associated :area
 
+  def full_address
+    "#{address}, #{area.name}"
+  end
+
 end

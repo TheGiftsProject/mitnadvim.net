@@ -69,6 +69,7 @@ he:
         duration: "משך ההתנדבות"
         duration_units: "שעות"
         requesting_school: "ביה\"ס המבקש"
+        requesting_school_address: 'כתובת הביה"ס'
 
 
 
