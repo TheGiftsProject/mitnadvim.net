@@ -3,8 +3,8 @@ class School < ActiveRecord::Base
   attr_accessible :area
 
   belongs_to :area
-  has_one :admin, :class_name => "User"
-  has_many :requests
+  has_one :admin, :class_name => 'User', :dependent => :destroy
+  has_many :requests, :dependent => :destroy
 
   validates :name, length: { minimum: 2 }
 
