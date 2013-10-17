@@ -6,7 +6,7 @@
   %dt= User.human_attribute_name('phone_number')
   %dd= opts[:volunteer].phone_number
   %dt= User.human_attribute_name('gender')
-  %dd= opts[:volunteer].gender
+  %dd= gender_translation(opts[:volunteer].gender)
   %dt= User.human_attribute_name('age')
   %dd= opts[:volunteer].age
 
