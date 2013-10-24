@@ -1,2 +1,6 @@
-%h1= t 'email.welcome_user.title', user: @user.fullname
-%p= t 'email.welcome_user.body'
+%p= t 'email.welcome_user.hello', :user => @user.fullname
+%p= t 'email.welcome_user.message1'
+%p= t 'email.welcome_user.message2'
+= render 'base_mailer/mail_action_button', :action => t('email.welcome_user.action')
+
+

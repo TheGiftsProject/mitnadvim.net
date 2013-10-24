@@ -34,7 +34,7 @@
           -if @active_requests.count > 0
             != render :partial => "components/request/request_row", :collection => @active_requests, :as => :req, :locals => {:type => 'main'}
           -else
-            .empty_group{:style => "margin-top: 10px;"}
+            .empty_group
               = t("requests.pages.index.list.no_requests")
 
 != render 'modals/volunteer/request_sent_modal'

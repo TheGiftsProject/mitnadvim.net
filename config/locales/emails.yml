@@ -1,14 +1,27 @@
 he:
   email:
+    layout:
+      brand: "מתנדבים.נט"
     welcome_user:
       subject: "ברוכים הבאים למתנדבים.נט"
-      title: "ברוכים הבאים למתנדבים.נט, %{user}"
-      body: ""
+      hello: "שלום %{user},"
+      message1: "הרשמתך למערכת בוצעה בהצלחה!"
+      message2: "מעתה תוכל/י להתנדב לפעילויות באתר."
+      action: "לאתר מתנדבים.נט"
     welcome_school:
       subject: "ברוכים הבאים למתנדבים.נט"
-      title: "ברוכים הבאים למתנדבים.נט, %{school}"
-      body: ""
-    new_response:
+      hello: "שלום %{user},"
+      message1: 'בית הספר "%{school}" נרשם בהצלחה במערכת!'
+      message2: "מעתה תוכל/י לפרסם פעילויות ולקבל פניות ממתנדבים."
+      action: "התחל לפרסם פעילויות"
+    volunteer_responded:
       subject: "מתנדב נענה לבקשתך"
-      title: "%{admin} שלום."
-      body: "משתמש %{user} נענה לבקשתך על התנדבות."
+      hello: "שלום %{user},"
+      message1: 'בקשת ההתנדבות "%{activity}" נענתה ע"י %{user}.'
+      action: "צפה בבקשות שנענו"
+    activity_completed:
+      subject: "ההתנדבות הסתיימה"
+      hello: "שלום %{user},"
+      message1: 'בקשת ההתנדבות "%{activity}" הסתיימה.'
+      note_from_school: "מסר מבית הספר: %{note}"
+      action: "צפה בבקשות שלך"

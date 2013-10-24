@@ -19,7 +19,7 @@
           - if @completed_responses.count > 0
             != render partial: "users/school_response_row", :collection => @completed_responses, :as => :response
           - else
-            .empty_group{:style => "margin-top: 10px;"}
+            .empty_group
               = t("requests.pages.index.list.no_requests")
 
   .row.open_requests
@@ -31,5 +31,5 @@
           - if @active_responses.count > 0
             != render partial: "users/response_row", :collection => @active_responses, :as => :response
           - else
-            .empty_group{:style => "margin-top: 10px;"}
+            .empty_group
               = t("requests.pages.index.list.no_requests")

@@ -11,6 +11,10 @@
 = form_text_field(User.human_attribute_name("phone_number"), "user[phone_number]", user.phone_number)
 = form_field_wrapper(User.human_attribute_name("gender"), "user[gender]") do
   = select_tag("user[gender]", gender_options(user.gender))
+- if user.volunteer?
+  = form_field_wrapper(User.human_attribute_name('program'), 'user[program_id]') do
+    = collection_select(:user, :program_id, Program.all, :id, :name, :prompt => t('users.pages.new.program_prompt'))
+    %span.help-inline= t('users.pages.new.program_help')
 = form_password_field(User.human_attribute_name("password"), "user[password]") do
   %span.help-inline= User.human_attribute_name("password_limit")
 = form_password_field(User.human_attribute_name("password_confirmation"), "user[password_confirmation]")

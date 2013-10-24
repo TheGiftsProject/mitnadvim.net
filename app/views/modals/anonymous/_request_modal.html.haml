@@ -13,6 +13,9 @@
       %dt= Request.human_attribute_name("requesting_school")
       %dd= request.school.name
 
+      %dt= Request.human_attribute_name('requesting_school_address')
+      %dd= request.school.full_address
+
       %dt= Request.human_attribute_name("duration")
       %dd= "#{request.duration} #{Request.human_attribute_name("duration_units")}"
 

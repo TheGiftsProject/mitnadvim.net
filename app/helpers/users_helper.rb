@@ -1,5 +1,9 @@
 module UsersHelper
 
+  def gender_translation(gender)
+    t("users.genders.#{gender}")
+  end
+
   def gender_options(selected)
     genders = {
       :male => t("users.genders.male"),

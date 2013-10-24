@@ -1,0 +1,4 @@
+%p= t 'email.activity_completed.hello', :user => @response.user.fullname
+%p= t 'email.activity_completed.message1', :activity => @response.request.name
+%p= t 'email.activity_completed.note_from_school', :note => @response.note_from_school
+= render 'base_mailer/mail_action_button', :action => t('email.activity_completed.action')

@@ -1,22 +1,43 @@
 # -*- coding: utf-8 -*-
-weekly_recurrence = Recurrence.create(:name => "שבועי")
 
-## AREAS
-Area.create!(:name => "בית שמש")
-Area.create!(:name => "בני ברק")
-Area.create!(:name => "ירושלים")
-Area.create!(:name => "לוד")
-Area.create!(:name => "תל אביב")
+def create_recurrence(name)
+  Recurrence.find_or_create_by_name(:name => name)
+end
 
-## CATEGORIES
-Category.create!(:name => "חנכות לימודית")
-Category.create!(:name => "חוגי העשרה")
-Category.create!(:name => "הרצאות והדרכות")
-Category.create!(:name => "מחשבים, מולטימדיה ואנטרנט")
-Category.create!(:name => "גיוס כספים")
-Category.create!(:name => "גינון")
-Category.create!(:name => "טרפיות, הוראה מתקנת וליקוי למידה (אנשי מקצוע)")
-Category.create!(:name => "הסעות והובלות")
-Category.create!(:name => "התנדבות בספרייה")
-Category.create!(:name => "התנדבות מהבית")
-Category.create!(:name => "תחזוקה ושיפוץ")
+def create_area(name)
+  Area.find_or_create_by_name(:name => name)
+end
+
+def create_category(name)
+  Category.find_or_create_by_name(:name => name)
+end
+
+def create_program(name)
+  Program.find_or_create_by_name(:name => name)
+end
+
+create_recurrence('חד-פעמי')
+create_recurrence('שבועי')
+create_recurrence('חודשי')
+
+# Areas
+create_area('בית שמש')
+create_area('בני ברק')
+create_area('ירושלים')
+create_area('לוד')
+create_area('תל אביב')
+
+# Categories
+create_category('חנכות לימודית')
+create_category('חוגי העשרה')
+create_category('הרצאות והדרכות')
+create_category('מחשבים, מולטימדיה ואנטרנט')
+create_category('גיוס כספים')
+create_category('גינון')
+create_category('הוראה מתקנת וליקוי למידה (אנשי מקצוע)')
+create_category('הסעות והובלות')
+create_category('התנדבות בספרייה')
+create_category('התנדבות מהבית')
+create_category('תחזוקה ושיפוץ')
+
+# Programs

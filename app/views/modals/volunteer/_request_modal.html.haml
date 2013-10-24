@@ -14,6 +14,9 @@
         %dt= Request.human_attribute_name("requesting_school")
         %dd= vrequest.school.name
 
+        %dt= Request.human_attribute_name('requesting_school_address')
+        %dd= vrequest.school.full_address
+
         %dt= Request.human_attribute_name("duration")
         %dd= "#{vrequest.duration} #{Request.human_attribute_name("duration_units")}"
 

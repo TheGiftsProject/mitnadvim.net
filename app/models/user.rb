@@ -3,12 +3,13 @@ class User < ActiveRecord::Base
   attr_accessor :password
 
   attr_accessible :area_id, :email, :facebook_id, :first_name, :gender, :last_name, :phone_number, :birth_year, :description
-  attr_accessible :school, :school_id, :password, :password_confirmation, :role
+  attr_accessible :school, :school_id, :program_id, :password, :password_confirmation, :role
 
   belongs_to :area
-  belongs_to :school # this is only relevant to school admin users.
+  belongs_to :school, :dependent => :destroy # this is only relevant to school admin users.
+  belongs_to :program # this is only relevant to volunteers
 
-  has_many :responses
+  has_many :responses, :dependent => :destroy
   has_many :requests, :through => :responses
   #validates :password, confirmation: true, length: { minimum: 2 }, on: :create
   #validates_presence_of :password_confirmation
@@ -28,6 +29,10 @@ class User < ActiveRecord::Base
 
   def fullname
     "#{first_name} #{last_name}"
+  end
+
+  def age
+    Date.today.year - birth_year
   end
 
   def encrypt_password

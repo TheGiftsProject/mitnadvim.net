@@ -8,3 +8,4 @@
 .irbrc
 .rdebugrc
 postgresql*
+.env

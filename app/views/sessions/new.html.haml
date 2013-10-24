@@ -13,4 +13,4 @@
     %hr
     %h3
       %strong= t("sessions.pages.new.actions.register.#{@type}.note")
-      %a{:href => "#{@type}/new"}= t("sessions.pages.new.actions.register.#{@type}.link")
+      %a{:href => sign_up_url(@type)}= t("sessions.pages.new.actions.register.#{@type}.link")

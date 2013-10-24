@@ -1,0 +1,54 @@
+$title-fonts: 'MeodedPashut', Arial, san-serif;
+$background-color: #e8edf0;
+
+body {
+  text-align: right;
+  direction: rtl;
+}
+
+.message_container {
+  width: 500px;
+}
+
+.header_container {
+  background: #677075;
+}
+
+.content_container {
+  background: $background-color;
+  > table {
+    width: 100%;
+  }
+}
+
+.logo {
+  img {
+    margin-top: -4px;
+  }
+}
+
+h1 {
+  margin: 0;
+}
+
+.action {
+
+  a {
+    text-decoration: none;
+  }
+
+  .button {
+    td {
+      background: #e9a825;
+      padding: 5px 10px;
+    }
+  }
+
+  .action_text {
+    span {
+      font-weight: bold;
+      font-size: 18px;
+      color: white;
+    }
+  }
+}

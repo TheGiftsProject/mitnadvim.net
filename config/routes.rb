@@ -17,4 +17,6 @@ MitnadvimNet::Application.routes.draw do
 
   root :to => "requests#index"
 
+  mount RailsEmailPreview::Engine => '/emails' if Rails.env.development?
+
 end

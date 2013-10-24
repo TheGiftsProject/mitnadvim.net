@@ -12,7 +12,8 @@ class ApplicationController < ActionController::Base
   include ErrorsSupport
 
   def under_construction
-    flash.now.alert = I18n.t("flashes.under_construction")
+    # render the under construction label unless current action is run by the rails email preview engine
+    flash.now.alert = I18n.t("flashes.under_construction") unless self.respond_to?(:test_deliver)
   end
 
 end

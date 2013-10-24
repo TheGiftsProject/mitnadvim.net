@@ -1,12 +1,14 @@
 class UsersController < ApplicationController
 
+  before_filter :user_must_be_signed_in, :only => [:show]
+
   def show
     @active_responses = current_user.responses.active.newest_first
     @completed_responses = current_user.responses.completed.newest_first
   end
 
   def new
-    @user = User.new
+    @user = User.new(:role => :volunteer)
   end
 
   def create
@@ -15,12 +17,12 @@ class UsersController < ApplicationController
 
     if @user.save
       sign_in(@user)
-      RegistrationMailer.delay.welcome_user(@user)
-      redirect_to root_path, :notice => t("flashes.users.created")
+      RegistrationMailer.welcome_user(@user).deliver
+      redirect_to root_path, :notice => t('flashes.users.created')
     else
       @errors = @user.errors.full_messages
       flash[:error] = @errors
-      render :action => "new"
+      render :action => 'new'
     end
 
   end
