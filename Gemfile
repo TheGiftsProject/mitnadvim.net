@@ -16,6 +16,8 @@ group :assets do
   gem 'compass-photoshop-drop-shadow'
   gem 'uglifier'
   gem 'bootstrap-sass-rails-rtl', :git => 'git://github.com/TheGiftsProject/bootstrap-sass-rails-rtl.git', :branch => 'all_fixes'
+  gem 'zebra-datepicker-rails'
+  gem 'momentjs-rails'
 end
 
 gem 'enumify'
