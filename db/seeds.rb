@@ -39,5 +39,7 @@ create_category('הסעות והובלות')
 create_category('התנדבות בספרייה')
 create_category('התנדבות מהבית')
 create_category('תחזוקה ושיפוץ')
+create_category('ציוד ומתקנים לבית הספר')
+create_category('עיצוב סביבה לימודית')
 
 # Programs
