@@ -8,9 +8,16 @@
   = form_textarea_field(Request.human_attribute_name("description"), "request[description]", @request.description)
   = form_field_wrapper(Request.human_attribute_name("category"), "request[category_id]") do
     = select_tag("request[category_id]", category_options(@request.category_id))
-  = form_field_wrapper(Request.human_attribute_name("recurrence"), "request[recurrence_id]") do
-    = select_tag("request[recurrence_id]", recurrence_options(@request.recurrence_id))
-  = form_text_field(Request.human_attribute_name("duration"), "request[duration]", @request.duration || 2) do
+  = form_text_field(Request.human_attribute_name("duration"), "request[duration]", @request.duration || 2, class: 'duration') do
     %span.help-inline= Request.human_attribute_name("duration_units")
+  = form_field_wrapper(Request.human_attribute_name("recurrence"), "request[recurrence_id]") do
+    - Recurrence.all.each do |r|
+      = label_tag("request_recurrence_id_#{r.id}", nil, class: 'radio inline') do
+        = radio_button_tag('request[recurrence_id]', r.id, @request.recurrence_id == r.id, class: '')
+        = r.name
+  = form_field_wrapper('', '') do
+    = link_to 'ציין זמן ספציפי', '#one_time_modal', data: {toggle: 'modal'}
 
   = form_submit_button(t("requests.pages.new.action"), :class => "btn btn-orange")
+
+  != render 'modals/school/one_time_modal'

@@ -48,9 +48,10 @@ he:
           note_placeholder: "הוסף מילות הערכה למתנדבים"
           action: "סיום"
 
-
     anonymous:
       request:
         note: "על מנת להגיש מועמדות להתנדבות זאת"
         action: "עליך להירשם"
 
+    one_time:
+      header: "ציין זמן להתנדבות חד-פעמית"
