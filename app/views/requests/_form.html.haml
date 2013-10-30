@@ -13,11 +13,12 @@
   = form_field_wrapper(Request.human_attribute_name("recurrence"), "request[recurrence_id]") do
     - Recurrence.all.each do |r|
       = label_tag("request_recurrence_id_#{r.id}", nil, class: 'radio inline') do
-        = radio_button_tag('request[recurrence_id]', r.id, @request.recurrence_id == r.id, class: '')
+        = radio_button_tag('request[recurrence_id]', r.id, @request.recurrence_id == r.id, class: 'recurrence-select')
         = r.name
   = form_field_wrapper('', '') do
-    = link_to 'ציין זמן ספציפי', '#one_time_modal', data: {toggle: 'modal'}
+    = link_to t('requests.pages.new.choose_time'), '', data: {toggle: :modal}, class: 'choose-time'
 
   = form_submit_button(t("requests.pages.new.action"), :class => "btn btn-orange")
 
   != render 'modals/school/one_time_modal'
+  != render 'modals/school/weekly_modal'
