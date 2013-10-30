@@ -2,6 +2,7 @@
 #= require jquery_ujs
 #= require twitter/bootstrap
 #= require plugins/jquery_filteron
+#= require jquery.datetimeentry
 #= require zebra-datepicker/core
 #= require moment
 #= require filter
