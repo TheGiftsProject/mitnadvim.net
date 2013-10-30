@@ -11,7 +11,7 @@ $ ->
     weekend_days: [6]
     show_icon: true
   }
-  $one_time.find('.date-picker').Zebra_DatePicker($.extend({always_visible: $('#datepicker_container')}, datePickerOptions))
+  $one_time.find('.date-picker').Zebra_DatePicker($.extend({always_visible: $one_time.find('.datepicker-container')}, datePickerOptions))
   $weekly.find('.datepicker').Zebra_DatePicker($.extend({}, datePickerOptions))
 
   $('input.recurrence-select').on 'click', ->
