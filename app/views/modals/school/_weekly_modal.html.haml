@@ -1,0 +1,19 @@
+#weekly_modal.modal.hide.fade
+  .modal-header
+    %button.close{ data: {dismiss: :modal}, aria: { hidden: true}} &times;
+    %h3= t("modals.weekly.header")
+
+  .modal-body
+    = form_text_field(t('modals.weekly.from_date'), 'request[from_date]', nil, class: 'input-medium datepicker')
+    = form_field_wrapper(t('modals.weekly.choose_week_days'), '') do
+      .btn-group{data: {toggle: 'button-radio'}}
+        - weekday_options.each do |k, v|
+          %button{type: :button, class: 'btn btn-orange', data: {id: k}}= v
+    = form_field_wrapper('בין השעות', '') do
+      = text_field_tag('request[begin_time]', nil, class: 'input-mini inline begin-time')
+      ! -
+      = text_field_tag('request[end_time]', nil, class: 'input-mini inline end-time')
+
+    .actions.control-group
+      .controls
+        = button_tag 'שמור', class: 'btn btn-orange save-button', type: :button, data: {dismiss: :modal}
