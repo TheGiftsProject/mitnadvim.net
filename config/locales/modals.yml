@@ -55,3 +55,14 @@ he:
 
     one_time:
       header: "ציין זמן להתנדבות חד-פעמית"
+    weekly:
+      header: "ציין זמן להתנדבות שבועית"
+      from_date: "החל מתאריך"
+      choose_week_days: "בחר ימים בשבוע"
+      sunday: "א"
+      monday: "ב"
+      tuesday: "ג"
+      wednesday: "ד"
+      thursday: "ה"
+      friday: "ו"
+      saturday: "ש"
