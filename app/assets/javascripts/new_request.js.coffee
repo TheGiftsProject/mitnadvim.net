@@ -14,6 +14,7 @@ $ ->
   $one_time.find('.date-picker').Zebra_DatePicker($.extend({always_visible: $one_time.find('.datepicker-container')}, datePickerOptions))
   $weekly.find('.datepicker').Zebra_DatePicker($.extend({}, datePickerOptions))
 
+  # init selection of recurrence dialog
   $('input.recurrence-select').on 'click', ->
     modalSelector = switch this.value
       when '1' then '#one_time_modal'
@@ -21,13 +22,18 @@ $ ->
       else ''
     $('a.choose-time').attr('href', modalSelector)
 
-  timef = 'hh:mm'
-  $one_time.on 'click', '.save-button', (e) ->
-    begin_time = moment($one_time.find('.begin-time').val(), timef)
-    end_time = moment($one_time.find('.end-time').val(), timef)
-    hours = end_time.diff(begin_time, 'hours', true)
-    $('form input.duration').val(hours)
+  initSaveButton = (modal) ->
+    modal.on 'click', '.save-button', (e) ->
+      begin_time = moment(modal.find('.begin-time').val(), timef)
+      end_time = moment(modal.find('.end-time').val(), timef)
+      hours = end_time.diff(begin_time, 'hours', true)
+      $('form input.duration').val(parseFloat(hours.toFixed(1)))
 
+  timef = 'hh:mm'
+  initSaveButton $one_time
+  initSaveButton $weekly
+
+  # initialize time entry
   $('.begin-time, .end-time').datetimeEntry({
     datetimeFormat: 'H:M'
     spinnerImage: ''
@@ -37,3 +43,4 @@ $ ->
     datetimeFormat: 'D/m/Y'
     spinnerImage: ''
   })
+
