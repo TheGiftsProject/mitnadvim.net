@@ -14,6 +14,13 @@ $ ->
   $one_time.find('.date-picker').Zebra_DatePicker($.extend({always_visible: $one_time.find('.datepicker-container')}, datePickerOptions))
   $weekly.find('.datepicker').Zebra_DatePicker($.extend({}, datePickerOptions))
 
+  # initialize check-box buttons on weekly dialog
+  $weekly.find('.weekdays button').on 'click', ->
+    $this = $(this)
+    weekday = $this.data('id')
+    $weekly.find("input:checkbox[value=#{weekday}]").attr 'checked', ->
+      not $this.hasClass('active')  # this handler is called before bootstrap sets active class, so we invert the logic
+
   # init selection of recurrence dialog
   $('input.recurrence-select').on 'click', ->
     modalSelector = switch this.value
