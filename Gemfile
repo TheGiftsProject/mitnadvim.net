@@ -8,6 +8,7 @@ gem 'pg'
 gem 'thin'
 gem 'paranoia'
 gem 'delayed_job_active_record'
+gem 'i18n-js'
 
 group :assets do
   gem 'sass-rails',  '~> 3.2'
