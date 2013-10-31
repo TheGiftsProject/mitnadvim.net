@@ -6,15 +6,15 @@
   .modal-body
     .control-group
       .controls
-        = text_field_tag('request[date_schedule]', nil, class: 'date-picker input-small')
-        .datepicker-container{style: 'width: 220px, height: 240px, position: relative'}
+        = hidden_field_tag('request[date_schedule]', nil, class: 'date-picker input-small')
+        .datepicker-container{style: 'width: 220px; height: 240px'}
 
 
-    = form_field_wrapper('בין השעות', '') do
+    = form_field_wrapper(t('modals.one_time.between_hours'), '') do
       = text_field_tag('request[begin_time]', nil, class: 'input-mini inline begin-time')
       ! -
       = text_field_tag('request[end_time]', nil, class: 'input-mini inline end-time')
 
     .actions.control-group
       .controls
-        = button_tag 'שמור', class: 'btn btn-orange save-button', type: :button, data: {dismiss: :modal}
+        = button_tag t('modals.one_time.save'), class: 'btn btn-orange save-button', type: :button, data: {dismiss: :modal}
