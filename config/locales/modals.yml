@@ -60,6 +60,7 @@ he:
     weekly:
       header: "ציין זמן להתנדבות שבועית"
       from_date: "החל מתאריך"
+      between_hours: "בין השעות"
       choose_week_days: "בחר ימים בשבוע"
       save: "שמור"
       sunday: "א"
