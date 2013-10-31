@@ -9,6 +9,7 @@
       .btn-group{data: {toggle: 'button-radio'}}
         - weekday_options.each do |k, v|
           %button{type: :button, class: 'btn btn-orange', data: {id: k}}= v
+          %input{type: :checkbox, name: 'request[weekday][]', value: k, style: 'display: none'}
     = form_field_wrapper('בין השעות', '') do
       = text_field_tag('request[begin_time]', nil, class: 'input-mini inline begin-time')
       ! -
@@ -16,4 +17,4 @@
 
     .actions.control-group
       .controls
-        = button_tag 'שמור', class: 'btn btn-orange save-button', type: :button, data: {dismiss: :modal}
+        = button_tag t('modals.one_time.save'), class: 'btn btn-orange save-button', type: :button, data: {dismiss: :modal}

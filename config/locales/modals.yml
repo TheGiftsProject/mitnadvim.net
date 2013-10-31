@@ -55,10 +55,13 @@ he:
 
     one_time:
       header: "ציין זמן להתנדבות חד-פעמית"
+      between_hours: "בין השעות"
+      save: "שמור"
     weekly:
       header: "ציין זמן להתנדבות שבועית"
       from_date: "החל מתאריך"
       choose_week_days: "בחר ימים בשבוע"
+      save: "שמור"
       sunday: "א"
       monday: "ב"
       tuesday: "ג"
