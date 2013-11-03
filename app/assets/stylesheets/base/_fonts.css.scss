@@ -1,7 +1,6 @@
 $light:   300;
 $normal:  400;
 $bold:    700;
-$black:   900;
 
 $title-fonts: 'MeodedPashut', Arial, san-serif;
 $body-fonts: Arial, san-serif;
@@ -38,15 +37,4 @@ $body-fonts: Arial, san-serif;
          asset-url('meodedpashut_oebold.ttf', font) format('truetype'),
          asset-url('meodedpashut_oebold.woff', font) format('woff'),
          asset-url('meodedpashut_oebold.svg#MeodedPashutBold', font) format('svg');
-}
-
-@font-face{
-	font-family:'MeodedPashut';
-	font-weight: $black; /*(black)*/
-	font-style: normal;
-	src: asset-url('meodedpashut_oeblack.eot', font);
-	src: asset-url('meodedpashut_oeblack.eot?#iefix', font) format('embedded-opentype'),
-         asset-url('meodedpashut_oeblack.ttf', font) format('truetype'),
-         asset-url('meodedpashut_oeblack.woff', font) format('woff'),
-         asset-url('meodedpashut_oeblack.svg#MeodedPashutBlack', font) format('svg');
 }
