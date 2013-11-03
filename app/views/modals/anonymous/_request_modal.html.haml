@@ -19,9 +19,6 @@
       %dt= Request.human_attribute_name("duration")
       %dd= "#{request.duration} #{Request.human_attribute_name("duration_units")}"
 
-      %dt= Request.human_attribute_name("start_date")
-      %dd= l(request.created_at.in_time_zone("Israel"), :format => :long)
-
     .register
       %span= t("modals.anonymous.request.note")
       %a{href: new_user_path}= t("modals.anonymous.request.action")

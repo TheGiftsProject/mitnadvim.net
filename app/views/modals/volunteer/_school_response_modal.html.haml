@@ -16,9 +16,6 @@
       %dt= Request.human_attribute_name("duration")
       %dd= "#{response.request.duration} #{Request.human_attribute_name("duration_units")}"
 
-      %dt= Request.human_attribute_name("start_date")
-      %dd= l(response.request.created_at.in_time_zone("Israel"), :format => :long)
-
       %dt= Response.human_attribute_name("note_from_school")
       %dd
         != text_area_tag :note_from_school, response.note_from_school, :disabled => :disabled

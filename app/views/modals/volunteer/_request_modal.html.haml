@@ -20,9 +20,6 @@
         %dt= Request.human_attribute_name("duration")
         %dd= "#{vrequest.duration} #{Request.human_attribute_name("duration_units")}"
 
-        %dt= Request.human_attribute_name("start_date")
-        %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
-
         %dt= Response.human_attribute_name("note")
         %dd
           != text_area_tag :note,"", placeholder: "#{t("modals.volunteer.request.fields.placeholders.note")}"

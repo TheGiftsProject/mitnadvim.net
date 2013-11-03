@@ -16,9 +16,6 @@
       %dt= Request.human_attribute_name("duration")
       %dd= "#{vrequest.duration} #{Request.human_attribute_name("duration_units")}"
 
-      %dt= Request.human_attribute_name("start_date")
-      %dd= l(vrequest.created_at.in_time_zone("Israel"), :format => :long)
-
     - if vrequest.opened?
       .actions
         %a.btn.edit_request{:href => edit_request_path(vrequest)}= t("modals.school.request.actions.edit_request")
