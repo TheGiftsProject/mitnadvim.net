@@ -5,16 +5,3 @@
     @include examples;
   }
 }
-
-#datepicker_container {
-  height: 240px;
-  width: 220px;
-}
-
-.Zebra_DatePicker {
-  z-index: 10000;
-}
-button.Zebra_DatePicker_Icon, button.Zebra_DatePicker_Icon_Inside {
-  background: url('/assets/zebra-datepicker/calendar.png') no-repeat left top;
-  display: block !important;
-}
