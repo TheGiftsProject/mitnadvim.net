@@ -7,10 +7,10 @@
     = form_text_field(t('modals.weekly.from_date'), 'request[from_date]', nil, class: 'input-medium datepicker')
     = form_field_wrapper(t('modals.weekly.choose_week_days'), '') do
       .btn-group.weekdays{data: {toggle: 'button-checkbox'}}
-        - weekday_options.each do |k, v|
-          %button{type: :button, class: 'btn btn-orange', data: {id: k}}= v
-      - weekday_options.each do |k, v|
-        %input{type: :checkbox, name: 'request[weekday][]', value: k, style: 'display: none'}
+        - weekday_options.each do |day_index, day_name|
+          %button{type: :button, class: 'btn btn-orange', data: {id: day_index}}= day_name
+      - weekday_options.each do |day_index, day_name|
+        %input{type: :checkbox, name: 'request[weekday][]', value: day_index, style: 'display: none'}
     = form_field_wrapper(t('modals.weekly.between_hours'), '') do
       = text_field_tag('request[begin_time]', nil, class: 'input-mini inline begin-time')
       ! -
