@@ -4,11 +4,10 @@
 #= require plugins/jquery_filteron
 #= require jquery.datetimeentry
 #= require zebra-datepicker/core
-#= require i18n
-#= require i18n/translations
 #= require moment
 #= require filter
 #= require new_request
+#= require datepicker
 
 class window.Mitnadvim
 
