@@ -57,6 +57,7 @@ he:
       header: "ציין זמן להתנדבות חד-פעמית"
       between_hours: "בין השעות"
       save: "שמור"
+      time_description: "בתאריך {{date}}, בין {{begin_time}} ו-{{end_time}}"
     weekly:
       header: "ציין זמן להתנדבות שבועית"
       from_date: "החל מתאריך"
@@ -71,3 +72,4 @@ he:
         thu: "ה"
         fri: "ו"
         sat: "ש"
+      time_description: "החל מ-{{date}}, בימים {{weekdays}}, בין {{begin_time}} ו-{{end_time}}"
