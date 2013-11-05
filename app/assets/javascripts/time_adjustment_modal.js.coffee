@@ -19,3 +19,4 @@ class window.TimeAdjustmentModal
       hours = end_time.diff(begin_time, 'hours', true)
       $('form input.duration').val(parseFloat(hours.toFixed(1)))
       $('form .time-description').text(@timeString())
+      $('form .choose-time').text(I18n.t('requests.pages.new.change_time'))
