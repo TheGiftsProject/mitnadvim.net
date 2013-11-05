@@ -16,6 +16,7 @@
         = radio_button_tag('request[recurrence_id]', r.id, @request.recurrence_id == r.id, class: 'recurrence-select')
         = r.name
   = form_field_wrapper('', '') do
+    %span.time-description
     = link_to t('requests.pages.new.choose_time'), '', data: {toggle: :modal}, class: 'choose-time'
 
   = form_submit_button(t("requests.pages.new.action"), :class => "btn btn-orange")
