@@ -8,7 +8,7 @@
     = form_field_wrapper(t('modals.weekly.choose_week_days'), '') do
       .btn-group.weekdays{data: {toggle: 'button-checkbox'}}
         - weekday_options.each do |day_index, day_name|
-          %button{type: :button, class: 'btn btn-orange', data: {id: day_index}}= day_name
+          %button{type: :button, class: 'btn', data: {id: day_index}}= day_name
       - weekday_options.each do |day_index, day_name|
         %input{type: :checkbox, name: 'request[weekday][]', value: day_index, style: 'display: none'}
     = form_field_wrapper(t('modals.weekly.between_hours'), '') do
