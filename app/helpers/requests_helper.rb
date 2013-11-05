@@ -14,12 +14,12 @@ module RequestsHelper
 
   def weekday_options
     {
-        0 => I18n.t('modals.weekly.sunday'),
-        1 => I18n.t('modals.weekly.monday'),
-        2 => I18n.t('modals.weekly.tuesday'),
-        3 => I18n.t('modals.weekly.wednesday'),
-        4 => I18n.t('modals.weekly.thursday'),
-        5 => I18n.t('modals.weekly.friday')
+        0 => I18n.t('modals.weekly.weekday.sun'),
+        1 => I18n.t('modals.weekly.weekday.mon'),
+        2 => I18n.t('modals.weekly.weekday.tue'),
+        3 => I18n.t('modals.weekly.weekday.wed'),
+        4 => I18n.t('modals.weekly.weekday.thu'),
+        5 => I18n.t('modals.weekly.weekday.fri')
     }
   end
 
