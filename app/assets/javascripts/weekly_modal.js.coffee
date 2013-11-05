@@ -3,13 +3,12 @@ class window.WeeklyModal extends window.TimeAdjustmentModal
     super @modalEl
     @ui =
       _datepicker: @modalEl.find('.datepicker')
-      _from_date: @modalEl.find('.from-date')
     @initDatepicker()
     @initWeekdaySelect()
     @initDatetimeMask()
 
   initDatepicker: ->
-    new window.MitnadvimDatepicker(@ui._datepicker, {})
+    new window.MitnadvimDatepicker(@ui._datepicker, {format: 'd/m/Y'})
 
   # initialize check-box buttons on weekly dialog
   initWeekdaySelect: ->
@@ -24,5 +23,14 @@ class window.WeeklyModal extends window.TimeAdjustmentModal
       datetimeFormat: 'D/m/Y'
       spinnerImage: ''
     })
+
+  selectedWeekdays: ->
+    days = []
+    @modalEl.find('.weekdays button.active').each (index, el) ->
+      days.push($(el).text())
+    days.join(', ')
+
+  timeString: ->
+    I18n.t('modals.weekly.time_description', {"date": @ui._datepicker.val(), weekdays: @selectedWeekdays(), begin_time: @modalEl.find('.begin-time').val(), end_time: @modalEl.find('.end-time').val()})
 
 

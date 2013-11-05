@@ -18,3 +18,4 @@ class window.TimeAdjustmentModal
       end_time = moment(@modalEl.find('.end-time').val(), @time_format)
       hours = end_time.diff(begin_time, 'hours', true)
       $('form input.duration').val(parseFloat(hours.toFixed(1)))
+      $('form .time-description').text(@timeString())
