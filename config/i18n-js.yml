@@ -1,3 +1,3 @@
 translations:
 - file: 'public/javascripts/he.js'
-  only: ['*.datepicker.*', '*.modals.one_time.time_description', '*.modals.weekly.time_description']
+  only: ['*.datepicker.*', '*.modals.*', '*.requests.pages.*']
