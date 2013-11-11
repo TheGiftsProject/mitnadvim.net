@@ -1,7 +1,7 @@
 class window.TimeAdjustmentModal
-  constructor: (@modalEl) ->
+  constructor: (@$modalEl) ->
     @ui =
-      _time_inputs: @modalEl.find('.begin-time, .end-time')
+      _time_inputs: @$modalEl.find('.begin-time, .end-time')
     @initSaveButton()
     @initTimeInputs()
     @time_format = 'hh:mm'

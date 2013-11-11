@@ -1,8 +1,8 @@
 class window.WeeklyModal extends window.TimeAdjustmentModal
-  constructor: (@modalEl) ->
-    super @modalEl
+  constructor: (@$modalEl) ->
+    super @$modalEl
     @ui =
-      _datepicker: @modalEl.find('.datepicker')
+      _datepicker: @$modalEl.find('.datepicker')
     @initDatepicker()
     @initWeekdaySelect()
     @initDatetimeMask()

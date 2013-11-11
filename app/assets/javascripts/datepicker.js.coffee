@@ -36,5 +36,5 @@ class window.MitnadvimDatepicker
       show_icon: true
     }
   # @el should be jQuery object
-  constructor: (@el, options) ->
-    @el.Zebra_DatePicker($.extend(options, _options))
+  constructor: (@$el, options) ->
+    @$el.Zebra_DatePicker($.extend(options, _options))
