@@ -13,4 +13,4 @@ class window.OneTimeModal extends window.TimeAdjustmentModal
     moment(@ui._datepicker.val(), 'YYYY-MM-DD').format('DD/MM/YYYY')
 
   timeString: ->
-    I18n.t('modals.one_time.time_description', {date: @selectedDate(), begin_time: @modalEl.find('.begin-time').val(), end_time: @modalEl.find('.end-time').val()})
+    I18n.t('modals.one_time.time_description', {date: @selectedDate(), begin_time: @$modalEl.find('.begin-time').val(), end_time: @$modalEl.find('.end-time').val()})

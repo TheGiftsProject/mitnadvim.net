@@ -13,9 +13,9 @@ class window.TimeAdjustmentModal
     })
 
   initSaveButton: ->
-    @modalEl.on 'click', '.save-button', =>
-      begin_time = moment(@modalEl.find('.begin-time').val(), @time_format)
-      end_time = moment(@modalEl.find('.end-time').val(), @time_format)
+    @$modalEl.on 'click', '.save-button', =>
+      begin_time = moment(@$modalEl.find('.begin-time').val(), @time_format)
+      end_time = moment(@$modalEl.find('.end-time').val(), @time_format)
       hours = end_time.diff(begin_time, 'hours', true)
       $('form input.duration').val(parseFloat(hours.toFixed(1)))
       $('form .time-description').text(@timeString())
