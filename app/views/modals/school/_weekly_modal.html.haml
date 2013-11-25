@@ -12,10 +12,10 @@
       - weekday_options.each do |day_index, day_name|
         %input{type: :checkbox, name: 'request[weekday][]', value: day_index, style: 'display: none'}
     .days-with-time
-      = form_field_wrapper(t('modals.weekly.between_hours'), '') do
-        = text_field_tag('request[begin_time]', nil, class: 'input-mini inline begin-time')
-        ! -
-        = text_field_tag('request[end_time]', nil, class: 'input-mini inline end-time')
+      -#= form_field_wrapper(t('modals.weekly.between_hours'), '') do
+      -#  = text_field_tag('request[begin_time]', nil, class: 'input-mini inline begin-time')
+      -#  ! -
+      -#  = text_field_tag('request[end_time]', nil, class: 'input-mini inline end-time')
 
     .actions.control-group
       .controls
