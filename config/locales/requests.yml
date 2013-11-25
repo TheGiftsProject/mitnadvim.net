@@ -24,6 +24,8 @@ he:
       new:
         header: "בקשת התנדבות חדשה"
         action: "צור בקשה חדשה"
+        choose_time: "ציין זמן ספציפי"
+        change_time: "שנה"
       edit:
         header: "ערוך בקשת התנדבות"
       index:

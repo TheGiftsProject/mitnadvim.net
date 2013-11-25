@@ -48,9 +48,28 @@ he:
           note_placeholder: "הוסף מילות הערכה למתנדבים"
           action: "סיום"
 
-
     anonymous:
       request:
         note: "על מנת להגיש מועמדות להתנדבות זאת"
         action: "עליך להירשם"
 
+    one_time:
+      header: "ציין זמן להתנדבות חד-פעמית"
+      between_hours: "בין השעות"
+      save: "שמור"
+      time_description: "בתאריך {{date}}, בין {{begin_time}} ו-{{end_time}}"
+    weekly:
+      header: "ציין זמן להתנדבות שבועית"
+      from_date: "החל מתאריך"
+      between_hours: "בין השעות"
+      choose_week_days: "בחר ימים בשבוע"
+      save: "שמור"
+      weekday:
+        sun: "א"
+        mon: "ב"
+        tue: "ג"
+        wed: "ד"
+        thu: "ה"
+        fri: "ו"
+        sat: "ש"
+      time_description: "החל מ-{{date}}, בימים {{weekdays}}, בין {{begin_time}} ו-{{end_time}}"

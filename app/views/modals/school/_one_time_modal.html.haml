@@ -1,0 +1,20 @@
+#one_time_modal.modal.hide.fade
+  .modal-header
+    %button.close{ data: {dismiss: :modal}, aria: { hidden: true}} &times;
+    %h3= t("modals.one_time.header")
+
+  .modal-body
+    .control-group
+      .controls
+        = hidden_field_tag('request[date_schedule]', nil, class: 'date-picker input-small')
+        .datepicker-container
+
+
+    = form_field_wrapper(t('modals.one_time.between_hours'), '') do
+      = text_field_tag('request[begin_time]', nil, class: 'input-mini inline begin-time')
+      ! -
+      = text_field_tag('request[end_time]', nil, class: 'input-mini inline end-time')
+
+    .actions.control-group
+      .controls
+        = button_tag t('modals.one_time.save'), class: 'btn btn-orange save-button', type: :button, data: {dismiss: :modal}

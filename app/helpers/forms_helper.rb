@@ -2,12 +2,12 @@ module FormsHelper
 
   extend ComponentsHelper
 
-  def form_text_field(label, field_name, value = nil, &block)
-    block_to_partial("components/form/text_field", {:field_name => field_name, label: label, :type => "text", value: value}, &block)
+  def form_text_field(label, field_name, value = nil, options = {}, &block)
+    block_to_partial("components/form/text_field", {name: field_name, id: field_name, label: label, type: :text, value: value}.merge(options), &block)
   end
 
-  def form_password_field(label, field_name, &block)
-    block_to_partial("components/form/text_field", {:field_name => field_name, label: label, :type => "password"}, &block)
+  def form_password_field(label, field_name, options = {}, &block)
+    block_to_partial("components/form/text_field", {name: field_name, id: field_name, label: label, type: :password}.merge(options), &block)
   end
 
   def form_textarea_field(label, field_name, value, &block)
