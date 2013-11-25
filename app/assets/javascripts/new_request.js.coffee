@@ -2,8 +2,8 @@ $ ->
   # init selection of recurrence dialog
   $('input.recurrence-select').on 'click', ->
     modalSelector = switch this.value
-      when '1' then '#one_time_modal'
-      when '2' then '#weekly_modal'
+      when 'one_time' then '#one_time_modal'
+      when 'weekly' then '#weekly_modal'
       else ''
     $('a.choose-time').attr('href', modalSelector)
 
