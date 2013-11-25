@@ -11,7 +11,7 @@ class Request < ActiveRecord::Base
   validates_presence_of :name, :description, :category, :recurrence, :duration
 
   enum :status, [:opened, :closed]
-  enum :recurrence, [:one_time, :weekly, :monthly], allow_nil: true
+  enum :recurrence, [:one_time, :weekly, :monthly]
   scope :newest_first, order('requests.created_at DESC')
 
   def close!(user_ids, note)
@@ -20,6 +20,10 @@ class Request < ActiveRecord::Base
     # update the responses
     volunteers_responses = responses.belong_to_users user_ids
     volunteers_responses.each {|response| response.complete!(note)}
+  end
+
+  def recurrence_name
+    I18n.t "recurrences.#{recurrence}"
   end
 
 end
