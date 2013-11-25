@@ -28,8 +28,8 @@ class window.WeeklyModal extends window.TimeAdjustmentModal
         @addTimeSelection(name, weekday)
 
   initDatetimeMask: ->
-    @ui._datepicker.datetimeEntry({
-      datetimeFormat: 'D/m/Y'
+    $('.begin-time, .end-time').datetimeEntry({
+      datetimeFormat: 'H:M'
       spinnerImage: ''
     })
 
@@ -53,13 +53,14 @@ class window.WeeklyModal extends window.TimeAdjustmentModal
       index++
     @weekdays.splice(index, 0, value)
     console.log @weekdays
-    template = $('<div class="control-group" data-day="' + value + '"><label class="control-label" for="">יום ' + name + '</label><div class="controls"><span class="datetimeEntry_wrap"><input class="input-mini inline begin-time hasDatetimeEntry" id="request_begin_time" name="request[begin_time][]" type="text"></span> - <span class="datetimeEntry_wrap"><input class="input-mini inline end-time hasDatetimeEntry" id="request_end_time" name="request[end_time][]" type="text"></span><button>X</button> </div></div>')
+    template = $('<div class="control-group" data-day="' + value + '"><label class="control-label" for="">יום ' + name + '</label><div class="controls"><input class="input-mini inline begin-time" name="request[begin_time][]" type="text"> - <input class="input-mini inline end-time" name="request[end_time][]" type="text"> </div></div>')
     if index == 0
       template.prependTo(@$modalEl.find('.days-with-time'))
     else if index == @weekdays.length - 1
       template.appendTo(@$modalEl.find('.days-with-time'))
     else
       template.insertAfter(@$modalEl.find(".days-with-time>div:nth-child(#{index})"))
+    @initDatetimeMask()
 
   timeString: ->
     I18n.t('modals.weekly.time_description', {"date": @ui._datepicker.val(), weekdays: @selectedWeekdays(), begin_time: @$modalEl.find('.begin-time').val(), end_time: @$modalEl.find('.end-time').val()})
