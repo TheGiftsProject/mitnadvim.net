@@ -12,6 +12,7 @@ class Request < ActiveRecord::Base
   validates_presence_of :name, :description, :category, :recurrence, :duration
 
   enum :status, [:opened, :closed]
+  enum :recurrence, [:one_time, :weekly, :monthly], allow_nil: true
   scope :newest_first, order('requests.created_at DESC')
 
   def close!(user_ids, note)

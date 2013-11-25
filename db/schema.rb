@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131016183217) do
+ActiveRecord::Schema.define(:version => 20131125102337) do
 
   create_table "areas", :force => true do |t|
     t.string   "name"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20131016183217) do
     t.integer  "recurrence_id"
     t.integer  "duration"
     t.string   "status",        :default => "opened"
+    t.string   "recurrence"
   end
 
   create_table "responses", :force => true do |t|
