@@ -5,7 +5,7 @@ module RequestsHelper
   end
 
   def recurrence_options(selected)
-    options_from_collection_for_select(Recurrence.all, :id, :name, selected)
+    options_for_select(Request::RECURRENCES.map{|recurrence| [recurrence, t("recurrences.#{recurrence}")]}, selected)
   end
 
   def school_options(area, selected)
