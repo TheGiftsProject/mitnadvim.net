@@ -1,0 +1,5 @@
+he:
+  recurrences:
+    one_time: 'חד-פעמי'
+    weekly: 'שבועי'
+    monthly: 'חודשי'
