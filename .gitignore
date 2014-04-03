@@ -10,3 +10,4 @@
 postgresql*
 .env
 .ruby-version
+.rbenv-vars
