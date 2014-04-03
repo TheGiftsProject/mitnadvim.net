@@ -7,34 +7,34 @@ $body-fonts: Arial, san-serif;
 
 @font-face{
 	font-family:'MeodedPashut';
-	font-weight: $light; /*(light)*/
+	font-weight: $light;
 	font-style: normal;
-	src: asset-url('meodedpashut_oelight.eot', font);
-	src: asset-url('meodedpashut_oelight.eot?#iefix', font) format('embedded-opentype'),
-         asset-url('meodedpashut_oelight.ttf', font) format('truetype'),
-         asset-url('meodedpashut_oelight.woff', font) format('woff'),
-         asset-url('meodedpashut_oelight.svg#MeodedPashutLight', font) format('svg');
+	src: font-url('meodedpashut_oelight.eot');
+	src: font-url('meodedpashut_oelight.eot?#iefix') format('embedded-opentype'),
+         font-url('meodedpashut_oelight.ttf') format('truetype'),
+         font-url('meodedpashut_oelight.woff') format('woff'),
+         font-url('meodedpashut_oelight.svg#MeodedPashutLight') format('svg');
 }
 
 
 @font-face{
 	font-family:'MeodedPashut';
-	font-weight: $normal; /*(regular)*/
+	font-weight: $normal;
 	font-style: normal;
-	src: asset-url('meodedpashut_oeregular.eot', font);
-	src: asset-url('meodedpashut_oeregular.eot?#iefix', font) format('embedded-opentype'),
-         asset-url('meodedpashut_oeregular.ttf', font) format('truetype'),
-         asset-url('meodedpashut_oeregular.woff', font) format('woff'),
-         asset-url('meodedpashut_oeregular.svg#MeodedPashut', font) format('svg');
+	src: font-url('meodedpashut_oeregular.eot');
+	src: font-url('meodedpashut_oeregular.eot?#iefix') format('embedded-opentype'),
+         font-url('meodedpashut_oeregular.ttf') format('truetype'),
+         font-url('meodedpashut_oeregular.woff') format('woff'),
+         font-url('meodedpashut_oeregular.svg#MeodedPashut') format('svg');
 }
 
 @font-face{
 	font-family:'MeodedPashut';
-	font-weight: $bold; /*(bold)*/
+	font-weight: $bold;
 	font-style: normal;
-	src: asset-url('meodedpashut_oebold.eot', font);
-	src: asset-url('meodedpashut_oebold.eot?#iefix', font) format('embedded-opentype'),
-         asset-url('meodedpashut_oebold.ttf', font) format('truetype'),
-         asset-url('meodedpashut_oebold.woff', font) format('woff'),
-         asset-url('meodedpashut_oebold.svg#MeodedPashutBold', font) format('svg');
+	src: font-url('meodedpashut_oebold.eot');
+	src: font-url('meodedpashut_oebold.eot?#iefix') format('embedded-opentype'),
+         font-url('meodedpashut_oebold.ttf') format('truetype'),
+         font-url('meodedpashut_oebold.woff') format('woff'),
+         font-url('meodedpashut_oebold.svg#MeodedPashutBold') format('svg');
 }
