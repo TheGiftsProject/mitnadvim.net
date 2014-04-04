@@ -1,7 +1,7 @@
-.span7.request_details
-  .name{:title => req.name}= req.name
-  .description{:title => req.description}= req.description
-  .additional_data
+.span8.request_details
+  .name.span7{:title => req.name}= req.name
+  .description.span7{:title => req.description}= req.description
+  .additional_data.span8
     .icon.location
     %span= req.school.try(:name)
     .icon.duration
