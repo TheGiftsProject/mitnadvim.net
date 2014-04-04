@@ -6,9 +6,7 @@ header.navbar{
 
   .navbar-inner{
     height: $navbar-height;
-    @include background-image(
-      linear-gradient(bottom,#565e62,#7a858a)
-    );
+    @include background-image(linear-gradient(#7a858a,#565e62));
     @include photoshop-drop-shadow(90,1px,0,4px,rgba(#000,0.25));
     @include border-radius(0);
   }
